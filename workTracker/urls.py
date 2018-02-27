@@ -1,13 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
-#from login.views import LoginView
 from django.contrib.auth.views import LoginView, LogoutView
-from clockin.views import IndexView
+from clockin.views import WorkUpdate
 
 urlpatterns = [
     path('', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('clockin/', IndexView.as_view(), name='clockin'),
+    path('started/', WorkUpdate.as_view(), name='started/<pk>/'),
+    path('clockin/', include('clockin.urls')),
     path('admin/', admin.site.urls),
 ]
 

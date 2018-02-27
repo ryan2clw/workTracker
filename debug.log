@@ -1,78 +1,526 @@
-[23/Feb/2018 13:14:13] DEBUG [workTracker:11] LoginRequiredMixin instantiated
-[23/Feb/2018 13:14:13] DEBUG [workTracker:21] Entering clockin view
-[23/Feb/2018 13:14:24] DEBUG [workTracker:16] user is authenticated
-[23/Feb/2018 13:15:15] DEBUG [workTracker:11] LoginRequiredMixin instantiated
-[23/Feb/2018 13:15:15] DEBUG [workTracker:22] Entering clockin view
-[23/Feb/2018 13:15:19] DEBUG [workTracker:16] user is authenticated
-[23/Feb/2018 13:15:19] DEBUG [workTracker:17] <WSGIRequest: GET '/clockin/'>
-[23/Feb/2018 13:26:55] DEBUG [workTracker:11] LoginRequiredMixin instantiated
-[23/Feb/2018 13:26:55] DEBUG [workTracker:22] Entering clockin view
-[23/Feb/2018 13:27:23] DEBUG [workTracker:14] user is indeed, not authenticated
-[23/Feb/2018 13:27:53] DEBUG [workTracker:16] user is authenticated
-[23/Feb/2018 13:27:53] DEBUG [workTracker:17] <WSGIRequest: GET '/clockin/'>
-[23/Feb/2018 13:32:22] DEBUG [workTracker:16] user is authenticated
-[23/Feb/2018 13:32:22] DEBUG [workTracker:17] <WSGIRequest: GET '/clockin/'>
-[23/Feb/2018 13:47:11] DEBUG [workTracker:16] user is authenticated
-[23/Feb/2018 13:47:11] DEBUG [workTracker:17] <WSGIRequest: GET '/clockin/'>
-[23/Feb/2018 13:48:26] DEBUG [workTracker:16] user is authenticated
-[23/Feb/2018 13:48:26] DEBUG [workTracker:17] <WSGIRequest: GET '/clockin/'>
-[23/Feb/2018 13:53:07] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 13:53:46] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 13:55:10] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 13:56:48] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 13:59:31] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:00:04] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:00:21] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:00:32] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:00:49] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:01:06] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:01:12] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:05:51] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:16:55] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:16:59] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:18:14] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:18:49] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:22:29] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:24:41] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 14:29:51] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 15:05:04] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 15:27:08] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 15:37:02] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 15:38:08] DEBUG [workTracker:24] Entering clockin view
-[23/Feb/2018 15:41:57] DEBUG [workTracker:10] Entering clockin view
-[23/Feb/2018 16:17:52] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 16:33:23] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 17:21:05] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 17:50:05] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 17:54:56] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 17:55:55] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 17:56:43] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 18:01:38] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 18:13:30] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 18:18:00] DEBUG [workTracker:11] Entering clockin view
-[23/Feb/2018 18:20:49] DEBUG [workTracker:12] Entering clockin view
-[23/Feb/2018 18:21:45] DEBUG [workTracker:12] Entering clockin view
-[23/Feb/2018 18:26:11] DEBUG [workTracker:12] Entering clockin view
-[23/Feb/2018 19:54:54] DEBUG [workTracker:12] Entering clockin view
-[23/Feb/2018 23:36:36] DEBUG [workTracker:12] Entering clockin view
-[23/Feb/2018 23:48:32] DEBUG [workTracker:12] Entering clockin view
-[23/Feb/2018 23:48:54] DEBUG [workTracker:12] Entering clockin view
-[23/Feb/2018 23:48:56] DEBUG [workTracker:12] Entering clockin view
-[24/Feb/2018 00:01:20] DEBUG [workTracker:12] Entering clockin view
-[24/Feb/2018 00:16:11] DEBUG [workTracker:12] Entering clockin view
-[25/Feb/2018 19:39:21] DEBUG [workTracker:12] Entering clockin view
-[25/Feb/2018 20:24:39] DEBUG [workTracker:12] Entering clockin view
-[25/Feb/2018 22:36:14] DEBUG [workTracker:12] Entering clockin view
-[26/Feb/2018 01:02:54] DEBUG [workTracker:12] Entering clockin view
-[26/Feb/2018 01:07:37] DEBUG [workTracker:12] Entering clockin view
-[26/Feb/2018 01:56:12] DEBUG [workTracker:12] Entering clockin view
-[26/Feb/2018 02:00:38] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:02:14] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:03:18] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:05:15] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:07:48] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:08:07] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:08:21] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:09:08] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:09:56] DEBUG [workTracker:13] Entering clockin view
-[26/Feb/2018 02:10:59] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:21:24] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:21:24] DEBUG [workTracker:31] Entering WorkCreate view
+[26/Feb/2018 15:21:24] DEBUG [workTracker:37] Entering WorkUpdate view
+[26/Feb/2018 15:27:48] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:28:55] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:35:02] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:35:42] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:36:05] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:36:12] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:36:22] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:36:22] DEBUG [workTracker:30] Entering WorkCreate view
+[26/Feb/2018 15:36:53] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:39:03] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:40:46] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:40:55] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:44:48] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 15:57:08] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:32:07] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:32:19] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:33:21] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:36:35] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:41:16] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:41:30] DEBUG [workTracker:21] {'view': <clockin.views.IndexView object at 0x7f6fe13d55f8>}
+[26/Feb/2018 17:42:59] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:44:23] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:46:17] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:46:35] DEBUG [workTracker:21] {'view': <clockin.views.IndexView object at 0x7f889c0e8be0>}
+[26/Feb/2018 17:54:34] DEBUG [workTracker:21] {'view': <clockin.views.IndexView object at 0x7f889c0f2208>}
+[26/Feb/2018 17:55:20] DEBUG [workTracker:21] {'view': <clockin.views.IndexView object at 0x7f889c0f2e80>}
+[26/Feb/2018 17:57:09] DEBUG [workTracker:21] {'view': <clockin.views.IndexView object at 0x7f889c096e10>}
+[26/Feb/2018 17:58:46] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 17:58:53] DEBUG [workTracker:21] ['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+[26/Feb/2018 18:00:05] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:00:10] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 18:06:00] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:06:11] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 18:06:11] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f2760257cc0>
+[26/Feb/2018 18:47:52] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:55:26] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:56:26] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:56:50] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:57:02] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:58:14] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:58:28] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 18:58:46] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 19:00:11] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 19:00:23] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 19:00:38] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 19:02:09] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 19:02:50] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 19:03:04] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 19:03:36] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:03:36] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f5adc4fec50>
+[26/Feb/2018 19:05:40] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:05:40] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f5adc4cfe10>
+[26/Feb/2018 19:38:35] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:38:35] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f5adc274ba8>
+[26/Feb/2018 19:51:31] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 19:53:41] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:53:41] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f010f63f080>
+[26/Feb/2018 19:53:50] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:53:50] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f0107fe3e10>
+[26/Feb/2018 19:53:56] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:53:56] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f0107d88780>
+[26/Feb/2018 19:54:01] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:54:01] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f0107d8e7b8>
+[26/Feb/2018 19:54:07] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:54:07] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f0107d8ee10>
+[26/Feb/2018 19:56:03] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:56:03] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f0107d8ec88>
+[26/Feb/2018 19:56:19] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:56:19] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f010f637940>
+[26/Feb/2018 19:59:10] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:59:10] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f0107d88dd8>
+[26/Feb/2018 19:59:32] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 19:59:32] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f0107d88ef0>
+[26/Feb/2018 20:01:03] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:14:03] DEBUG [workTracker:20] dict_keys(['view'])
+[26/Feb/2018 20:14:03] DEBUG [workTracker:21] <clockin.views.IndexView object at 0x7f3738ac2400>
+[26/Feb/2018 20:15:29] DEBUG [workTracker:20] dict_keys(['view'])
+[26/Feb/2018 20:15:29] DEBUG [workTracker:21] <clockin.views.IndexView object at 0x7f3738477d30>
+[26/Feb/2018 20:16:34] DEBUG [workTracker:20] dict_keys(['view'])
+[26/Feb/2018 20:16:34] DEBUG [workTracker:21] <clockin.views.IndexView object at 0x7f37384776a0>
+[26/Feb/2018 20:17:32] DEBUG [workTracker:20] dict_keys(['view'])
+[26/Feb/2018 20:17:32] DEBUG [workTracker:21] <clockin.views.IndexView object at 0x7f3738494198>
+[26/Feb/2018 20:17:54] DEBUG [workTracker:20] dict_keys(['view'])
+[26/Feb/2018 20:17:54] DEBUG [workTracker:21] <clockin.views.IndexView object at 0x7f37381ddbe0>
+[26/Feb/2018 20:18:21] DEBUG [workTracker:20] dict_keys(['view'])
+[26/Feb/2018 20:18:21] DEBUG [workTracker:21] <clockin.views.IndexView object at 0x7f37381e1940>
+[26/Feb/2018 20:18:33] DEBUG [workTracker:20] dict_keys(['view'])
+[26/Feb/2018 20:18:33] DEBUG [workTracker:21] <clockin.views.IndexView object at 0x7f37381ef7b8>
+[26/Feb/2018 20:20:15] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:25:02] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:25:32] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:26:44] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:27:50] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:34:50] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:35:43] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 20:35:43] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7fecaeda0048>
+[26/Feb/2018 20:35:49] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 20:35:49] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7fecac1b37f0>
+[26/Feb/2018 20:36:13] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:36:21] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:36:53] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:36:56] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:37:39] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:37:49] DEBUG [workTracker:21] dict_keys(['view'])
+[26/Feb/2018 20:37:49] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f0a34106be0>
+[26/Feb/2018 20:41:51] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:42:04] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:45:33] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:47:23] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:47:36] DEBUG [workTracker:13] Entering clockin view
+[26/Feb/2018 20:47:50] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:21:34] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:22:06] DEBUG [workTracker:21] dict_keys(['view'])
+[27/Feb/2018 03:22:06] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f83100512e8>
+[27/Feb/2018 03:31:15] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:32:23] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:32:43] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:33:08] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:33:26] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:35:59] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:36:06] DEBUG [workTracker:21] dict_keys(['view'])
+[27/Feb/2018 03:36:06] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7fd7700aa898>
+[27/Feb/2018 03:41:44] DEBUG [workTracker:13] Entering clockin view
+[27/Feb/2018 03:51:51] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 03:52:44] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 03:53:35] DEBUG [workTracker:42] GET request
+[27/Feb/2018 03:53:35] DEBUG [workTracker:43] ryan.dines@gmail.com
+[27/Feb/2018 03:55:47] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 03:55:57] DEBUG [workTracker:41] GET request
+[27/Feb/2018 03:55:57] DEBUG [workTracker:42] ryan.dines@gmail.com
+[27/Feb/2018 04:03:42] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:03:49] DEBUG [workTracker:57] GET request
+[27/Feb/2018 04:03:49] DEBUG [workTracker:58] ryan.dines@gmail.com
+[27/Feb/2018 04:04:00] DEBUG [workTracker:57] GET request
+[27/Feb/2018 04:04:00] DEBUG [workTracker:58] ryan.dines@gmail.com
+[27/Feb/2018 04:04:30] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:06:06] DEBUG [workTracker:57] GET request
+[27/Feb/2018 04:06:06] DEBUG [workTracker:58] ryan.dines@gmail.com
+[27/Feb/2018 04:10:52] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:11:02] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:11:02] DEBUG [workTracker:59] ryan.dines@gmail.com
+[27/Feb/2018 04:11:54] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:11:57] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:11:57] DEBUG [workTracker:59] ryan.dines@gmail.com
+[27/Feb/2018 04:11:57] DEBUG [workTracker:21] dict_keys(['view'])
+[27/Feb/2018 04:11:57] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f7ae3c955c0>
+[27/Feb/2018 04:12:04] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:12:04] DEBUG [workTracker:59] ryan.dines@gmail.com
+[27/Feb/2018 04:12:04] DEBUG [workTracker:21] dict_keys(['view'])
+[27/Feb/2018 04:12:04] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f7ae0690ac8>
+[27/Feb/2018 04:12:25] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:12:25] DEBUG [workTracker:59] ryan.dines@gmail.com
+[27/Feb/2018 04:12:25] DEBUG [workTracker:21] dict_keys(['view'])
+[27/Feb/2018 04:12:25] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f7ae0436438>
+[27/Feb/2018 04:13:07] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:13:15] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:13:15] DEBUG [workTracker:59] ryan.dines@gmail.com
+[27/Feb/2018 04:13:57] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:14:05] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:14:30] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:14:54] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:15:02] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:15:02] DEBUG [workTracker:59] ryan.dines@gmail.com
+[27/Feb/2018 04:15:02] DEBUG [workTracker:21] dict_keys(['view'])
+[27/Feb/2018 04:15:02] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7fa97a792f98>
+[27/Feb/2018 04:16:51] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:16:54] DEBUG [workTracker:14] Entering clockin view
+[27/Feb/2018 04:17:07] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:17:07] DEBUG [workTracker:59] sara.verel@yahoo.com
+[27/Feb/2018 04:17:07] DEBUG [workTracker:21] dict_keys(['view'])
+[27/Feb/2018 04:17:07] DEBUG [workTracker:22] <clockin.views.IndexView object at 0x7f1fdc0aae48>
+[27/Feb/2018 04:21:13] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:21:45] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:22:50] DEBUG [workTracker:59] GET request
+[27/Feb/2018 04:22:50] DEBUG [workTracker:60] ryan.dines@gmail.com
+[27/Feb/2018 04:22:50] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:22:50] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f294c0f11d0>
+[27/Feb/2018 04:26:23] DEBUG [workTracker:59] GET request
+[27/Feb/2018 04:26:23] DEBUG [workTracker:60] ryan.dines@gmail.com
+[27/Feb/2018 04:26:23] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:26:23] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f294c0f1f28>
+[27/Feb/2018 04:29:33] DEBUG [workTracker:59] GET request
+[27/Feb/2018 04:29:33] DEBUG [workTracker:60] ryan.dines@gmail.com
+[27/Feb/2018 04:29:33] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:29:33] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f294c0934e0>
+[27/Feb/2018 04:30:21] DEBUG [workTracker:59] GET request
+[27/Feb/2018 04:30:21] DEBUG [workTracker:60] ryan.dines@gmail.com
+[27/Feb/2018 04:30:21] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:30:21] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f294c0bf080>
+[27/Feb/2018 04:33:53] DEBUG [workTracker:59] GET request
+[27/Feb/2018 04:33:53] DEBUG [workTracker:60] ryan.dines@gmail.com
+[27/Feb/2018 04:33:53] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:33:53] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f294c0bfda0>
+[27/Feb/2018 04:37:30] DEBUG [workTracker:59] GET request
+[27/Feb/2018 04:37:30] DEBUG [workTracker:60] sara.verel@yahoo.com
+[27/Feb/2018 04:37:30] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:37:30] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f294c0934e0>
+[27/Feb/2018 04:40:51] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:42:08] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:43:06] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:43:06] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:43:06] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7fea0179f0b8>
+[27/Feb/2018 04:43:27] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:43:27] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:43:27] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7fe9fe112908>
+[27/Feb/2018 04:44:05] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:44:05] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:44:05] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7fe9fe1205f8>
+[27/Feb/2018 04:48:23] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:48:34] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:48:34] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:48:34] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7fefc011bf98>
+[27/Feb/2018 04:50:47] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:50:47] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:50:47] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7fefc013d2b0>
+[27/Feb/2018 04:51:25] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:51:25] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:51:25] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7fefc013de48>
+[27/Feb/2018 04:52:50] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:52:50] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:52:50] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7fefc011ba58>
+[27/Feb/2018 04:54:59] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:55:20] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:56:02] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:56:31] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:56:48] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:57:29] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 04:57:53] DEBUG [workTracker:58] GET request
+[27/Feb/2018 04:57:53] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 04:57:53] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f305d775fd0>
+[27/Feb/2018 05:02:35] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 05:02:35] DEBUG [workTracker:65] Entering WorkCreate view
+[27/Feb/2018 05:03:50] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 05:03:50] DEBUG [workTracker:65] Entering WorkCreate view
+[27/Feb/2018 05:06:38] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 05:06:38] DEBUG [workTracker:65] Entering WorkCreate view
+[27/Feb/2018 05:07:48] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 05:07:48] DEBUG [workTracker:66] Entering WorkCreate view
+[27/Feb/2018 05:07:55] DEBUG [workTracker:58] GET request
+[27/Feb/2018 05:07:55] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 05:07:55] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7fdc88465908>
+[27/Feb/2018 05:08:39] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 05:08:39] DEBUG [workTracker:67] Entering WorkCreate view
+[27/Feb/2018 05:08:52] DEBUG [workTracker:58] GET request
+[27/Feb/2018 05:08:52] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 05:08:52] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f03d12ee978>
+[27/Feb/2018 05:27:23] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 05:27:23] DEBUG [workTracker:67] Entering WorkCreate view
+[27/Feb/2018 05:28:30] DEBUG [workTracker:15] Entering clockin view
+[27/Feb/2018 05:28:30] DEBUG [workTracker:67] Entering WorkCreate view
+[27/Feb/2018 05:28:42] DEBUG [workTracker:58] GET request
+[27/Feb/2018 05:28:42] DEBUG [workTracker:22] dict_keys(['view'])
+[27/Feb/2018 05:28:42] DEBUG [workTracker:23] <clockin.views.IndexView object at 0x7f24901a7e48>
+[27/Feb/2018 05:31:53] DEBUG [workTracker:16] Entering clockin view
+[27/Feb/2018 05:31:53] DEBUG [workTracker:68] Entering WorkCreate view
+[27/Feb/2018 05:33:53] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 05:33:53] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 05:34:04] DEBUG [workTracker:60] GET request
+[27/Feb/2018 05:34:04] DEBUG [workTracker:24] dict_keys(['view'])
+[27/Feb/2018 05:34:04] DEBUG [workTracker:25] <clockin.views.IndexView object at 0x7f6ec40ebe10>
+[27/Feb/2018 05:46:50] DEBUG [workTracker:60] GET request
+[27/Feb/2018 05:46:50] DEBUG [workTracker:24] dict_keys(['view'])
+[27/Feb/2018 05:46:50] DEBUG [workTracker:25] <clockin.views.IndexView object at 0x7f6ec4365f60>
+[27/Feb/2018 05:47:05] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 05:47:05] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 05:47:12] DEBUG [workTracker:60] GET request
+[27/Feb/2018 05:47:12] DEBUG [workTracker:24] dict_keys(['view'])
+[27/Feb/2018 05:47:12] DEBUG [workTracker:25] <clockin.views.IndexView object at 0x7f5bf15cc898>
+[27/Feb/2018 13:53:51] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 13:53:51] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 13:54:34] DEBUG [workTracker:60] GET request
+[27/Feb/2018 13:54:34] DEBUG [workTracker:24] dict_keys(['view'])
+[27/Feb/2018 13:54:34] DEBUG [workTracker:25] <clockin.views.IndexView object at 0x7f1d2dbca748>
+[27/Feb/2018 14:04:19] DEBUG [workTracker:60] GET request
+[27/Feb/2018 14:04:19] DEBUG [workTracker:24] dict_keys(['view'])
+[27/Feb/2018 14:04:19] DEBUG [workTracker:25] <clockin.views.IndexView object at 0x7f1d2fc34160>
+[27/Feb/2018 14:05:04] DEBUG [workTracker:60] GET request
+[27/Feb/2018 14:05:04] DEBUG [workTracker:24] dict_keys(['view'])
+[27/Feb/2018 14:05:04] DEBUG [workTracker:25] <clockin.views.IndexView object at 0x7f1d2dbeb908>
+[27/Feb/2018 14:09:33] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 14:09:33] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 14:15:44] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 14:15:44] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 14:15:44] DEBUG [workTracker:72] Entering WorkUpdate view
+[27/Feb/2018 14:16:20] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 14:16:20] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 14:16:20] DEBUG [workTracker:72] Entering WorkUpdate view
+[27/Feb/2018 14:17:24] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 14:17:24] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 14:17:24] DEBUG [workTracker:72] Entering WorkUpdate view
+[27/Feb/2018 14:17:47] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 14:17:47] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 14:17:47] DEBUG [workTracker:72] Entering WorkUpdate view
+[27/Feb/2018 14:19:30] DEBUG [workTracker:17] Entering clockin view
+[27/Feb/2018 14:19:30] DEBUG [workTracker:69] Entering WorkCreate view
+[27/Feb/2018 14:19:30] DEBUG [workTracker:72] Entering WorkUpdate view
+[27/Feb/2018 14:20:07] DEBUG [workTracker:60] GET request
+[27/Feb/2018 14:20:07] DEBUG [workTracker:24] dict_keys(['view'])
+[27/Feb/2018 14:20:07] DEBUG [workTracker:25] <clockin.views.IndexView object at 0x7fab180ca9e8>
+[27/Feb/2018 14:21:33] DEBUG [workTracker:60] GET request
+[27/Feb/2018 14:21:33] DEBUG [workTracker:24] dict_keys(['view'])
+[27/Feb/2018 14:21:33] DEBUG [workTracker:25] <clockin.views.IndexView object at 0x7fab180d0c50>
+[27/Feb/2018 14:28:46] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 14:28:46] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 14:28:46] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 14:32:42] DEBUG [workTracker:61] GET request
+[27/Feb/2018 14:32:42] DEBUG [workTracker:25] dict_keys(['view'])
+[27/Feb/2018 14:32:42] DEBUG [workTracker:26] <clockin.views.IndexView object at 0x7f9750801d68>
+[27/Feb/2018 14:34:13] DEBUG [workTracker:61] GET request
+[27/Feb/2018 14:34:13] DEBUG [workTracker:25] dict_keys(['view'])
+[27/Feb/2018 14:34:13] DEBUG [workTracker:26] <clockin.views.IndexView object at 0x7f975078cf28>
+[27/Feb/2018 14:35:13] DEBUG [workTracker:61] GET request
+[27/Feb/2018 14:35:13] DEBUG [workTracker:25] dict_keys(['view'])
+[27/Feb/2018 14:35:13] DEBUG [workTracker:26] <clockin.views.IndexView object at 0x7f9750781da0>
+[27/Feb/2018 14:40:41] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 14:40:41] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 14:40:41] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 14:40:51] DEBUG [workTracker:61] GET request
+[27/Feb/2018 14:40:51] DEBUG [workTracker:25] dict_keys(['view'])
+[27/Feb/2018 14:40:51] DEBUG [workTracker:26] <clockin.views.IndexView object at 0x7fed0007b9e8>
+[27/Feb/2018 14:53:42] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 14:53:42] DEBUG [workTracker:70] Entering WorkCreate view
+[27/Feb/2018 14:53:42] DEBUG [workTracker:73] Entering WorkUpdate view
+[27/Feb/2018 14:56:54] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 14:56:54] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 14:56:54] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 15:00:14] DEBUG [workTracker:60] GET request
+[27/Feb/2018 15:01:58] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 15:01:58] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 15:01:58] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 15:02:14] DEBUG [workTracker:60] GET request
+[27/Feb/2018 15:04:02] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 15:04:02] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 15:04:02] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 15:58:37] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 15:58:37] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 15:58:37] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 16:21:11] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 16:21:11] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 16:21:11] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 16:25:33] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 16:25:33] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 16:25:33] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 16:25:41] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 16:25:41] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 16:25:41] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 16:27:27] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 16:27:27] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 16:27:27] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 16:46:55] DEBUG [workTracker:18] Entering clockin view
+[27/Feb/2018 16:46:55] DEBUG [workTracker:71] Entering WorkCreate view
+[27/Feb/2018 16:46:55] DEBUG [workTracker:74] Entering WorkUpdate view
+[27/Feb/2018 17:19:52] DEBUG [workTracker:90] Entering WorkCreate view
+[27/Feb/2018 17:19:52] DEBUG [workTracker:93] Entering WorkUpdate view
+[27/Feb/2018 17:22:28] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 17:22:28] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 17:23:07] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 17:23:07] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 17:24:18] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:24:18] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:25:09] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:25:09] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:25:19] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:25:37] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:25:37] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:25:40] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:26:28] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:26:28] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:26:32] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:26:43] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:29:03] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:29:03] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:29:46] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:29:46] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:29:51] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:29:58] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:32:28] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:32:28] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:32:40] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:32:40] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:32:54] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:33:03] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:35:25] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:35:25] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:35:28] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:37:48] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:37:48] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:37:59] DEBUG [workTracker:30] ['COOKIES', 'FILES', 'GET', 'META', 'POST', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_cached_user', '_encoding', '_get_post', '_get_raw_host', '_get_scheme', '_initialize_handlers', '_load_post_and_files', '_mark_post_parse_error', '_messages', '_post_parse_error', '_read_started', '_set_post', '_stream', '_upload_handlers', 'body', 'build_absolute_uri', 'close', 'content_params', 'content_type', 'csrf_processing_done', 'encoding', 'environ', 'get_full_path', 'get_host', 'get_port', 'get_raw_uri', 'get_signed_cookie', 'is_ajax', 'is_secure', 'method', 'parse_file_upload', 'path', 'path_info', 'read', 'readline', 'readlines', 'resolver_match', 'scheme', 'session', 'upload_handlers', 'user', 'xreadlines']
+[27/Feb/2018 17:38:24] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:38:24] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:38:38] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:38:38] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:38:41] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 17:42:21] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 17:42:21] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 17:42:28] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 17:45:49] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 17:45:49] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 17:49:47] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 17:49:47] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 17:49:52] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 17:52:29] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 17:52:29] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 17:52:32] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 17:53:09] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 17:53:09] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 17:53:42] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 17:53:42] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 17:53:54] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 17:54:43] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 17:55:03] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 17:55:23] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 17:55:52] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 17:56:16] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 17:56:34] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 18:04:36] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 18:11:42] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 18:11:42] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 18:12:27] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 18:15:05] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 18:15:05] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 18:15:15] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 18:15:15] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 18:15:24] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 18:15:33] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 18:16:09] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 18:16:09] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 18:16:32] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:36:39] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:37:08] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:37:54] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:40:18] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:40:54] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:42:31] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:42:49] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:44:54] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:48:32] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:51:39] DEBUG [workTracker:91] Entering WorkCreate view
+[27/Feb/2018 19:51:39] DEBUG [workTracker:94] Entering WorkUpdate view
+[27/Feb/2018 19:51:42] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:52:37] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 19:56:02] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:04:23] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:28:04] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:28:04] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:29:26] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:29:37] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:30:25] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:30:32] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:32:59] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:34:28] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:34:44] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:35:01] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:36:08] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:36:31] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:37:46] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:37:46] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:37:47] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:38:11] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:38:11] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:38:56] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:38:56] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:38:59] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:38:59] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:40:38] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:42:22] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:42:22] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:42:37] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:42:37] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:42:59] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:46:14] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:46:14] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:46:33] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:47:12] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:47:12] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:47:17] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:47:51] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:47:51] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:48:56] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:48:56] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:49:04] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:52:14] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:52:14] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:54:17] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:54:17] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:54:27] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:55:02] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:55:02] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:55:08] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:55:22] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:55:22] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:55:33] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 20:57:06] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 20:57:06] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 20:57:14] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:59:32] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 20:59:42] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 22:44:29] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 22:46:16] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 22:46:38] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 22:48:24] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 22:51:17] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 22:51:17] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 22:51:54] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 22:51:54] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 22:52:09] DEBUG [workTracker:92] Entering WorkCreate view
+[27/Feb/2018 22:52:09] DEBUG [workTracker:95] Entering WorkUpdate view
+[27/Feb/2018 22:54:05] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 22:55:44] DEBUG [workTracker:37] Entering WorkCreate view
+[27/Feb/2018 22:55:44] DEBUG [workTracker:40] Entering WorkUpdate view
+[27/Feb/2018 22:55:56] DEBUG [workTracker:37] Entering WorkCreate view
+[27/Feb/2018 22:55:56] DEBUG [workTracker:40] Entering WorkUpdate view
+[27/Feb/2018 22:56:45] DEBUG [workTracker:37] Entering WorkCreate view
+[27/Feb/2018 22:56:45] DEBUG [workTracker:40] Entering WorkUpdate view
+[27/Feb/2018 22:58:53] DEBUG [workTracker:30] sara.verel@yahoo.com
+[27/Feb/2018 23:00:40] DEBUG [workTracker:37] Entering WorkCreate view
+[27/Feb/2018 23:00:40] DEBUG [workTracker:40] Entering WorkUpdate view
+[27/Feb/2018 23:00:53] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 23:06:39] DEBUG [workTracker:37] Entering WorkCreate view
+[27/Feb/2018 23:06:39] DEBUG [workTracker:40] Entering WorkUpdate view
+[27/Feb/2018 23:06:56] DEBUG [workTracker:30] ryan.dines@gmail.com
+[27/Feb/2018 23:08:56] DEBUG [workTracker:37] Entering WorkCreate view
+[27/Feb/2018 23:08:56] DEBUG [workTracker:40] Entering WorkUpdate view

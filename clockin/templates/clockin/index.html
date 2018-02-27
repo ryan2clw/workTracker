@@ -15,35 +15,139 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body class="text-center" onload="startTime()">
-    <!--{% if open %}
-    <p>We are currently open!</p>
-    {% else %}
-    <p>We are currently closed! Feel free to contact us!</p>
-    {% endif %}-->
-    <div style="display:inline-block; vertical-align:top">
-        <h3 style="; margin-bottom: 5px">Status</h3>
-        {% if intervalWork.started %}
-        <p>Clocked in</p>
+        <!--{% if open %}
+        <p>We are currently open!</p>
         {% else %}
-        <p>Not Clocked in</p>
-        {% endif %}
+        <p>We are currently closed! Feel free to contact us!</p>
+        {% endif %}-->
+        <div id="topHalf">
+        <div class="threeColumn">
+            <h3 style="; margin-bottom: 5px">Status</h3>
+            {% if workIntervals %}
+            <p>Clocked in</p>
+            {% else %}
+            <p>Not Clocked in</p>
+            {% endif %}
+        </div>
+        <div class="threeColumn">
+            <h3 style="; margin-bottom: 5px">Action</h2>
+            {% if True %}
+            <form method="post" action="{% url 'work_new' %}">
+            {{ clockinForm }}
+            {% csrf_token %}
+                <button id="clockInButton" type="button" class="btn btn-default" value="{{ workIterval.save }}">Clock-In</button>
+            </form>
+            {% else %}
+            <button id="clockOutButton" type="button" class="btn btn-default">Clock-Out</button>
+            <button id="commentButton" type="button" class="btn btn-default">Comment</button>
+            {% endif %}
+        </div>
+        <div class="threeColumn">
+            <h3 style="text-align: right;margin:0px">Current Time</h3>
+            <div id="clock" style="padding:0px;font-size:150%;font-weight: bold;"></div>
+            <a href="{% url 'logout' %}" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-log-out">Log out</span>
+            </a>
+        </div>
+      </div>
+      <div id="bottomHalf">
+    {% load bootstrap4 %}
+    {% load querystring from django_tables2 %}
+    {% load title from django_tables2 %}
+
+    {% block "content" %}
+
+
+    {% if table.page %}
+      <div class="table-container">
+    {% endif %}
+
+    {% block table %}
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
+                {% block table.thead %}
+                <thead>                 
+                    <tr>
+                        <th><a href="{% url "work_new" %}" class="btn btn-small btn-primary dark"><span class="hidden-phone"><i class="fa fa-user-plus"></i> Add Customer</span></a>
+                          
+                        </th>                  
+                        <th colspan="5">                                         
+                            <form method="post" class="form-inline form-search pull-right">
+                              {% csrf_token %}
+                                <div>
+                                  <input id="search_form_id" name="search" type="text" class="form-control col-md-3" placeholder="ID, Name, Account #, ZIP"{% if search %} value="{{ search }}"{% endif %}>
+                                  <button type="submit" class="btn btn-small btn-dark"><i class="fa fa-search"></i> Search</button>
+                                </div>              
+                            </form>
+                        </th>                  
+                    </tr>
+                 
+                  <tr>
+                    {% for column in table.columns %}
+                        {% if column.orderable %}
+                        <th {{ column.attrs.th.as_html }}><a href="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}">{{ column.header|title }}</a></th>
+                        {% else %}
+                        <th {{ column.attrs.th.as_html }}>{{ column.header|title }}</th>
+                        {% endif %}
+                    {% endfor %}
+                  </tr>
+                </thead>
+                {% endblock table.thead %}
+                {% block table.tbody %}
+                <tbody>
+                    {% for row in table.page.object_list|default:table.rows %} {# support pagination #}
+                      {% block table.tbody.row %}
+                      <tr class="{% cycle "odd" "even" %}">
+                          {% for column, cell in row.items %}
+                              <td {{ column.attrs.td.as_html }}>{{ cell }}</td>
+                          {% endfor %}
+                      </tr>
+                      {% endblock table.tbody.row %}
+                    {% empty %}
+                      {% if table.empty_text %}
+                      {% block table.tbody.empty_text %}
+                      <tr><td colspan="{{ table.columns|length }}">{{ table.empty_text }}</td></tr>
+                      {% endblock table.tbody.empty_text %}
+                      {% endif %}
+                    {% endfor %}
+                </tbody>
+                {% endblock table.tbody %}
+                {% block table.tfoot %}
+                <tfoot></tfoot>
+                {% endblock table.tfoot %}
+        </table-->
     </div>
-    <div style="display:inline-block; vertical-align:top">
-        <h3 style="; margin-bottom: 5px">Action</h2>
-        {% if not intervalWork.started %}
-        <button id="clockInButton" type="button" class="btn btn-default" on-click="updateStartTime">Clock-In</button>
-        {% else %}
-        <button id="clockOutButton" type="button" class="btn btn-default">Clock-Out</button>
-        <button id="commentButton" type="button" class="btn btn-default">Comment</button>
-        {% endif %}
-    </div>
-    <div style="display:inline-block; vertical-align:top">
-        <a href="{% url 'logout' %}" class="btn btn-info btn-lg" style="position:absolute;right:7px">
-            <span class="glyphicon glyphicon-log-out">Log out</span>
-        </a>
-        <h3 style="text-align: center;margin:0px">Current Time</h3>
-        <div id="clock" style="padding:0px;font-size:150%;font-weight: bold;"></div>
-    </div>
+{% endblock table %}
+
+{% if table.page %}
+    {% block pagination %}
+        {% bootstrap_pagination table.page url=request.get_full_path %}
+    {% endblock pagination %}
+  </div>
+{% endif %}
+
+
+{% endblock "content" %}
+
+          <!--table class="table table-dark table-hover center" style="width:50%;display:">
+            <thead>
+              <tr>
+                <th>Started</th>
+                <th>Ended</th> 
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for workInterval in workIntervals %}
+              <tr>
+                <td>{{workInterval.started}}</td>
+                <td>{{workInterval.ended}}</td>
+                <td>deltaTee</td>
+              </tr>
+                {% endfor %}
+            </tbody>
+          </table-->
+      </div>
   </body>
 </html>
 <style>
@@ -54,17 +158,31 @@
 div{
     padding: 10px;
 }
+th{
+    text-align: center;
+}
+.center {
+
+}
+.threeColumn {
+    display:inline-block;
+    vertical-align:top;
+    margin: auto;
+    padding: 20px;
+}
 </style>
 <script>
     $(function() {
-        console.log( "ready!" );
+        // hides buttons on page load
         $("#clockOutButton").hide();
         $("#commentButton").hide();
-        console.log( "hidden" );
+        //$("#clockInButton").click(function(e) {
+        //    console.log( "Handler for clockInButton called.", e);
+        //});
     });
     function updateStartTime(){
         console.log("updating start time");
-        // UPDATE REQUEST TO SERVER
+        // GET OR CREATE INTERVAL WORK FOR THE DAY
     }
     function startTime() {
         var today = new Date();
@@ -74,7 +192,6 @@ div{
         var ampm = h >= 12 ? 'pm' : 'am';
         h = h % 12;
         h = h ? h : 12; // the hour '0' should be '12'
-        m = m < 10 ? '0' + m : m;
         m = checkTime(m);
         s = checkTime(s);
         document.getElementById('clock').innerHTML =
