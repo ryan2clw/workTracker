@@ -81,10 +81,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'work_tracker',
-	'USER': 'work_tracker_user',
-	'PASSWORD': 'mK?zT!pL.gQ&12',
-	'HOST': 'localhost',
-	'PORT': ''
+	    'USER': 'work_tracker_user',
+	    'PASSWORD': 'mK?zT!pL.gQ&12',
+	    'HOST': 'localhost',
+	    'PORT': ''
     }
 }
 

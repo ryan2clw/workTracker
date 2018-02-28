@@ -25,11 +25,12 @@ class IndexView(LoginRequiredMixin, ListView): # removed GroupRequiredMixin,
     #group_required = u'company-user'
 
     def get_context_data(self, **kwargs):
+        kwargs['user_id'] = self.request.user.id 
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['user'] = self.request.user
-        log.debug(self.request.user)
-        table = IntervalTable(IntervalWork.objects.all()) #filter(self.kwargs['interval']).order_by('-pk'))
-        RequestConfig(self.request, paginate={'per_page': 30}).configure(table)
+        #context['user'] = str(self.request.user)
+        #table = IntervalTable(IntervalWork.objects.filter(self.request.user).order_by('-pk'))
+        table = IntervalTable(IntervalWork.objects.filter(user_id=self.request.user.id).order_by('-pk'))
+        RequestConfig(self.request, paginate={'per_page': 5}).configure(table)
         context['table'] = table
         return context
         
