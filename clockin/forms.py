@@ -6,4 +6,4 @@ class ClockinForm(forms.ModelForm):
 
     class Meta:
         model = IntervalWork
-        fields = ('finished',)
+        fields = ('comments',)

@@ -38,6 +38,7 @@ class IndexView(LoginRequiredMixin, ListView):
         table = IntervalTable(myHours)
         RequestConfig(self.request, paginate=False).configure(table)
         context['table'] = table
+        context['myForm'] = ClockinForm()
         return context
     
 class WorkUpdate(UpdateAPIView):

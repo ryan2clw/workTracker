@@ -19,7 +19,7 @@
         <ul id="topHalf" style="margin: auto;padding-bottom:0px;padding-top:12px;padding-left:0px">
             <li class="column" style="padding-right:10px;">
                 <h5 class="navBar">Welcome, {{ first_name }}</h5>
-                <a href="{% url 'logout' %}" class="btn-sm btn-info navBar">
+                <a href="{% url 'logout' %}" class="btn-sm btn-primary navBar">
                   <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
                 </a>
             </li>
@@ -36,18 +36,42 @@
                 <div style="display:inline-block; padding: 0px; vertical-align:top" id="myButtonDiv">
                     <ul id="buttonList" style="padding:0px">
                         <li>
-                            <button id="clockInButton" type="button" class="btn-sm btn-info navBar" style="font-weight: bold;border:none;">Clock-In</button>
+                            <button id="clockInButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Clock-In</button>
                         </li>
                         <li>
-                           <button id="clockOutButton" type="button" class="btn-sm btn-info navBar" style="font-weight: bold;border:none;">Clock-Out</button>
+                           <button id="clockOutButton"  type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Clock-Out</button>
                         </li>                 
                         <li>
-                            <button id="commentButton" type="button" class="btn-sm btn-info navBar" style="font-weight: bold;border:none;">Comment</button>
+                            <button id="commentButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Comment</button>
                         </li>
                     <ul>
                 </div>
             </li>
         </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Enter your comments below</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form action="url {{ work_update }}" method="PUT" id="commentForm">
+                  {% csrf_token %}
+                  <div class="modal-body">
+                        {{ myForm }}
+                        <!--textarea class="form-control" id="closingComments" style="min-height:250px;"></textarea-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="saveButton" data="closingComments">Save changes</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
         <div id="bottomHalf" style="margin: auto; height:500px;">
         {% load bootstrap4 %}
         {% load querystring from django_tables2 %}
@@ -152,12 +176,21 @@ th, td{
 }
 </style>
 <script>
-
     $('document').ready(function(){
         $(".comments").attr("style","width:240px");
         renderButtons();
     });
-    
+    // Submit post on submit
+    $('#commentForm').on('submit', function(event){
+        event.preventDefault();
+        console.log("form submitted!")  // sanity check
+        //create_post();
+    });
+    $("#id_comments").attr({
+        class:"form-control", 
+        style:"min-height:250px"
+    });
+    // textarea class="form-control" id="closingComments" style="min-height:250px;"></textarea
     function renderButtons(){
         var clockedIn = $("#clockedIn")[0].innerText;
         if (clockedIn == "Clocked In"){
@@ -178,7 +211,7 @@ th, td{
                 data: {
                     // get the user from the request and the finished timestamp from the server
                     user: {{ user.id }},
-                    comments:"Hi",
+                    comments:"hi",
                 },
                 type: "PUT",
                 dataType: "json",
