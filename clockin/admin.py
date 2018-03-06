@@ -1,3 +1,4 @@
 from django.contrib import admin
+from clockin.models import IntervalWork
 
-# Register your models here.
+admin.site.register(IntervalWork)

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_tables2',
     'bootstrap4',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,7 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'clockin'
 LOGOUT_REDIRECT_URL = 'login'
 LOG_LEVEL = 'DEBUG'
+DATETIME_FORMAT = 'H:i:s.u'
 
 LOGGING = {
     'version': 1,

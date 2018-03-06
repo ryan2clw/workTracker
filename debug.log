@@ -1,46 +1,552 @@
-[28/Feb/2018 01:10:08] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:15:38] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:15:46] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:15:49] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:15:55] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:15:58] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:16:11] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:16:18] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:17:58] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 01:20:14] DEBUG [workTracker:37] Entering WorkCreate view
-[28/Feb/2018 01:20:14] DEBUG [workTracker:40] Entering WorkUpdate view
-[28/Feb/2018 01:27:46] DEBUG [workTracker:37] Entering WorkCreate view
-[28/Feb/2018 01:27:46] DEBUG [workTracker:40] Entering WorkUpdate view
-[28/Feb/2018 01:30:05] DEBUG [workTracker:37] Entering WorkCreate view
-[28/Feb/2018 01:30:05] DEBUG [workTracker:40] Entering WorkUpdate view
-[28/Feb/2018 13:21:24] DEBUG [workTracker:30] ryan.dines@gmail.com
-[28/Feb/2018 13:22:14] DEBUG [workTracker:37] Entering WorkCreate view
-[28/Feb/2018 13:22:14] DEBUG [workTracker:40] Entering WorkUpdate view
-[28/Feb/2018 13:24:35] DEBUG [workTracker:38] Entering WorkCreate view
-[28/Feb/2018 13:24:35] DEBUG [workTracker:41] Entering WorkUpdate view
-[28/Feb/2018 13:25:19] DEBUG [workTracker:39] Entering WorkCreate view
-[28/Feb/2018 13:25:19] DEBUG [workTracker:42] Entering WorkUpdate view
-[28/Feb/2018 13:25:24] DEBUG [workTracker:39] Entering WorkCreate view
-[28/Feb/2018 13:25:24] DEBUG [workTracker:42] Entering WorkUpdate view
-[28/Feb/2018 13:25:36] DEBUG [workTracker:31] ryan.dines@gmail.com
-[28/Feb/2018 13:28:27] DEBUG [workTracker:39] Entering WorkCreate view
-[28/Feb/2018 13:28:27] DEBUG [workTracker:42] Entering WorkUpdate view
-[28/Feb/2018 13:28:46] DEBUG [workTracker:31] sara.verel@yahoo.com
-[28/Feb/2018 13:33:07] DEBUG [workTracker:31] ryan.dines@gmail.com
-[28/Feb/2018 13:33:18] DEBUG [workTracker:39] Entering WorkCreate view
-[28/Feb/2018 13:33:18] DEBUG [workTracker:42] Entering WorkUpdate view
-[28/Feb/2018 13:33:29] DEBUG [workTracker:31] sara.verel@yahoo.com
-[28/Feb/2018 13:34:42] DEBUG [workTracker:39] Entering WorkCreate view
-[28/Feb/2018 13:34:42] DEBUG [workTracker:42] Entering WorkUpdate view
-[28/Feb/2018 13:34:52] DEBUG [workTracker:31] sara.verel@yahoo.com
-[28/Feb/2018 13:35:43] DEBUG [workTracker:39] Entering WorkCreate view
-[28/Feb/2018 13:35:43] DEBUG [workTracker:42] Entering WorkUpdate view
-[28/Feb/2018 13:36:01] DEBUG [workTracker:31] sara.verel@yahoo.com
-[28/Feb/2018 13:42:40] DEBUG [workTracker:38] Entering WorkCreate view
-[28/Feb/2018 13:42:40] DEBUG [workTracker:41] Entering WorkUpdate view
-[28/Feb/2018 13:50:55] DEBUG [workTracker:38] Entering WorkCreate view
-[28/Feb/2018 13:50:55] DEBUG [workTracker:41] Entering WorkUpdate view
-[28/Feb/2018 13:52:07] DEBUG [workTracker:38] Entering WorkCreate view
-[28/Feb/2018 13:52:07] DEBUG [workTracker:41] Entering WorkUpdate view
-[28/Feb/2018 13:52:34] DEBUG [workTracker:38] Entering WorkCreate view
-[28/Feb/2018 13:52:34] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:01:15] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:01:51] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:01:51] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:01:51] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:04:19] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:04:19] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:04:19] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:04:36] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:04:36] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:04:36] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:05:05] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:05:05] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:05:05] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:07:42] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:07:42] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:07:42] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:09:55] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:09:55] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:09:55] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:10:05] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:10:05] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:10:05] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:10:27] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:10:27] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:10:27] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:10:51] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:10:51] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:10:51] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:25:35] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:25:35] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:25:35] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:25:55] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:25:55] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:25:55] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:26:38] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:26:38] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:26:38] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:28:32] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:28:32] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:28:32] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:29:14] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:29:14] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:29:14] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:29:29] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:29:29] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:29:29] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:30:20] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:30:20] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:30:20] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:33:33] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:33:33] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:33:33] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:33:55] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:33:55] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:33:55] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:40:28] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:40:28] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:40:28] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:41:08] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:41:08] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:41:08] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:44:34] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:44:34] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:44:34] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:45:20] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:45:20] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:45:20] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:46:12] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:46:12] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:46:12] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:50:22] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:50:22] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:50:22] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:50:37] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:50:37] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:50:37] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:55:56] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:55:56] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:55:56] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:56:23] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:56:23] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:56:23] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:56:34] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:56:34] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:56:34] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:57:13] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:57:13] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:57:13] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 15:58:21] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 15:58:21] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 15:58:21] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:00:58] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:00:58] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:00:58] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:03:02] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:03:02] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:03:02] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:03:32] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:03:32] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:03:32] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:04:25] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:04:25] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:04:25] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:05:08] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:05:08] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:05:08] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:06:05] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:06:05] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:06:05] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:07:10] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:07:10] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:07:10] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:07:59] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:07:59] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:07:59] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:09:05] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:09:05] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:09:05] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:09:33] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:09:33] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:09:33] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:09:59] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:09:59] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:09:59] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:10:15] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:10:15] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:10:15] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:11:27] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:11:27] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:11:27] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:12:09] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:12:09] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:12:09] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:12:29] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:12:29] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:12:29] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:13:30] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:13:30] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:13:30] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:14:58] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:14:58] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:14:58] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:15:24] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:15:24] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:15:24] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:16:24] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:16:24] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:16:24] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 16:17:13] DEBUG [workTracker:26] <tr><th><label for="id_started">Started:</label></th><td><input type="text" name="started" id="id_started" /></td></tr>
+[01/Mar/2018 16:17:13] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 16:17:13] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 19:37:35] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 19:37:35] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 19:37:35] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 19:38:09] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 19:38:09] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 19:38:09] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 19:43:10] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 19:43:10] DEBUG [workTracker:38] Entering WorkCreate view
+[01/Mar/2018 19:43:10] DEBUG [workTracker:41] Entering WorkUpdate view
+[01/Mar/2018 19:43:12] DEBUG [workTracker:18] secondsApart
+[01/Mar/2018 19:43:12] DEBUG [workTracker:19] 2018-02-28 18:50:06+00:00
+[01/Mar/2018 19:43:12] DEBUG [workTracker:20] 1519843806.0
+[01/Mar/2018 19:43:12] DEBUG [workTracker:21] 1519840204.0
+[01/Mar/2018 19:43:12] DEBUG [workTracker:23] Found data
+[01/Mar/2018 19:47:24] DEBUG [workTracker:18] secondsApart
+[01/Mar/2018 19:47:24] DEBUG [workTracker:19] 2018-02-28 18:50:06+00:00
+[01/Mar/2018 19:47:24] DEBUG [workTracker:20] 1519843806.0
+[01/Mar/2018 19:47:24] DEBUG [workTracker:21] 1519840204.0
+[01/Mar/2018 19:47:24] DEBUG [workTracker:23] Found data
+[01/Mar/2018 19:48:28] DEBUG [workTracker:18] secondsApart
+[01/Mar/2018 19:48:28] DEBUG [workTracker:19] 2018-02-28 18:50:06+00:00
+[01/Mar/2018 19:48:28] DEBUG [workTracker:20] 1519843806.0
+[01/Mar/2018 19:48:28] DEBUG [workTracker:21] 1519840204.0
+[01/Mar/2018 19:48:28] DEBUG [workTracker:23] Found data
+[01/Mar/2018 20:57:54] DEBUG [workTracker:18] secondsApart
+[01/Mar/2018 20:57:54] DEBUG [workTracker:19] None
+[01/Mar/2018 21:04:00] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 21:04:00] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 21:04:00] DEBUG [workTracker:57] Entering WorkCreate view
+[01/Mar/2018 21:04:00] DEBUG [workTracker:60] Entering WorkUpdate view
+[01/Mar/2018 21:05:31] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 21:05:31] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 21:05:31] DEBUG [workTracker:57] Entering WorkCreate view
+[01/Mar/2018 21:05:31] DEBUG [workTracker:60] Entering WorkUpdate view
+[01/Mar/2018 21:16:25] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 21:16:25] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 21:16:25] DEBUG [workTracker:57] Entering WorkCreate view
+[01/Mar/2018 21:16:25] DEBUG [workTracker:60] Entering WorkUpdate view
+[01/Mar/2018 22:38:11] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:40:00] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:41:03] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:41:03] DEBUG [workTracker:45] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:41:03] DEBUG [workTracker:58] Entering WorkCreate view
+[01/Mar/2018 22:41:03] DEBUG [workTracker:61] Entering WorkUpdate view
+[01/Mar/2018 22:41:44] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:41:44] DEBUG [workTracker:45] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:41:44] DEBUG [workTracker:58] Entering WorkCreate view
+[01/Mar/2018 22:41:44] DEBUG [workTracker:61] Entering WorkUpdate view
+[01/Mar/2018 22:45:22] DEBUG [workTracker:26] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:45:22] DEBUG [workTracker:45] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:45:22] DEBUG [workTracker:58] Entering WorkCreate view
+[01/Mar/2018 22:45:22] DEBUG [workTracker:61] Entering WorkUpdate view
+[01/Mar/2018 22:52:07] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:52:07] DEBUG [workTracker:57] Entering WorkCreate view
+[01/Mar/2018 22:52:07] DEBUG [workTracker:60] Entering WorkUpdate view
+[01/Mar/2018 22:57:43] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 22:57:43] DEBUG [workTracker:57] Entering WorkCreate view
+[01/Mar/2018 22:57:43] DEBUG [workTracker:60] Entering WorkUpdate view
+[01/Mar/2018 22:57:43] DEBUG [workTracker:63] Sara: 2018-03-01 09:56:46 - active
+[01/Mar/2018 23:03:04] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 23:03:04] DEBUG [workTracker:58] Entering WorkCreate view
+[01/Mar/2018 23:03:04] DEBUG [workTracker:61] Entering WorkUpdate view
+[01/Mar/2018 23:03:04] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[01/Mar/2018 23:03:34] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[01/Mar/2018 23:03:34] DEBUG [workTracker:58] Entering WorkCreate view
+[01/Mar/2018 23:03:34] DEBUG [workTracker:61] Entering WorkUpdate view
+[01/Mar/2018 23:03:34] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 00:04:40] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 00:04:40] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 00:04:40] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 00:04:40] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:04:40] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:04:40] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:04:40] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:04:40] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:07:14] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:07:14] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:07:14] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:07:22] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:07:22] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:07:22] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:08:37] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:08:37] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:08:37] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:09:08] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:09:08] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:09:08] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:09:08] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:10:00] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:10:00] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:10:00] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:10:00] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:21:25] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:21:25] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:21:25] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:21:25] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:21:29] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:21:29] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:25:12] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:25:12] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:25:12] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:25:12] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:25:39] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:25:39] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:25:39] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:25:39] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:25:48] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:25:48] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:25:48] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:25:48] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:27:49] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:27:49] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:27:49] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:27:49] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:29:20] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 01:29:20] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 01:29:20] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 01:29:20] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 01:37:16] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:37:16] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:38:31] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:38:31] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:41:14] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:41:14] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:41:48] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:41:48] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:42:39] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:42:39] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:42:57] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:42:57] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:43:37] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:43:37] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:44:09] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:44:09] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:45:40] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:45:40] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:46:11] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:46:11] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:46:30] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:46:30] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:48:32] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:48:32] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:51:13] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:51:13] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:51:40] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:51:40] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:52:08] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:52:08] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:53:11] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:53:11] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:53:14] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:53:14] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:53:36] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:53:36] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:54:05] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:54:05] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:54:27] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:54:27] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:54:57] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:54:57] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:55:32] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:55:32] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:55:47] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:55:47] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:55:58] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:55:58] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:58:37] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:58:37] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 01:58:55] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 01:58:55] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:04:51] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:04:51] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:05:19] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:05:19] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:06:08] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:06:08] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:07:05] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:07:05] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:07:26] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:07:26] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:07:41] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:07:41] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:10:51] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:10:51] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:14:52] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:14:52] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:14:52] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:14:52] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:16:40] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:16:40] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:16:40] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:16:40] DEBUG [workTracker:64] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 02:17:28] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:17:28] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:17:28] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:17:28] DEBUG [workTracker:64] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:24:39] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:24:39] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:24:39] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:24:39] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:24:45] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:24:45] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:24:45] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:24:45] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:25:59] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:25:59] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:25:59] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:25:59] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:28:22] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:28:22] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:30:10] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:30:10] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:30:10] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:30:10] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:30:16] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:30:16] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:30:35] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:30:35] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:30:35] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:30:35] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:30:39] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:30:39] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:31:22] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:31:22] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:32:50] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:32:50] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:32:50] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:32:50] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:33:09] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:33:09] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:33:09] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:33:09] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:33:19] DEBUG [workTracker:18] 1519843806.0
+[02/Mar/2018 02:33:19] DEBUG [workTracker:19] 1519840204.0
+[02/Mar/2018 02:34:04] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:34:04] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:34:04] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:34:04] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:42:12] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:42:12] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:42:12] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:42:12] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:53:38] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:53:38] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:53:38] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:53:38] DEBUG [workTracker:65] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:54:04] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:54:04] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:54:04] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:54:04] DEBUG [workTracker:66] Ryan: 2018-03-01 17:58:44 - active
+[02/Mar/2018 02:54:36] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:54:36] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:54:36] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:54:36] DEBUG [workTracker:66] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 02:56:38] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 02:56:38] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 02:56:38] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 02:56:38] DEBUG [workTracker:66] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 03:02:43] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:02:43] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:02:43] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:02:43] DEBUG [workTracker:66] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 03:04:54] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:04:54] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:04:54] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:05:14] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:05:14] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:05:14] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:05:35] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:05:35] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:05:35] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:06:27] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:06:27] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:06:27] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:06:32] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:06:32] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:06:32] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:06:43] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:06:43] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:06:43] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:08:26] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:08:26] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:08:26] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:08:31] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:08:31] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:08:31] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:08:57] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:08:57] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:08:57] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:09:11] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:09:11] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:09:11] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:09:30] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:09:30] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:09:30] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:09:51] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:09:51] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:09:51] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:10:04] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:10:04] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:10:04] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:10:26] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:10:26] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:10:26] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:11:20] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:11:20] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:11:20] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:11:55] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:11:55] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:11:55] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:12:25] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:12:25] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:12:25] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:12:25] DEBUG [workTracker:66] <QuerySet []>
+[02/Mar/2018 03:12:32] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:12:32] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:12:32] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:12:32] DEBUG [workTracker:66] <QuerySet []>
+[02/Mar/2018 03:13:15] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:13:15] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:13:15] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:15:11] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:15:11] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:15:11] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:15:54] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:15:54] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:15:54] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:16:21] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:16:21] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:16:21] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:20:22] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:20:22] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:20:22] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:20:22] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:20:22] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:20:22] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:21:07] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:21:07] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:21:07] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:23:44] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:23:44] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:23:44] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:24:54] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:24:54] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:24:54] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:27:52] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:27:52] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:27:52] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:33:02] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:33:02] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:33:02] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:39:34] DEBUG [workTracker:44] <bound method BaseForm.as_p of <ClockinForm bound=False, valid=Unknown, fields=(started)>>
+[02/Mar/2018 03:39:34] DEBUG [workTracker:58] Entering WorkCreate view
+[02/Mar/2018 03:39:34] DEBUG [workTracker:61] Entering WorkUpdate view
+[02/Mar/2018 03:40:38] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:40:38] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:44:28] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:44:28] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:45:19] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:45:19] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:48:54] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:48:54] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:51:12] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:51:12] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:54:25] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:54:25] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:54:50] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:54:50] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:56:26] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:56:26] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:56:56] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:56:56] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:57:50] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:57:50] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:59:41] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 03:59:41] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 03:59:41] DEBUG [workTracker:64] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 04:06:06] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 04:06:06] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 04:06:06] DEBUG [workTracker:65] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 13:34:01] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 13:34:01] DEBUG [workTracker:60] Entering WorkUpdate view
+[02/Mar/2018 13:34:01] DEBUG [workTracker:65] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 14:29:06] DEBUG [workTracker:56] Entering WorkCreate view
+[02/Mar/2018 14:29:06] DEBUG [workTracker:59] Entering WorkUpdate view
+[02/Mar/2018 14:29:06] DEBUG [workTracker:64] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 14:58:40] DEBUG [workTracker:56] Entering WorkCreate view
+[02/Mar/2018 14:58:40] DEBUG [workTracker:59] Entering WorkUpdate view
+[02/Mar/2018 14:58:40] DEBUG [workTracker:64] <QuerySet [<IntervalWork: Sara: 2018-03-01 09:56:46 - active>, <IntervalWork: Ryan: 2018-03-01 17:58:44 - active>]>
+[02/Mar/2018 15:06:34] DEBUG [workTracker:56] Entering WorkCreate view
+[02/Mar/2018 15:06:52] DEBUG [workTracker:56] Entering WorkCreate view
+[02/Mar/2018 15:08:34] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 15:08:56] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 15:11:27] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 16:18:07] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 16:22:34] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 16:25:48] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 16:26:13] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 16:26:38] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 16:26:48] DEBUG [workTracker:57] Entering WorkCreate view
+[02/Mar/2018 16:43:15] DEBUG [workTracker:57] Entering WorkCreate view

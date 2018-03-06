@@ -9,181 +9,221 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <title>Signin to seniorDevops.com</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
-  <body class="text-center" onload="startTime()">
-        <!--{% if open %}
-        <p>We are currently open!</p>
-        {% else %}
-        <p>We are currently closed! Feel free to contact us!</p>
-        {% endif %}-->
-        <div id="topHalf">
-        <div class="threeColumn">
-            <h3 style="; margin-bottom: 5px">Status</h3>
-            {% if workIntervals %}
-            <p>Clocked in</p>
-            {% else %}
-            <p>Not Clocked in</p>
-            {% endif %}
-        </div>
-        <div class="threeColumn">
-            <h3 style="; margin-bottom: 5px">Action</h2>
-            {% if True %}
-            <form method="post" action="{% url 'work_new' %}">
-            {{ clockinForm }}
-            {% csrf_token %}
-                <button id="clockInButton" type="button" class="btn btn-default" value="{{ workIterval.save }}">Clock-In</button>
-            </form>
-            {% else %}
-            <button id="clockOutButton" type="button" class="btn btn-default">Clock-Out</button>
-            <button id="commentButton" type="button" class="btn btn-default">Comment</button>
-            {% endif %}
-        </div>
-        <div class="threeColumn">
-            <h3 style="text-align: right;margin:0px">Current Time</h3>
-            <div id="clock" style="padding:0px;font-size:150%;font-weight: bold;"></div>
-            <a href="{% url 'logout' %}" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-log-out">Log out</span>
-            </a>
-        </div>
-      </div>
-      <div id="bottomHalf">
-    {% load bootstrap4 %}
-    {% load querystring from django_tables2 %}
-    {% load title from django_tables2 %}
-
-    {% block "content" %}
-
-
-    {% if table.page %}
-      <div class="table-container">
-    {% endif %}
-
-    {% block table %}
-        <div class="table-responsive">
-            <table class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
-                {% block table.thead %}
-                <thead>                 
-                    <tr>
-                        <th><a href="{% url "work_new" %}" class="btn btn-small btn-primary dark"><span class="hidden-phone"><i class="fa fa-user-plus"></i> Add Customer</span></a>
-                          
-                        </th>                  
-                        <th colspan="5">                                         
-                            <form method="post" class="form-inline form-search pull-right">
-                              {% csrf_token %}
-                                <div>
-                                  <input id="search_form_id" name="search" type="text" class="form-control col-md-3" placeholder="ID, Name, Account #, ZIP" {% if search %} value="{{ search }}"{% endif %}>
-                                  <button type="submit" class="btn btn-small btn-dark"><i class="fa fa-search"></i> Search</button>
-                                </div>              
-                            </form>
-                        </th>                  
-                    </tr>
-                 
-                  <tr>
-                    {% for column in table.columns %}
-                        {% if column.orderable %}
-                        <th {{ column.attrs.th.as_html }}><a href="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}">{{ column.header|title }}</a></th>
-                        {% else %}
-                        <th {{ column.attrs.th.as_html }}>{{ column.header|title }}</th>
-                        {% endif %}
-                    {% endfor %}
-                  </tr>
-                </thead>
-                {% endblock table.thead %}
-                {% block table.tbody %}
-                <tbody>
-                    {% for row in table.page.object_list|default:table.rows %} {# support pagination #}
-                      {% block table.tbody.row %}
-                      <tr class="{% cycle "odd" "even" %}">
-                          {% for column, cell in row.items %}
-                              <td {{ column.attrs.td.as_html }}>{{ cell }}</td>
-                          {% endfor %}
+  <body class="main" onload="startTime()">
+    {% csrf_token %}
+        <ul id="topHalf" style="margin: auto;padding-bottom:0px;padding-top:12px;padding-left:0px">
+            <li class="column" style="padding-right:10px;">
+                <h5 class="navBar">Welcome, {{ first_name }}</h5>
+                <a href="{% url 'logout' %}" class="btn-sm btn-info navBar">
+                  <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
+                </a>
+            </li>
+            <li class="column">
+                <h5 style="margin-bottom: 5px;margin-right:5px;" class="navBar">Status:</h5>
+                <p class="navBar" style="font-size:110%;" id="clockedIn">{{ clockedIn }}</p>
+            </li>
+            <li class="column">
+                <h5 class="navBar" style="text-align:right;margin:0px">Current Time: </h5>
+                <div class="navBar" id="clock" style="padding:0px;font-size:110%;"></div>
+            </li>
+            <li class="column">
+                <h5 style="margin-bottom: 5px;" class="navBar">Action:</h5>
+                <div style="display:inline-block; padding: 0px; vertical-align:top" id="myButtonDiv">
+                    <ul id="buttonList" style="padding:0px">
+                        <li>
+                            <button id="clockInButton" type="button" class="btn-sm btn-info navBar" style="font-weight: bold;border:none;">Clock-In</button>
+                        </li>
+                        <li>
+                           <button id="clockOutButton" type="button" class="btn-sm btn-info navBar" style="font-weight: bold;border:none;">Clock-Out</button>
+                        </li>                 
+                        <li>
+                            <button id="commentButton" type="button" class="btn-sm btn-info navBar" style="font-weight: bold;border:none;">Comment</button>
+                        </li>
+                    <ul>
+                </div>
+            </li>
+        </ul>
+        <div id="bottomHalf" style="margin: auto; height:500px;">
+        {% load bootstrap4 %}
+        {% load querystring from django_tables2 %}
+        {% load title from django_tables2 %}
+        {% block "content" %}
+        {% if table.page %}
+            <div class="table-container">
+        {% endif %}
+            {% block table %}
+            <div class="table-responsive">
+                <table id = "myTable" style="background-color:white;max-width:600px" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
+                    {% block table.thead %}
+                    <thead>                 
+                      <tr>
+                        {% for column in table.columns %}
+                            {% if column.orderable %}
+                            <th {{ column.attrs.th.as_html }}><a href="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}">{{ column.header|title }}</a></th>
+                            {% else %}
+                            <th {{ column.attrs.th.as_html }}>{{ column.header|title }}</th>
+                            {% endif %}
+                        {% endfor %}
                       </tr>
-                      {% endblock table.tbody.row %}
-                    {% empty %}
-                      {% if table.empty_text %}
-                      {% block table.tbody.empty_text %}
-                      <tr><td colspan="{{ table.columns|length }}">{{ table.empty_text }}</td></tr>
-                      {% endblock table.tbody.empty_text %}
-                      {% endif %}
-                    {% endfor %}
-                </tbody>
-                {% endblock table.tbody %}
-                {% block table.tfoot %}
-                <tfoot></tfoot>
-                {% endblock table.tfoot %}
-        </table-->
-    </div>
-{% endblock table %}
-
-{% if table.page %}
-    {% block pagination %}
-        {% bootstrap_pagination table.page url=request.get_full_path %}
-    {% endblock pagination %}
-  </div>
-{% endif %}
-
-
-{% endblock "content" %}
-
-          <!--table class="table table-dark table-hover center" style="width:50%;display:">
-            <thead>
-              <tr>
-                <th>Started</th>
-                <th>Ended</th> 
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for workInterval in workIntervals %}
-              <tr>
-                <td>{{workInterval.started}}</td>
-                <td>{{workInterval.ended}}</td>
-                <td>deltaTee</td>
-              </tr>
-                {% endfor %}
-            </tbody>
-          </table-->
+                    </thead>
+                    {% endblock table.thead %}
+                    {% block table.tbody %}
+                    <tbody>
+                        {% for row in table.page.object_list|default:table.rows %} {# support pagination #}
+                          {% block table.tbody.row %}
+                          <tr class="{% cycle "odd" "even" %}">
+                              {% for column, cell in row.items %}
+                                  <td {{ column.attrs.td.as_html }}>{{ cell }}</td>
+                              {% endfor %}
+                          </tr>
+                          {% endblock table.tbody.row %}
+                        {% empty %}
+                          {% if table.empty_text %}
+                          {% block table.tbody.empty_text %}
+                          <tr><td colspan="{{ table.columns|length }}">{{ table.empty_text }}</td></tr>
+                          {% endblock table.tbody.empty_text %}
+                          {% endif %}
+                        {% endfor %}
+                    </tbody>
+                    {% endblock table.tbody %}
+                    {% block table.tfoot %}
+                    <tfoot></tfoot>
+                    {% endblock table.tfoot %}
+            </table>
+        </div>
+        {% endblock table %}
+        {% if table.page %}
+            {% block pagination %}
+            {% bootstrap_pagination table.page url=request.get_full_path %}
+            {% endblock pagination %}
+        {% endif %}
+        {% endblock "content" %}       
       </div>
+    </div>
+    <div id="myFooter"></div>
   </body>
 </html>
 <style>
 *{
     font-family:Helvetica,Arial,sans-serif;
-    text-align: right;
+}
+#myFooter{
+    height:45px;
 }
 div{
     padding: 10px;
 }
-th{
+
+th, td{
     text-align: center;
 }
-.center {
-
+#buttonList {
+    list-style-type: none;
 }
-.threeColumn {
+#buttonList li {
+    margin-bottom:3px;
+}
+
+.column {
     display:inline-block;
-    vertical-align:top;
+    //vertical-align:top;
     margin: auto;
-    padding: 20px;
+    height:35px;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    //border: 1px solid black;
+}
+.main{
+    //background-color:#F0F8FF;
+    background-color:#C6E2FF;
+    margin: 0 auto;
+    width: 90%;
+}
+.navBar{
+    display: inline-block;
+    padding-right:10px;
 }
 </style>
 <script>
-    $(function() {
-        // hides buttons on page load
+
+    $('document').ready(function(){
+        $(".comments").attr("style","width:240px");
+        renderButtons();
+    });
+    
+    function renderButtons(){
+        var clockedIn = $("#clockedIn")[0].innerText;
+        if (clockedIn == "Clocked In"){
+            $("#clockOutButton").show();
+            $("#commentButton").show();
+            $("#clockInButton").hide();
+            return;
+        }
         $("#clockOutButton").hide();
         $("#commentButton").hide();
-        //$("#clockInButton").click(function(e) {
-        //    console.log( "Handler for clockInButton called.", e);
-        //});
-    });
-    function updateStartTime(){
-        console.log("updating start time");
-        // GET OR CREATE INTERVAL WORK FOR THE DAY
+        $("#clockInButton").show();
     }
+    
+    function addClockout(){
+        $("#clockOutButton").click(function(e) { 
+            $.ajax({
+                url: "update/{{ object_list.last.id }}/",
+                data: {
+                    // get the user from the request and the finished timestamp from the server
+                    user: {{ user.id }},
+                    comments:"Hi",
+                },
+                type: "PUT",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (xhr, status) {
+                    console.log(xhr)
+                    console.log(status)
+                },
+                complete: function (xhr, status) {
+                    console.log(xhr)
+                    console.log(status)
+                },
+            });
+        });
+    }
+    
+    $("#clockInButton").click(function(e) {
+        console.log("creating new workInterval");
+        $.ajax({
+            url: "new/",
+            data: {
+                user: {{ user.id }},
+            },
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                $("#myTable").load(location.href + " #myTable");
+                addClockout();
+                $("#clockInButton").hide();
+                $("#clockOutButton").show();
+                $("#commentButton").show();
+            },
+            error: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+            complete: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+        });
+    });
     function startTime() {
         var today = new Date();
         var h = today.getHours();
@@ -202,5 +242,18 @@ th{
         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
         return i;
     }
+    
+    function csrfSafeMethod(method) {
+        // don't reveal CSRF token to GET requests
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader('X-CSRFToken', csrftoken);
+            }
+        }
+    });
 </script>
 
