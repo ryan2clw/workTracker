@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 import time
 import logging
 import pytz
@@ -8,7 +9,6 @@ log = logging.getLogger("workTracker")
 
 class IntervalWork(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    # created = models.DateTimeField(null=True, blank=True)
     started = models.DateTimeField(auto_now_add=True)
     finished = models.DateTimeField(null=True, blank=True)
     comments = models.TextField(null=True)
@@ -22,11 +22,10 @@ class IntervalWork(models.Model):
         return 0
         
     def localTimeStarted(self):
-        #utc_now = pytz.utc.localize(datetime.datetime.utcnow())
-        #return self.started.astimezone(pytz.timezone('US/Eastern'))
-        #est = pytz.timezone('US/Eastern')
-        return self.started.astimezone(pytz.timezone('US/Eastern'))
-        #localToday = datetime.date.fromtimestamp(time.mktime(est_now.timetuple()))
+        return self.started.astimezone(pytz.timezone('US/Eastern')).strftime("%H:%M:%S %p")
+        
+    def localTimeFinished(self):
+        return self.finished.astimezone(pytz.timezone('US/Eastern')).strftime("%H:%M:%S %p")
         
     def __str__(self):
         # Shows name, start and end time for admin

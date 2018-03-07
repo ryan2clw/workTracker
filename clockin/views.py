@@ -11,6 +11,7 @@ from datetime import datetime
 from django.utils import timezone
 from .forms import ClockinForm
 from .tables import IntervalTable
+from django.utils import timezone
 import pytz
 import logging
 
@@ -29,7 +30,7 @@ class IndexView(LoginRequiredMixin, ListView):
         context = super(IndexView, self).get_context_data(**kwargs)
         # add data to the context after the request is made
         context['first_name'] = self.request.user.first_name
-        context['user_id'] = self.request.user.id
+        #context['user_id'] = self.request.user.id
         context['clockedIn'] = "Clocked In"
         # get only the intervals by the user and today's date
         myHours = IntervalWork.objects.filter(started__date=timezone.now()).filter(user_id=self.request.user.id).order_by('started')
@@ -39,11 +40,15 @@ class IndexView(LoginRequiredMixin, ListView):
         RequestConfig(self.request, paginate=False).configure(table)
         context['table'] = table
         context['myForm'] = ClockinForm()
+        #context['lastInterval'] = myHours.last().id
         return context
     
 class WorkUpdate(UpdateAPIView):
     queryset = IntervalWork.objects.all()
     serializer_class = IntervalWorkSerializer
+    
+    def get_queryset(self):
+        return IntervalWork.objects.filter(user_id=self.request.user.id).filter(started__date=timezone.now()).order_by('started')
     
 class WorkCreate(CreateAPIView):
     queryset = IntervalWork.objects.all()

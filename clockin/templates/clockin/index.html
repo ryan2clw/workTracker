@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" crossorigin="anonymous"></script>
   </head>
   <body class="main" onload="startTime()">
     {% csrf_token %}
@@ -42,7 +43,7 @@
                            <button id="clockOutButton"  type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Clock-Out</button>
                         </li>                 
                         <li>
-                            <button id="commentButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Comment</button>
+                            <button id="commentButton" type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Comment</button>
                         </li>
                     <ul>
                 </div>
@@ -61,12 +62,11 @@
               <form action="url {{ work_update }}" method="PUT" id="commentForm">
                   {% csrf_token %}
                   <div class="modal-body">
-                        {{ myForm }}
-                        <!--textarea class="form-control" id="closingComments" style="min-height:250px;"></textarea-->
+                        {{ myForm.comments }}
                   </div>
                   <div class="modal-footer">
                     <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" id="saveButton" data="closingComments">Save changes</button>
+                    <button type="submit" class="btn btn-primary" data="closingComments">Save changes</button>
                   </div>
               </form>
             </div>
@@ -155,17 +155,14 @@ th, td{
 
 .column {
     display:inline-block;
-    //vertical-align:top;
     margin: auto;
     height:35px;
     padding-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 0px;
-    //border: 1px solid black;
 }
 .main{
-    //background-color:#F0F8FF;
     background-color:#C6E2FF;
     margin: 0 auto;
     width: 90%;
@@ -180,17 +177,65 @@ th, td{
         $(".comments").attr("style","width:240px");
         renderButtons();
     });
-    // Submit post on submit
+    function updateWorkInterval(){
+        // Updates comments and finish time of intervalWork
+        var rightNow = new Date().toISOString();
+        console.log("updateWorkInterval", rightNow)
+        $.ajax({
+            url: "update/{{ object_list.last.id }}/",
+            data: {
+                // get the user from the request and the finished timestamp from the server
+                user: {{ user.id }},
+                comments: $("#id_comments").val(),
+                finished: rightNow,
+            },
+            type: "PUT",
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                $("#id_comments").val("");
+                $('#myModal').modal('hide');
+                location.reload();
+            },
+            error: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+                $('#myModal').modal('hide');
+            },
+            complete: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+        });
+    }
     $('#commentForm').on('submit', function(event){
         event.preventDefault();
-        console.log("form submitted!")  // sanity check
-        //create_post();
+        console.log("form submitted!", $("#id_comments").val()); // sanity check 
+        updateWorkInterval();
+        var shouldWorkMore = sessionStorage.getItem("startNew");
+        console.log('shouldWorkMore',shouldWorkMore);
+        if(shouldWorkMore == "true"){
+            createWorkInterval();
+        }
+    });
+    // On showing modal, determine the button it came from, you'll need it to determine whether to start a new work interval
+    $('#myModal').on('show.bs.modal', function (event) { 
+        var myButton = $(event.relatedTarget); // Button that triggered the modal
+        console.log("from this button", myButton[0].id);
+        if (myButton[0].id == "clockOutButton"){
+            sessionStorage.setItem("startNew","false");
+            return;
+        }
+        sessionStorage.setItem("startNew","true");
+    }) //delete old text after sending comments to server
+    $(".modal").on("hidden.bs.modal", function(){
+        $(".modal-body1").html("");
     });
     $("#id_comments").attr({
         class:"form-control", 
-        style:"min-height:250px"
+        style:"min-height:250px",
+        placeholder: 'Comments go here'
     });
-    // textarea class="form-control" id="closingComments" style="min-height:250px;"></textarea
     function renderButtons(){
         var clockedIn = $("#clockedIn")[0].innerText;
         if (clockedIn == "Clocked In"){
@@ -203,34 +248,7 @@ th, td{
         $("#commentButton").hide();
         $("#clockInButton").show();
     }
-    
-    function addClockout(){
-        $("#clockOutButton").click(function(e) { 
-            $.ajax({
-                url: "update/{{ object_list.last.id }}/",
-                data: {
-                    // get the user from the request and the finished timestamp from the server
-                    user: {{ user.id }},
-                    comments:"hi",
-                },
-                type: "PUT",
-                dataType: "json",
-                success: function (data) {
-                    console.log(data)
-                },
-                error: function (xhr, status) {
-                    console.log(xhr)
-                    console.log(status)
-                },
-                complete: function (xhr, status) {
-                    console.log(xhr)
-                    console.log(status)
-                },
-            });
-        });
-    }
-    
-    $("#clockInButton").click(function(e) {
+    function createWorkInterval(){
         console.log("creating new workInterval");
         $.ajax({
             url: "new/",
@@ -241,11 +259,7 @@ th, td{
             dataType: "json",
             success: function (data) {
                 console.log(data)
-                $("#myTable").load(location.href + " #myTable");
-                addClockout();
-                $("#clockInButton").hide();
-                $("#clockOutButton").show();
-                $("#commentButton").show();
+                location.reload();
             },
             error: function (xhr, status) {
                 console.log(xhr)
@@ -256,6 +270,9 @@ th, td{
                 console.log(status)
             },
         });
+    }
+    $("#clockInButton").click(function(e) {
+        createWorkInterval();
     });
     function startTime() {
         var today = new Date();
