@@ -15,17 +15,22 @@ class IntervalWork(models.Model):
    
     def timeApart(self):
         # Returns 2 decimal delta of time worked
-        if self.started and self.finished:
+        if self.finished:
             finish = time.mktime(self.finished.timetuple())
             start = time.mktime(self.started.timetuple())
             return "{0:.2f}".format((finish - start)/3600)
-        return 0
+        return 0        
+       
+    def isToday(self):
+        if self.started.date() == timezone.now().astimezone(pytz.timezone('US/Eastern')).date():
+            return True
+        return False
         
     def localTimeStarted(self):
-        return self.started.astimezone(pytz.timezone('US/Eastern')).strftime("%H:%M:%S %p")
+        return self.started.astimezone(pytz.timezone('US/Eastern')).strftime("%I:%M:%S %p")
         
     def localTimeFinished(self):
-        return self.finished.astimezone(pytz.timezone('US/Eastern')).strftime("%H:%M:%S %p")
+        return self.finished.astimezone(pytz.timezone('US/Eastern')).strftime("%I:%M:%S %p")
         
     def __str__(self):
         # Shows name, start and end time for admin

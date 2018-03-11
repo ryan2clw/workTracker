@@ -35,7 +35,7 @@
             <li class="column">
                 <h5 style="margin-bottom: 5px;" class="navBar">Action:</h5>
                 <div style="display:inline-block; padding: 0px; vertical-align:top" id="myButtonDiv">
-                    <ul id="buttonList" style="padding:0px">
+                    <ul id="buttonList" style="padding:0px;">
                         <li>
                             <button id="clockInButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Clock-In</button>
                         </li>
@@ -72,7 +72,7 @@
             </div>
           </div>
         </div>
-        <div id="bottomHalf" style="margin: auto; height:500px;">
+        <div id="bottomHalf" style="margin: auto; border-top: 1px solid black;">
         {% load bootstrap4 %}
         {% load querystring from django_tables2 %}
         {% load title from django_tables2 %}
@@ -82,7 +82,7 @@
         {% endif %}
             {% block table %}
             <div class="table-responsive">
-                <table id = "myTable" style="background-color:white;max-width:600px" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
+                <table id = "myTable" style="background-color:white;" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
                     {% block table.thead %}
                     <thead>                 
                       <tr>
@@ -129,7 +129,14 @@
         {% endblock "content" %}       
       </div>
     </div>
-    <div id="myFooter"></div>
+  </div>
+  <div class="card card-block bg-faded" style="height:60px;width:200px;margin-left:260px;">
+    <span>
+      <h6 class="inline" style="color:#007BFF;font-weight:bold;font:sans-serif;">Total Hours:</h6>
+      <p class="inline" id="totalHours">{{ totalHours }}</p>
+    </span>
+  </div>   
+  <!--div id="myFooter" style="padding-top:200px;">SeniorDevOps.com © 2018</div-->
   </body>
 </html>
 <style>
@@ -145,14 +152,40 @@ div{
 
 th, td{
     text-align: center;
+    pointer-events: none;
+    cursor: default;
 }
 #buttonList {
     list-style-type: none;
 }
 #buttonList li {
     margin-bottom:3px;
+    display: inline;
 }
-
+.noPads{
+    padding:0px;
+    margin:0px;
+}
+.borderB{
+    border-bottom:gainsboro solid 1.5px;
+}
+.borderR{
+    border-right:gainsboro solid 1px;
+}
+.borderL{
+    border-left:gainsboro solid 1px;
+}
+.borderT{
+    border-top:gainsboro solid 1px;
+}
+p{
+    display:inline-block;
+}
+.inline{
+    display:inline-block;
+    padding: 5px;
+    //border: 1px solid black;;
+}
 .column {
     display:inline-block;
     margin: auto;
@@ -174,7 +207,10 @@ th, td{
 </style>
 <script>
     $('document').ready(function(){
-        $(".comments").attr("style","width:240px");
+        $(".startedFormatted").attr("style","width:150px");
+        $(".finishedFormatted").attr("style","width:150px");
+        $(".myHours").attr("style","width:150px");
+        $(".comments").attr("style","text-align:left");
         renderButtons();
     });
     function updateWorkInterval(){
@@ -182,7 +218,7 @@ th, td{
         var rightNow = new Date().toISOString();
         console.log("updateWorkInterval", rightNow)
         $.ajax({
-            url: "update/{{ object_list.last.id }}/",
+            url: "update/{{ myHours.last.id }}/",
             data: {
                 // get the user from the request and the finished timestamp from the server
                 user: {{ user.id }},
@@ -210,7 +246,7 @@ th, td{
     }
     $('#commentForm').on('submit', function(event){
         event.preventDefault();
-        console.log("form submitted!", $("#id_comments").val()); // sanity check 
+        console.log("form submitted!", $("#id_comments").val());  
         updateWorkInterval();
         var shouldWorkMore = sessionStorage.getItem("startNew");
         console.log('shouldWorkMore',shouldWorkMore);
@@ -291,8 +327,7 @@ th, td{
     function checkTime(i) {
         if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
         return i;
-    }
-    
+    }  
     function csrfSafeMethod(method) {
         // don't reveal CSRF token to GET requests
         return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
