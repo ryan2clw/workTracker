@@ -22,15 +22,17 @@ class IntervalWork(models.Model):
         return 0        
        
     def isToday(self):
-        if self.started.date() == timezone.now().astimezone(pytz.timezone('US/Eastern')).date():
+        if self.started.astimezone(pytz.timezone('US/Eastern')).date() == timezone.now().astimezone(pytz.timezone('US/Eastern')).date():
             return True
         return False
         
     def localTimeStarted(self):
-        return self.started.astimezone(pytz.timezone('US/Eastern')).strftime("%I:%M:%S %p")
+        if True:
+            return self.started.astimezone(pytz.timezone('US/Eastern')).strftime("%I:%M:%S %p")
         
     def localTimeFinished(self):
-        return self.finished.astimezone(pytz.timezone('US/Eastern')).strftime("%I:%M:%S %p")
+        if True:
+            return self.finished.astimezone(pytz.timezone('US/Eastern')).strftime("%I:%M:%S %p")
         
     def __str__(self):
         # Shows name, start and end time for admin

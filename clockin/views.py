@@ -31,12 +31,15 @@ class IndexView(LoginRequiredMixin, ListView):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['first_name'] = self.request.user.first_name
         context['clockedIn'] = "Clocked In"
-        myHours = IntervalWork.objects.filter(user_id=self.request.user.id).order_by('started')
+        myHours = IntervalWork.objects.filter(user_id=self.request.user.id, started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
+        #myNewHours = [ i for i in myHours if i.started.astimezone(pytzTZ('US/Eastern')).date() == timezone.now().astimezone(pytzTZ('US/Eastern')).date() ]
         context['myHours'] = myHours
         log.debug(myHours)
-        #filter(started__date=timezone.now().astimezone(pytzTZ('US/Eastern')).date())\
-        #myHours = [interval for interval in myHours if interval.started.date() == timezone.now().astimezone(pytzTZ('US/Eastern')).date()]
-        #log.debug(myHours)
+        #log.debug(myNewHours)
+        #filter(started__date=timezone.now().astimezone(pytzTZ('US/Eastern')).date())
+        for i in myHours:
+            log.debug(i.started.astimezone(pytzTZ('US/Eastern')))
+            log.debug(timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0))
         if not myHours or myHours.last().finished:
             context['clockedIn'] = "Not Clocked In"
         table = IntervalTable(myHours) # gotta love list comprehensions 

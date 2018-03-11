@@ -1,278 +1,38 @@
-[09/Mar/2018 22:52:27] DEBUG [workTracker:35] myHours<QuerySet [<IntervalWork: Sara: 2018-03-08 20:03:44.549356 - 20:09:02.041000>, <IntervalWork: Sara: 2018-03-08 20:09:02.079316 - 21:00:38.150000>, <IntervalWork: Sara: 2018-03-09 08:31:36.510452 - 08:48:01.201000>, <IntervalWork: Sara: 2018-03-09 12:29:17.445393 - 12:52:19.748000>, <IntervalWork: Sara: 2018-03-09 17:34:42.506633 - 17:49:25.147000>]>
-[09/Mar/2018 22:52:34] DEBUG [workTracker:35] myHours<QuerySet [<IntervalWork: Sara: 2018-03-08 20:03:44.549356 - 20:09:02.041000>, <IntervalWork: Sara: 2018-03-08 20:09:02.079316 - 21:00:38.150000>, <IntervalWork: Sara: 2018-03-09 08:31:36.510452 - 08:48:01.201000>, <IntervalWork: Sara: 2018-03-09 12:29:17.445393 - 12:52:19.748000>, <IntervalWork: Sara: 2018-03-09 17:34:42.506633 - 17:49:25.147000>, <IntervalWork: Sara: 2018-03-09 17:52:34.894760 - active>]>
-[09/Mar/2018 22:59:37] DEBUG [workTracker:37] None
-[09/Mar/2018 23:00:38] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-08 20:03:44.549356 - 20:09:02.041000>, <IntervalWork: Sara: 2018-03-08 20:09:02.079316 - 21:00:38.150000>, <IntervalWork: Sara: 2018-03-09 08:31:36.510452 - 08:48:01.201000>, <IntervalWork: Sara: 2018-03-09 12:29:17.445393 - 12:52:19.748000>, <IntervalWork: Sara: 2018-03-09 17:34:42.506633 - 17:49:25.147000>, <IntervalWork: Sara: 2018-03-09 17:52:34.894760 - active>]>
-[09/Mar/2018 23:00:47] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-08 19:25:40.997748 - 19:26:19.931000>, <IntervalWork: Ryan: 2018-03-09 14:50:54.957824 - 14:53:06.801000>, <IntervalWork: Ryan: 2018-03-09 17:33:39.875719 - active>]>
-[09/Mar/2018 23:01:08] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-08 19:25:40.997748 - 19:26:19.931000>, <IntervalWork: Ryan: 2018-03-09 14:50:54.957824 - 14:53:06.801000>, <IntervalWork: Ryan: 2018-03-09 17:33:39.875719 - active>]>
-[09/Mar/2018 23:29:52] DEBUG [workTracker:38] <QuerySet [<IntervalWork: Ryan: 2018-03-08 19:25:40.997748 - 19:26:19.931000>, <IntervalWork: Ryan: 2018-03-09 14:50:54.957824 - 14:53:06.801000>, <IntervalWork: Ryan: 2018-03-09 17:33:39.875719 - active>]>
-[09/Mar/2018 23:30:07] DEBUG [workTracker:38] <QuerySet [<IntervalWork: Ryan: 2018-03-08 19:25:40.997748 - 19:26:19.931000>, <IntervalWork: Ryan: 2018-03-09 14:50:54.957824 - 14:53:06.801000>, <IntervalWork: Ryan: 2018-03-09 17:33:39.875719 - active>, <IntervalWork: Ryan: 2018-03-09 18:30:07.749230 - active>]>
-[09/Mar/2018 23:31:28] DEBUG [workTracker:38] <QuerySet [<IntervalWork: Ryan: 2018-03-08 19:25:40.997748 - 19:26:19.931000>, <IntervalWork: Ryan: 2018-03-09 14:50:54.957824 - 14:53:06.801000>, <IntervalWork: Ryan: 2018-03-09 18:30:07.749230 - active>]>
-[09/Mar/2018 23:33:23] DEBUG [workTracker:38] <QuerySet [<IntervalWork: Sara: 2018-03-08 20:03:44.549356 - 20:09:02.041000>, <IntervalWork: Sara: 2018-03-08 20:09:02.079316 - 21:00:38.150000>, <IntervalWork: Sara: 2018-03-09 08:31:36.510452 - 08:48:01.201000>, <IntervalWork: Sara: 2018-03-09 12:29:17.445393 - 12:52:19.748000>, <IntervalWork: Sara: 2018-03-09 17:34:42.506633 - 17:49:25.147000>, <IntervalWork: Sara: 2018-03-09 17:52:34.894760 - active>]>
-[10/Mar/2018 00:48:59] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-09 19:29:03.533313 - active>]>
-[10/Mar/2018 00:48:59] DEBUG [workTracker:38] []
-[10/Mar/2018 12:08:00] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]>
-[10/Mar/2018 12:08:00] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 12:11:16] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]>
-[10/Mar/2018 12:11:16] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 12:11:26] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]>
-[10/Mar/2018 12:11:26] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 12:14:59] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]>
-[10/Mar/2018 12:14:59] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 12:19:33] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]>
-[10/Mar/2018 12:19:34] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 12:19:34] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 12:20:04] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]>
-[10/Mar/2018 12:20:04] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 12:20:04] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 12:20:11] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-09 19:29:03.533313 - active>]>
-[10/Mar/2018 12:20:11] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-09 19:29:03.533313 - active>]
-[10/Mar/2018 12:20:11] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 12:20:34] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-09 19:29:03.533313 - active>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - active>]>
-[10/Mar/2018 12:20:34] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-09 19:29:03.533313 - active>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - active>]
-[10/Mar/2018 12:20:34] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:29:46] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:31:34] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:31:59] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:32:59] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - active>]
-[10/Mar/2018 13:32:59] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - active>]
-[10/Mar/2018 13:32:59] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:34:46] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - active>]
-[10/Mar/2018 13:34:46] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - active>]
-[10/Mar/2018 13:34:46] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:39:44] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - 08:39:44.525000>, <IntervalWork: Sara: 2018-03-10 08:39:44.576207 - active>]
-[10/Mar/2018 13:41:04] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-08 01:00:00 - 04:00:00>, <IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - 08:39:44.525000>, <IntervalWork: Sara: 2018-03-10 08:39:44.576207 - active>]
-[10/Mar/2018 13:41:04] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-09 19:08:49.106496 - 19:09:26.467000>, <IntervalWork: Sara: 2018-03-09 19:21:52.537212 - 19:29:03.486000>, <IntervalWork: Sara: 2018-03-10 07:20:34.028140 - 08:39:44.525000>, <IntervalWork: Sara: 2018-03-10 08:39:44.576207 - active>]
-[10/Mar/2018 13:41:04] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:41:17] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 13:41:17] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 13:41:17] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:41:56] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 13:41:56] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-09 19:07:37.576193 - 19:08:35.382000>, <IntervalWork: Ryan: 2018-03-09 19:15:46.731815 - 19:16:14.667000>, <IntervalWork: Ryan: 2018-03-09 19:16:14.708002 - 19:20:44.788000>, <IntervalWork: Ryan: 2018-03-09 19:20:44.838909 - 19:21:30.239000>, <IntervalWork: Ryan: 2018-03-09 19:30:03.258593 - 19:30:15.293000>, <IntervalWork: Ryan: 2018-03-09 19:30:15.352761 - 19:30:23.788000>]
-[10/Mar/2018 13:41:56] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:42:19] DEBUG [workTracker:35] []
-[10/Mar/2018 13:42:19] DEBUG [workTracker:38] []
-[10/Mar/2018 13:42:19] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:42:24] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 08:42:24.379782 - active>]
-[10/Mar/2018 13:42:24] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 08:42:24.379782 - active>]
-[10/Mar/2018 13:42:24] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:42:33] DEBUG [workTracker:35] []
-[10/Mar/2018 13:42:33] DEBUG [workTracker:38] []
-[10/Mar/2018 13:42:33] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:42:36] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 08:42:36.431614 - active>]
-[10/Mar/2018 13:42:36] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 08:42:36.431614 - active>]
-[10/Mar/2018 13:42:36] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:42:45] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 08:42:24.379782 - active>]
-[10/Mar/2018 13:42:45] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 08:42:24.379782 - active>]
-[10/Mar/2018 13:42:45] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:43:14] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 08:42:24.379782 - active>, <IntervalWork: Ryan: 2018-03-10 08:43:14.674685 - active>]
-[10/Mar/2018 13:43:14] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 08:42:24.379782 - active>, <IntervalWork: Ryan: 2018-03-10 08:43:14.674685 - active>]
-[10/Mar/2018 13:43:14] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:44:44] DEBUG [workTracker:35] []
-[10/Mar/2018 13:44:44] DEBUG [workTracker:38] []
-[10/Mar/2018 13:44:44] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:44:47] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 08:44:47.929601 - active>]
-[10/Mar/2018 13:44:47] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 08:44:47.929601 - active>]
-[10/Mar/2018 13:44:47] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:45:03] DEBUG [workTracker:35] []
-[10/Mar/2018 13:45:03] DEBUG [workTracker:38] []
-[10/Mar/2018 13:45:03] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:45:07] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 08:45:07.031763 - active>]
-[10/Mar/2018 13:45:07] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 08:45:07.031763 - active>]
-[10/Mar/2018 13:45:07] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:45:12] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 08:44:47.929601 - active>]
-[10/Mar/2018 13:45:12] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 08:44:47.929601 - active>]
-[10/Mar/2018 13:45:12] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:45:24] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 08:44:47.929601 - active>, <IntervalWork: Sara: 2018-03-10 08:45:23.970274 - active>]
-[10/Mar/2018 13:45:24] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 08:44:47.929601 - active>, <IntervalWork: Sara: 2018-03-10 08:45:23.970274 - active>]
-[10/Mar/2018 13:45:24] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:59:36] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 08:45:07.031763 - active>]
-[10/Mar/2018 13:59:36] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 08:45:07.031763 - active>]
-[10/Mar/2018 13:59:36] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 13:59:51] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 08:45:07.031763 - active>, <IntervalWork: Ryan: 2018-03-10 08:59:51.099067 - active>]
-[10/Mar/2018 13:59:51] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 08:45:07.031763 - active>, <IntervalWork: Ryan: 2018-03-10 08:59:51.099067 - active>]
-[10/Mar/2018 13:59:51] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 14:02:32] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 08:45:07.031763 - active>, <IntervalWork: Ryan: 2018-03-10 08:59:51.099067 - active>, <IntervalWork: Ryan: 2018-03-10 09:02:32.597924 - active>]
-[10/Mar/2018 14:02:32] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 08:45:07.031763 - active>, <IntervalWork: Ryan: 2018-03-10 08:59:51.099067 - active>, <IntervalWork: Ryan: 2018-03-10 09:02:32.597924 - active>]
-[10/Mar/2018 14:02:32] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 14:02:58] DEBUG [workTracker:35] []
-[10/Mar/2018 14:02:58] DEBUG [workTracker:38] []
-[10/Mar/2018 14:02:58] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 14:03:03] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:03:03.749731 - active>]
-[10/Mar/2018 14:03:03] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:03:03.749731 - active>]
-[10/Mar/2018 14:03:03] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 14:03:25] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:03:03.749731 - active>, <IntervalWork: Sara: 2018-03-10 09:03:25.454803 - active>]
-[10/Mar/2018 14:03:25] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:03:03.749731 - active>, <IntervalWork: Sara: 2018-03-10 09:03:25.454803 - active>]
-[10/Mar/2018 14:03:25] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 14:03:32] DEBUG [workTracker:35] []
-[10/Mar/2018 14:03:32] DEBUG [workTracker:38] []
-[10/Mar/2018 14:03:32] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 14:08:41] DEBUG [workTracker:36] [<IntervalWork: Sara: 2018-03-10 09:08:41.291243 - active>]
-[10/Mar/2018 14:08:41] DEBUG [workTracker:39] [<IntervalWork: Sara: 2018-03-10 09:08:41.291243 - active>]
-[10/Mar/2018 14:08:41] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:08:52] DEBUG [workTracker:36] [<IntervalWork: Sara: 2018-03-10 09:08:41.291243 - active>, <IntervalWork: Sara: 2018-03-10 09:08:52.480625 - active>]
-[10/Mar/2018 14:08:52] DEBUG [workTracker:39] [<IntervalWork: Sara: 2018-03-10 09:08:41.291243 - active>, <IntervalWork: Sara: 2018-03-10 09:08:52.480625 - active>]
-[10/Mar/2018 14:08:52] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:12:01] DEBUG [workTracker:35] []
-[10/Mar/2018 14:12:01] DEBUG [workTracker:38] []
-[10/Mar/2018 14:12:01] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:12:04] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:12:04.077637 - active>]
-[10/Mar/2018 14:12:04] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:12:04.077637 - active>]
-[10/Mar/2018 14:12:04] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:12:13] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:12:04.077637 - active>, <IntervalWork: Sara: 2018-03-10 09:12:13.731390 - active>]
-[10/Mar/2018 14:12:13] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:12:04.077637 - active>, <IntervalWork: Sara: 2018-03-10 09:12:13.731390 - active>]
-[10/Mar/2018 14:12:13] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:15:48] DEBUG [workTracker:35] []
-[10/Mar/2018 14:15:48] DEBUG [workTracker:38] []
-[10/Mar/2018 14:15:48] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:15:51] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:15:51.224609 - active>]
-[10/Mar/2018 14:15:51] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:15:51.224609 - active>]
-[10/Mar/2018 14:15:51] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:16:04] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:15:51.224609 - active>, <IntervalWork: Sara: 2018-03-10 09:16:04.903003 - active>]
-[10/Mar/2018 14:16:04] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:15:51.224609 - active>, <IntervalWork: Sara: 2018-03-10 09:16:04.903003 - active>]
-[10/Mar/2018 14:16:04] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:19:31] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:15:51.224609 - active>, <IntervalWork: Sara: 2018-03-10 09:16:04.903003 - active>]
-[10/Mar/2018 14:19:31] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:15:51.224609 - active>, <IntervalWork: Sara: 2018-03-10 09:16:04.903003 - active>]
-[10/Mar/2018 14:19:31] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:19:38] DEBUG [workTracker:35] []
-[10/Mar/2018 14:19:38] DEBUG [workTracker:38] []
-[10/Mar/2018 14:19:38] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:19:40] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:19:40.587543 - active>]
-[10/Mar/2018 14:19:40] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:19:40.587543 - active>]
-[10/Mar/2018 14:19:40] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:19:47] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:19:40.587543 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>]
-[10/Mar/2018 14:19:47] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:19:40.587543 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>]
-[10/Mar/2018 14:19:47] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:19:58] DEBUG [workTracker:35] []
-[10/Mar/2018 14:19:58] DEBUG [workTracker:38] []
-[10/Mar/2018 14:19:58] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:20:00] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:20:00.618629 - active>]
-[10/Mar/2018 14:20:00] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:20:00.618629 - active>]
-[10/Mar/2018 14:20:00] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:20:11] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:20:00.618629 - 09:20:11.161000>, <IntervalWork: Ryan: 2018-03-10 09:20:11.206285 - active>]
-[10/Mar/2018 14:20:11] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:20:00.618629 - 09:20:11.161000>, <IntervalWork: Ryan: 2018-03-10 09:20:11.206285 - active>]
-[10/Mar/2018 14:20:11] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:20:17] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:19:40.587543 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>]
-[10/Mar/2018 14:20:17] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:19:40.587543 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>]
-[10/Mar/2018 14:20:17] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:20:28] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:19:40.587543 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>, <IntervalWork: Sara: 2018-03-10 09:20:28.827046 - active>]
-[10/Mar/2018 14:20:28] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:19:40.587543 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>, <IntervalWork: Sara: 2018-03-10 09:20:28.827046 - active>]
-[10/Mar/2018 14:20:28] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:30:19] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:20:00.618629 - 09:20:11.161000>, <IntervalWork: Ryan: 2018-03-10 09:20:11.206285 - active>]
-[10/Mar/2018 14:30:19] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:20:00.618629 - 09:20:11.161000>, <IntervalWork: Ryan: 2018-03-10 09:20:11.206285 - active>]
-[10/Mar/2018 14:30:19] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:30:38] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-09 20:00:00 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>, <IntervalWork: Sara: 2018-03-10 09:20:28.827046 - active>]
-[10/Mar/2018 14:30:38] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-09 20:00:00 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>, <IntervalWork: Sara: 2018-03-10 09:20:28.827046 - active>]
-[10/Mar/2018 14:30:38] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:31:14] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-09 20:00:00 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>, <IntervalWork: Sara: 2018-03-10 09:20:28.827046 - active>]
-[10/Mar/2018 14:31:14] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-09 20:00:00 - 09:19:47.456000>, <IntervalWork: Sara: 2018-03-10 09:19:47.504295 - active>, <IntervalWork: Sara: 2018-03-10 09:20:28.827046 - active>]
-[10/Mar/2018 14:31:14] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:34:24] DEBUG [workTracker:35] []
-[10/Mar/2018 14:34:24] DEBUG [workTracker:38] []
-[10/Mar/2018 14:34:24] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:34:27] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:34:27.221685 - active>]
-[10/Mar/2018 14:34:27] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:34:27.221685 - active>]
-[10/Mar/2018 14:34:27] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:34:33] DEBUG [workTracker:35] []
-[10/Mar/2018 14:34:33] DEBUG [workTracker:38] []
-[10/Mar/2018 14:34:33] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:34:35] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:34:35.073451 - active>]
-[10/Mar/2018 14:34:35] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:34:35.073451 - active>]
-[10/Mar/2018 14:34:35] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:34:39] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:34:27.221685 - active>]
-[10/Mar/2018 14:34:39] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:34:27.221685 - active>]
-[10/Mar/2018 14:34:39] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:34:47] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:34:27.221685 - active>, <IntervalWork: Sara: 2018-03-10 09:34:47.151952 - active>]
-[10/Mar/2018 14:34:47] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:34:27.221685 - active>, <IntervalWork: Sara: 2018-03-10 09:34:47.151952 - active>]
-[10/Mar/2018 14:34:47] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:43:59] DEBUG [workTracker:35] []
-[10/Mar/2018 14:43:59] DEBUG [workTracker:38] []
-[10/Mar/2018 14:43:59] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:44:11] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:44:11.886892 - active>]
-[10/Mar/2018 14:44:11] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:44:11.886892 - active>]
-[10/Mar/2018 14:44:11] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:45:04] DEBUG [workTracker:35] []
-[10/Mar/2018 14:45:04] DEBUG [workTracker:38] []
-[10/Mar/2018 14:45:04] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:45:08] DEBUG [workTracker:35] [<IntervalWork: Sara: 2018-03-10 09:45:08.544085 - active>]
-[10/Mar/2018 14:45:08] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 09:45:08.544085 - active>]
-[10/Mar/2018 14:45:08] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:45:44] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:44:11.886892 - active>]
-[10/Mar/2018 14:45:44] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:44:11.886892 - active>]
-[10/Mar/2018 14:45:44] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:46:13] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:44:11.886892 - active>, <IntervalWork: Ryan: 2018-03-10 09:46:13.294451 - active>]
-[10/Mar/2018 14:46:13] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:44:11.886892 - active>, <IntervalWork: Ryan: 2018-03-10 09:46:13.294451 - active>]
-[10/Mar/2018 14:46:13] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:55:15] DEBUG [workTracker:35] []
-[10/Mar/2018 14:55:15] DEBUG [workTracker:38] []
-[10/Mar/2018 14:55:15] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:55:18] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:55:18.689654 - active>]
-[10/Mar/2018 14:55:18] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:55:18.689654 - active>]
-[10/Mar/2018 14:55:18] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:55:34] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:55:18.689654 - 09:55:34.138000>]
-[10/Mar/2018 14:55:34] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:55:18.689654 - 09:55:34.138000>]
-[10/Mar/2018 14:55:34] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:56:29] DEBUG [workTracker:35] []
-[10/Mar/2018 14:56:29] DEBUG [workTracker:38] []
-[10/Mar/2018 14:56:29] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:56:32] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:56:32.473127 - active>]
-[10/Mar/2018 14:56:32] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:56:32.473127 - active>]
-[10/Mar/2018 14:56:32] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:56:41] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:56:32.473127 - 09:56:41.592000>]
-[10/Mar/2018 14:56:41] DEBUG [workTracker:38] [<IntervalWork: Ryan: 2018-03-10 09:56:32.473127 - 09:56:41.592000>]
-[10/Mar/2018 14:56:41] DEBUG [workTracker:46] no hours for user
-[10/Mar/2018 14:57:54] DEBUG [workTracker:35] []
-[10/Mar/2018 14:57:54] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 14:57:57] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:57:57.616381 - active>]
-[10/Mar/2018 14:57:57] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 14:58:05] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:57:57.616381 - 09:58:05.496000>]
-[10/Mar/2018 14:58:05] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 15:05:14] DEBUG [workTracker:35] [<IntervalWork: Ryan: 2018-03-10 09:57:57.616381 - 09:58:05.496000>]
-[10/Mar/2018 15:05:14] DEBUG [workTracker:45] no hours for user
-[10/Mar/2018 15:08:04] DEBUG [workTracker:35] <QuerySet []>
-[10/Mar/2018 15:08:04] DEBUG [workTracker:38] []
-[10/Mar/2018 15:08:11] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - active>]>
-[10/Mar/2018 15:08:11] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - active>]
-[10/Mar/2018 15:12:19] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - active>]>
-[10/Mar/2018 15:12:19] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - active>]
-[11/Mar/2018 02:29:31] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - 21:29:31.697000>]>
-[11/Mar/2018 02:29:31] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - 21:29:31.697000>]
-[11/Mar/2018 02:29:45] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - 21:29:31.697000>, <IntervalWork: Sara: 2018-03-10 21:29:45.831041 - active>]>
-[11/Mar/2018 02:29:45] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - 21:29:31.697000>]
-[11/Mar/2018 02:30:29] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - 21:29:31.697000>, <IntervalWork: Sara: 2018-03-10 21:29:45.831041 - active>, <IntervalWork: Sara: 2018-03-10 21:30:29.563038 - active>]>
-[11/Mar/2018 02:30:29] DEBUG [workTracker:38] [<IntervalWork: Sara: 2018-03-10 10:08:11.211225 - 21:29:31.697000>]
-[11/Mar/2018 02:31:13] DEBUG [workTracker:35] <QuerySet []>
-[11/Mar/2018 02:31:13] DEBUG [workTracker:38] []
-[11/Mar/2018 02:31:18] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:31:18.118306 - active>]>
-[11/Mar/2018 02:31:18] DEBUG [workTracker:38] []
-[11/Mar/2018 02:34:07] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:31:18.118306 - active>, <IntervalWork: Ryan: 2018-03-10 21:34:07.962139 - active>]>
-[11/Mar/2018 02:35:36] DEBUG [workTracker:35] <QuerySet []>
-[11/Mar/2018 02:35:40] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:35:40.305565 - active>]>
-[11/Mar/2018 02:35:51] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:35:40.305565 - 21:35:51.019000>, <IntervalWork: Ryan: 2018-03-10 21:35:51.069672 - active>]>
-[11/Mar/2018 02:35:57] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:35:40.305565 - 21:35:51.019000>, <IntervalWork: Ryan: 2018-03-10 21:35:51.069672 - 21:35:57.750000>]>
-[11/Mar/2018 02:36:09] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:35:40.305565 - 21:35:51.019000>, <IntervalWork: Ryan: 2018-03-10 21:35:51.069672 - 21:35:57.750000>, <IntervalWork: Ryan: 2018-03-10 21:36:09.158487 - active>]>
-[11/Mar/2018 02:36:30] DEBUG [workTracker:35] <QuerySet []>
-[11/Mar/2018 02:36:33] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:36:33.264077 - active>]>
-[11/Mar/2018 02:36:40] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:35:40.305565 - 21:35:51.019000>, <IntervalWork: Ryan: 2018-03-10 21:35:51.069672 - 21:35:57.750000>, <IntervalWork: Ryan: 2018-03-10 21:36:09.158487 - active>]>
-[11/Mar/2018 02:36:52] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:35:40.305565 - 21:35:51.019000>, <IntervalWork: Ryan: 2018-03-10 21:35:51.069672 - 21:35:57.750000>, <IntervalWork: Ryan: 2018-03-10 21:36:09.158487 - active>, <IntervalWork: Ryan: 2018-03-10 21:36:52.612909 - active>]>
-[11/Mar/2018 02:40:23] DEBUG [workTracker:35] <QuerySet []>
-[11/Mar/2018 02:40:26] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:40:26.439947 - active>]>
-[11/Mar/2018 02:40:34] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:40:26.439947 - 21:40:34.601000>, <IntervalWork: Sara: 2018-03-10 21:40:34.632879 - active>]>
-[11/Mar/2018 02:40:40] DEBUG [workTracker:35] <QuerySet []>
-[11/Mar/2018 02:40:42] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:40:42.261942 - active>]>
-[11/Mar/2018 02:41:12] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:40:42.261942 - 21:41:12.070000>]>
-[11/Mar/2018 02:41:14] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:40:42.261942 - 21:41:12.070000>, <IntervalWork: Ryan: 2018-03-10 21:41:14.851313 - active>]>
-[11/Mar/2018 02:41:19] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:40:26.439947 - 21:40:34.601000>, <IntervalWork: Sara: 2018-03-10 21:40:34.632879 - active>]>
-[11/Mar/2018 02:41:30] DEBUG [workTracker:35] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:40:26.439947 - 21:40:34.601000>, <IntervalWork: Sara: 2018-03-10 21:40:34.632879 - active>, <IntervalWork: Sara: 2018-03-10 21:41:30.270181 - active>]>
-[11/Mar/2018 02:52:32] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:40:26.439947 - 21:40:34.601000>, <IntervalWork: Sara: 2018-03-10 21:40:34.632879 - active>, <IntervalWork: Sara: 2018-03-10 21:41:30.270181 - active>]>
-[11/Mar/2018 02:52:48] DEBUG [workTracker:36] <QuerySet []>
-[11/Mar/2018 02:52:50] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:52:50.320584 - active>]>
-[11/Mar/2018 02:53:00] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:52:50.320584 - 21:53:00.407000>, <IntervalWork: Ryan: 2018-03-10 21:53:00.441840 - active>]>
-[11/Mar/2018 02:53:08] DEBUG [workTracker:36] <QuerySet []>
-[11/Mar/2018 02:53:09] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:53:09.847544 - active>]>
-[11/Mar/2018 02:53:22] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:53:09.847544 - 21:53:22.845000>]>
-[11/Mar/2018 02:53:25] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:53:09.847544 - 21:53:22.845000>, <IntervalWork: Sara: 2018-03-10 21:53:25.072025 - active>]>
-[11/Mar/2018 02:53:29] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:52:50.320584 - 21:53:00.407000>, <IntervalWork: Ryan: 2018-03-10 21:53:00.441840 - active>]>
-[11/Mar/2018 02:53:42] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:52:50.320584 - 21:53:00.407000>, <IntervalWork: Ryan: 2018-03-10 21:53:00.441840 - 21:53:42.117000>]>
-[11/Mar/2018 02:53:45] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Ryan: 2018-03-10 21:52:50.320584 - 21:53:00.407000>, <IntervalWork: Ryan: 2018-03-10 21:53:00.441840 - 21:53:42.117000>, <IntervalWork: Ryan: 2018-03-10 21:53:45.822661 - active>]>
-[11/Mar/2018 02:53:50] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:53:09.847544 - 21:53:22.845000>, <IntervalWork: Sara: 2018-03-10 21:53:25.072025 - active>]>
-[11/Mar/2018 02:54:00] DEBUG [workTracker:36] <QuerySet [<IntervalWork: Sara: 2018-03-10 21:53:09.847544 - 21:53:22.845000>, <IntervalWork: Sara: 2018-03-10 21:53:25.072025 - 21:54:00.696000>, <IntervalWork: Sara: 2018-03-10 21:54:00.754934 - active>]>
+[11/Mar/2018 19:35:31] DEBUG [workTracker:41] 2018-03-10 22:27:07.964922-05:00
+[11/Mar/2018 19:35:31] DEBUG [workTracker:42] 2018-03-11 00:00:00.434565-04:00
+[11/Mar/2018 19:35:31] DEBUG [workTracker:41] 2018-03-10 22:27:28.014831-05:00
+[11/Mar/2018 19:35:31] DEBUG [workTracker:42] 2018-03-11 00:00:00.435195-04:00
+[11/Mar/2018 19:35:31] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
+[11/Mar/2018 19:35:31] DEBUG [workTracker:42] 2018-03-11 00:00:00.435462-04:00
+[11/Mar/2018 19:46:04] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - active>]>
+[11/Mar/2018 19:46:04] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
+[11/Mar/2018 19:46:04] DEBUG [workTracker:42] 2018-03-11 00:00:00.804251-04:00
+[11/Mar/2018 19:46:59] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - 15:46:59.880000>, <IntervalWork: Ryan: 2018-03-11 15:46:59.925533 - active>]>
+[11/Mar/2018 19:46:59] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
+[11/Mar/2018 19:46:59] DEBUG [workTracker:42] 2018-03-11 00:00:00.984736-04:00
+[11/Mar/2018 19:46:59] DEBUG [workTracker:41] 2018-03-11 15:46:59.925533-04:00
+[11/Mar/2018 19:46:59] DEBUG [workTracker:42] 2018-03-11 00:00:00.985153-04:00
+[11/Mar/2018 19:48:29] DEBUG [workTracker:37] <QuerySet []>
+[11/Mar/2018 19:49:50] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - active>]>
+[11/Mar/2018 19:49:50] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
+[11/Mar/2018 19:49:50] DEBUG [workTracker:42] 2018-03-11 00:00:00.650140-04:00
+[11/Mar/2018 19:49:58] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - 15:46:59.880000>, <IntervalWork: Ryan: 2018-03-11 15:46:59.925533 - active>]>
+[11/Mar/2018 19:49:58] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
+[11/Mar/2018 19:49:58] DEBUG [workTracker:42] 2018-03-11 00:00:00.075087-04:00
+[11/Mar/2018 19:49:58] DEBUG [workTracker:41] 2018-03-11 15:46:59.925533-04:00
+[11/Mar/2018 19:49:58] DEBUG [workTracker:42] 2018-03-11 00:00:00.075419-04:00
+[11/Mar/2018 19:50:12] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - 15:46:59.880000>, <IntervalWork: Ryan: 2018-03-11 15:46:59.925533 - 15:50:12.140000>]>
+[11/Mar/2018 19:50:12] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
+[11/Mar/2018 19:50:12] DEBUG [workTracker:42] 2018-03-11 00:00:00.251750-04:00
+[11/Mar/2018 19:50:12] DEBUG [workTracker:41] 2018-03-11 15:46:59.925533-04:00
+[11/Mar/2018 19:50:12] DEBUG [workTracker:42] 2018-03-11 00:00:00.252264-04:00
+[11/Mar/2018 19:50:17] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - 15:46:59.880000>, <IntervalWork: Ryan: 2018-03-11 15:46:59.925533 - 15:50:12.140000>, <IntervalWork: Ryan: 2018-03-11 15:50:17.581378 - active>]>
+[11/Mar/2018 19:50:17] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
+[11/Mar/2018 19:50:17] DEBUG [workTracker:42] 2018-03-11 00:00:00.627976-04:00
+[11/Mar/2018 19:50:17] DEBUG [workTracker:41] 2018-03-11 15:46:59.925533-04:00
+[11/Mar/2018 19:50:17] DEBUG [workTracker:42] 2018-03-11 00:00:00.628226-04:00
+[11/Mar/2018 19:50:17] DEBUG [workTracker:41] 2018-03-11 15:50:17.581378-04:00
+[11/Mar/2018 19:50:17] DEBUG [workTracker:42] 2018-03-11 00:00:00.628449-04:00
+[11/Mar/2018 19:50:24] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - active>]>
+[11/Mar/2018 19:50:24] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
+[11/Mar/2018 19:50:24] DEBUG [workTracker:42] 2018-03-11 00:00:00.362594-04:00
