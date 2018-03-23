@@ -1,11 +1,13 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import LogoutView
+from login.views import CustomLoginview
 
 urlpatterns = [
-    path('', LoginView.as_view(), name='login'),
+    path('', CustomLoginview.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('clockin/', include('clockin.urls')),
+    path('invoice/', include('invoice.urls')),
     path('admin/', admin.site.urls),
 ]
 

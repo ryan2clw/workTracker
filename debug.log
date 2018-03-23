@@ -36,3 +36,197 @@
 [11/Mar/2018 19:50:24] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - active>]>
 [11/Mar/2018 19:50:24] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
 [11/Mar/2018 19:50:24] DEBUG [workTracker:42] 2018-03-11 00:00:00.362594-04:00
+[11/Mar/2018 20:32:55] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - active>]>
+[11/Mar/2018 20:32:55] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
+[11/Mar/2018 20:32:55] DEBUG [workTracker:42] 2018-03-11 00:00:00.042018-04:00
+[11/Mar/2018 20:33:08] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - 16:33:08.464000>]>
+[11/Mar/2018 20:33:08] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
+[11/Mar/2018 20:33:08] DEBUG [workTracker:42] 2018-03-11 00:00:00.555938-04:00
+[12/Mar/2018 12:46:28] DEBUG [workTracker:37] <QuerySet []>
+[12/Mar/2018 12:46:35] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - active>]>
+[12/Mar/2018 12:46:35] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 12:46:35] DEBUG [workTracker:42] 2018-03-12 00:00:00.699755-04:00
+[12/Mar/2018 12:46:40] DEBUG [workTracker:37] <QuerySet []>
+[12/Mar/2018 12:46:41] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - active>]>
+[12/Mar/2018 12:46:41] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
+[12/Mar/2018 12:46:41] DEBUG [workTracker:42] 2018-03-12 00:00:00.931251-04:00
+[12/Mar/2018 12:48:29] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - active>]>
+[12/Mar/2018 12:48:29] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 12:48:29] DEBUG [workTracker:42] 2018-03-12 00:00:00.056124-04:00
+[12/Mar/2018 12:49:05] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
+[12/Mar/2018 12:49:05] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 12:49:05] DEBUG [workTracker:42] 2018-03-12 00:00:00.094055-04:00
+[12/Mar/2018 12:49:05] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
+[12/Mar/2018 12:49:05] DEBUG [workTracker:42] 2018-03-12 00:00:00.094376-04:00
+[12/Mar/2018 13:38:10] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
+[12/Mar/2018 13:38:10] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 13:38:10] DEBUG [workTracker:42] 2018-03-12 00:00:00.332441-04:00
+[12/Mar/2018 13:38:10] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
+[12/Mar/2018 13:38:10] DEBUG [workTracker:42] 2018-03-12 00:00:00.334812-04:00
+[12/Mar/2018 13:38:19] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - active>]>
+[12/Mar/2018 13:38:19] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
+[12/Mar/2018 13:38:19] DEBUG [workTracker:42] 2018-03-12 00:00:00.417224-04:00
+[12/Mar/2018 15:20:03] DEBUG [workTracker:28] entering LoginView
+[12/Mar/2018 15:20:09] DEBUG [workTracker:43] dispatch called in LoginView
+[12/Mar/2018 15:20:14] DEBUG [workTracker:43] dispatch called in LoginView
+[12/Mar/2018 15:20:14] DEBUG [workTracker:45] POST <QueryDict: {'password': ['Rfd362436!'], 'csrfmiddlewaretoken': ['cuf2JegcNFOrAZNa1FELcF74aBQdrqkRhOTfnuAIVk2jEYnJnzNpP2tdEdwqD0L4'], 'username': ['ryan.dines@gmail.com']}>
+[12/Mar/2018 15:20:14] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - active>]>
+[12/Mar/2018 15:20:14] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
+[12/Mar/2018 15:20:14] DEBUG [workTracker:42] 2018-03-12 00:00:00.713700-04:00
+[12/Mar/2018 15:20:46] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - 11:20:46.805000>, <IntervalWork: Ryan: 2018-03-12 11:20:46.850700 - active>]>
+[12/Mar/2018 15:20:46] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
+[12/Mar/2018 15:20:46] DEBUG [workTracker:42] 2018-03-12 00:00:00.911774-04:00
+[12/Mar/2018 15:20:46] DEBUG [workTracker:41] 2018-03-12 11:20:46.850700-04:00
+[12/Mar/2018 15:20:46] DEBUG [workTracker:42] 2018-03-12 00:00:00.912076-04:00
+[12/Mar/2018 15:24:48] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:25:05] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:26:04] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:26:16] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:27:46] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:28:48] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:29:07] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:29:49] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:30:56] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:31:35] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 15:31:44] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - 11:20:46.805000>, <IntervalWork: Ryan: 2018-03-12 11:20:46.850700 - active>]>
+[12/Mar/2018 15:31:44] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
+[12/Mar/2018 15:31:44] DEBUG [workTracker:42] 2018-03-12 00:00:00.057507-04:00
+[12/Mar/2018 15:31:44] DEBUG [workTracker:41] 2018-03-12 11:20:46.850700-04:00
+[12/Mar/2018 15:31:44] DEBUG [workTracker:42] 2018-03-12 00:00:00.057883-04:00
+[12/Mar/2018 16:13:04] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
+[12/Mar/2018 16:13:04] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 16:13:04] DEBUG [workTracker:42] 2018-03-12 00:00:00.341815-04:00
+[12/Mar/2018 16:13:04] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
+[12/Mar/2018 16:13:04] DEBUG [workTracker:42] 2018-03-12 00:00:00.342052-04:00
+[12/Mar/2018 16:47:28] DEBUG [workTracker:28] entering AdvancedLoginView
+[12/Mar/2018 16:47:55] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 16:49:26] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 16:49:55] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 16:50:15] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 16:54:56] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 16:54:59] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 16:55:03] DEBUG [workTracker:36] Route to customer
+[12/Mar/2018 16:55:03] DEBUG [workTracker:37] <QuerySet []>
+[12/Mar/2018 16:55:51] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 16:55:54] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 16:55:54] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
+[12/Mar/2018 16:55:54] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 16:55:54] DEBUG [workTracker:42] 2018-03-12 00:00:00.588379-04:00
+[12/Mar/2018 16:55:54] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
+[12/Mar/2018 16:55:54] DEBUG [workTracker:42] 2018-03-12 00:00:00.588681-04:00
+[12/Mar/2018 16:57:02] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 16:57:12] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 16:57:18] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 16:57:23] DEBUG [workTracker:36] Route to customer
+[12/Mar/2018 16:57:23] DEBUG [workTracker:37] <QuerySet []>
+[12/Mar/2018 17:00:03] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 17:00:40] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 17:00:43] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 17:00:43] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
+[12/Mar/2018 17:00:43] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 17:00:43] DEBUG [workTracker:42] 2018-03-12 00:00:00.617732-04:00
+[12/Mar/2018 17:00:43] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
+[12/Mar/2018 17:00:43] DEBUG [workTracker:42] 2018-03-12 00:00:00.619180-04:00
+[12/Mar/2018 19:07:06] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 19:07:16] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
+[12/Mar/2018 19:07:16] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 19:07:16] DEBUG [workTracker:42] 2018-03-12 00:00:00.792782-04:00
+[12/Mar/2018 19:07:16] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
+[12/Mar/2018 19:07:16] DEBUG [workTracker:42] 2018-03-12 00:00:00.793082-04:00
+[12/Mar/2018 19:07:33] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - 15:07:33.751000>]>
+[12/Mar/2018 19:07:33] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
+[12/Mar/2018 19:07:33] DEBUG [workTracker:42] 2018-03-12 00:00:00.851972-04:00
+[12/Mar/2018 19:07:33] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
+[12/Mar/2018 19:07:33] DEBUG [workTracker:42] 2018-03-12 00:00:00.852351-04:00
+[12/Mar/2018 19:07:42] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 19:07:45] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 19:07:45] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - 11:20:46.805000>, <IntervalWork: Ryan: 2018-03-12 11:20:46.850700 - active>]>
+[12/Mar/2018 19:07:45] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
+[12/Mar/2018 19:07:45] DEBUG [workTracker:42] 2018-03-12 00:00:00.753152-04:00
+[12/Mar/2018 19:07:45] DEBUG [workTracker:41] 2018-03-12 11:20:46.850700-04:00
+[12/Mar/2018 19:07:45] DEBUG [workTracker:42] 2018-03-12 00:00:00.753660-04:00
+[12/Mar/2018 19:07:58] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - 11:20:46.805000>, <IntervalWork: Ryan: 2018-03-12 11:20:46.850700 - 15:07:58.423000>, <IntervalWork: Ryan: 2018-03-12 15:07:58.474077 - active>]>
+[12/Mar/2018 19:07:58] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
+[12/Mar/2018 19:07:58] DEBUG [workTracker:42] 2018-03-12 00:00:00.533987-04:00
+[12/Mar/2018 19:07:58] DEBUG [workTracker:41] 2018-03-12 11:20:46.850700-04:00
+[12/Mar/2018 19:07:58] DEBUG [workTracker:42] 2018-03-12 00:00:00.534285-04:00
+[12/Mar/2018 19:07:58] DEBUG [workTracker:41] 2018-03-12 15:07:58.474077-04:00
+[12/Mar/2018 19:07:58] DEBUG [workTracker:42] 2018-03-12 00:00:00.534549-04:00
+[12/Mar/2018 19:14:04] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 19:14:30] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 19:14:34] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 19:15:35] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 19:15:38] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 19:15:41] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 19:15:44] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 19:21:40] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 19:22:10] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 19:22:13] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 19:28:40] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 19:28:48] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 19:28:51] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 19:29:43] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 20:10:00] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 20:10:50] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 20:12:05] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 20:12:48] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 20:14:30] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 20:14:39] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 20:14:39] DEBUG [workTracker:45] next
+[12/Mar/2018 20:14:42] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 20:14:42] DEBUG [workTracker:45] next
+[12/Mar/2018 20:15:13] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 20:15:15] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 20:15:34] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 20:15:36] DEBUG [workTracker:40] No groups yet.
+[12/Mar/2018 20:15:36] DEBUG [workTracker:45] 
+[12/Mar/2018 20:15:40] DEBUG [workTracker:38] Route to developer
+[12/Mar/2018 20:15:40] DEBUG [workTracker:45] clockin
+[12/Mar/2018 20:25:26] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:28:15] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:36:39] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:37:15] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:37:41] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:38:47] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:40:05] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:40:48] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:42:00] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:44:42] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:45:06] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:45:33] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:48:58] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:50:06] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:50:44] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:51:04] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 21:51:46] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 22:00:50] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 22:04:23] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 22:36:43] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 22:37:50] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 22:37:57] DEBUG [workTracker:41] No groups yet.
+[12/Mar/2018 22:37:57] DEBUG [workTracker:46] 
+[12/Mar/2018 22:38:02] DEBUG [workTracker:36] Route to customer
+[12/Mar/2018 22:38:37] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 22:38:51] DEBUG [workTracker:36] Route to customer
+[12/Mar/2018 22:38:57] DEBUG [workTracker:36] Route to customer
+[12/Mar/2018 22:42:07] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 22:42:40] DEBUG [workTracker:29] entering AdvancedLoginView
+[12/Mar/2018 22:48:32] DEBUG [workTracker:41] 
+[12/Mar/2018 22:48:36] DEBUG [workTracker:41] clockin
+[12/Mar/2018 22:48:39] DEBUG [workTracker:41] 
+[12/Mar/2018 23:28:25] DEBUG [workTracker:46] 
+[12/Mar/2018 23:29:57] DEBUG [workTracker:50] 
+[12/Mar/2018 23:30:01] DEBUG [workTracker:50] clockin
+[12/Mar/2018 23:30:04] DEBUG [workTracker:50] 
+[12/Mar/2018 23:30:09] DEBUG [workTracker:50] 
+[12/Mar/2018 23:33:22] DEBUG [workTracker:33] 
+[12/Mar/2018 23:33:27] DEBUG [workTracker:33] 
+[12/Mar/2018 23:33:30] DEBUG [workTracker:33] clockin
+[12/Mar/2018 23:33:32] DEBUG [workTracker:33] 
+[12/Mar/2018 23:33:34] DEBUG [workTracker:33] clockin
+[12/Mar/2018 23:33:36] DEBUG [workTracker:33] 
+[12/Mar/2018 23:36:33] DEBUG [workTracker:33] 
+[12/Mar/2018 23:36:36] DEBUG [workTracker:33] clockin
+[12/Mar/2018 23:36:39] DEBUG [workTracker:33] 
+[12/Mar/2018 23:36:45] DEBUG [workTracker:33] 
+[12/Mar/2018 23:36:48] DEBUG [workTracker:33] clockin

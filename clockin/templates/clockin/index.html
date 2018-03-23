@@ -211,6 +211,7 @@ p{
         $(".finishedFormatted").attr("style","width:150px");
         $(".myHours").attr("style","width:150px");
         $(".comments").attr("style","text-align:left");
+        console.log({{ project.id }});
         renderButtons();
     });
     function updateWorkInterval(){
@@ -223,6 +224,7 @@ p{
                 // get the user from the request and the finished timestamp from the server
                 user: {{ user.id }},
                 comments: $("#id_comments").val(),
+                project: {{ project.id }},
                 finished: rightNow,
             },
             type: "PUT",
@@ -290,6 +292,8 @@ p{
             url: "new/",
             data: {
                 user: {{ user.id }},
+                paid: false,
+                project: {{ project.id }},
             },
             type: "POST",
             dataType: "json",
