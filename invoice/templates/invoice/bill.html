@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Billing</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="main">
+    {% csrf_token %}
+        <ul id="topHalf" style="margin: auto;padding-bottom:0px;padding-top:12px;padding-left:0px">
+            <li class="column" style="padding-right:10px;">
+                <h5 class="navBar">Welcome, {{ first_name }}</h5>
+                <a href="{% url 'logout' %}" class="btn-sm btn-primary navBar">
+                  <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
+                </a>
+            </li>
+            <li class="column">
+                <h5 style="margin-bottom: 5px;" class="navBar">Action:</h5>
+                <div style="display:inline-block; padding: 0px; vertical-align:top" id="myButtonDiv">
+                    <ul id="buttonList" style="padding:0px;">
+                        <li>
+                            <button id="payButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Pay Bill</button>
+                        </li>
+                    <ul>
+                </div>
+            </li>
+        </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Enter your comments below</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form action="url {{ work_update }}" method="PUT" id="commentForm">
+                  {% csrf_token %}
+                  <div class="modal-body">
+                        {{ myForm.comments }}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" data="closingComments">Save changes</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="bottomHalf" style="margin: auto; border-top: 1px solid black;">
+        {% load bootstrap4 %}
+        {% load querystring from django_tables2 %}
+        {% load title from django_tables2 %}
+        {% block "content" %}
+        {% if table.page %}
+            <div class="table-container">
+        {% endif %}
+            {% block table %}
+            <div class="table-responsive">
+                <table id = "myTable" style="background-color:white;" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
+                    {% block table.thead %}
+                    <thead>                 
+                      <tr>
+                        {% for column in table.columns %}
+                            {% if column.orderable %}
+                            <th {{ column.attrs.th.as_html }}><a href="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}">{{ column.header|title }}</a></th>
+                            {% else %}
+                            <th {{ column.attrs.th.as_html }}>{{ column.header|title }}</th>
+                            {% endif %}
+                        {% endfor %}
+                      </tr>
+                    </thead>
+                    {% endblock table.thead %}
+                    {% block table.tbody %}
+                    <tbody>
+                        {% for row in table.page.object_list|default:table.rows %} {# support pagination #}
+                          {% block table.tbody.row %}
+                          <tr class="{% cycle "odd" "even" %}">
+                              {% for column, cell in row.items %}
+                                  <td {{ column.attrs.td.as_html }}>{{ cell }}</td>
+                              {% endfor %}
+                          </tr>
+                          {% endblock table.tbody.row %}
+                        {% empty %}
+                          {% if table.empty_text %}
+                          {% block table.tbody.empty_text %}
+                          <tr><td colspan="{{ table.columns|length }}">{{ table.empty_text }}</td></tr>
+                          {% endblock table.tbody.empty_text %}
+                          {% endif %}
+                        {% endfor %}
+                    </tbody>
+                    {% endblock table.tbody %}
+                    {% block table.tfoot %}
+                    <tfoot></tfoot>
+                    {% endblock table.tfoot %}
+            </table>
+        </div>
+        {% endblock table %}
+        {% if table.page %}
+            {% block pagination %}
+            {% bootstrap_pagination table.page url=request.get_full_path %}
+            {% endblock pagination %}
+        {% endif %}
+        {% endblock "content" %}       
+      </div>
+    </div>
+  </div>
+  <div class="card card-block bg-faded" style="height:180px;width:250px;margin-left:260px;">
+      <table class="moneyTable">
+        <tr>
+          <td style="font-weight:bold;">Hours:</td>
+          <td id="totalHours" style="margin-bottom:0px;color:black">{{ totalHours }}</td>
+          <td>(hr)</td>
+        </tr>
+        <tr style="border-bottom: solid black 1px">
+          <td style="font-weight:bold;">Pay Rate:</td>
+          <td>
+            <p id="HourlyRate" style="margin-bottom:0px;color:black">20.00</p>
+          </td>
+          <td>($/hr)
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold;">Gross:</td>
+          <td>
+            <p id="GrossDue" style="margin-bottom:0px;color:black"></p>
+          </td>
+          <td>($)
+          </td>
+        </tr>
+        <tr style="border-bottom: solid black 1px">
+          <td style="font-weight:bold;">Convenience:</td>
+          <td>
+            <p id="surCharge" style="margin-bottom:0px;color:black;">2.90</p>
+          </td>
+          <td>(%)
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold;">Total Due:</td>
+          <td>
+            <p id="totalDue" style="margin-bottom:0px;color:black"></p>
+          </td>
+          <td>($)
+          </td>
+        </tr>
+      </table>
+  </div>   
+  <!--div id="myFooter" style="padding-top:200px;">SeniorDevOps.com © 2018</div-->
+  </body>
+</html>
+<style>
+*{
+    font-family:Helvetica,Arial,sans-serif;
+}
+#myFooter{
+    height:45px;
+}
+div{
+    padding: 10px;
+}
+
+th, td{
+    pointer-events: none;
+    cursor: default;
+    padding-right: 7px;
+}
+p{
+    display:inline-block;
+}
+.moneyTable{
+    color:#007BFF;
+    font:sans-serif;
+    text-align:right;
+    width:100%;
+}
+.inline{
+    display:inline-block;
+    padding: 5px;
+}
+.column {
+    display:inline-block;
+    margin: auto;
+    height:35px;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+}
+.main{
+    background-color:#C6E2FF;
+    margin: 0 auto;
+    width: 90%;
+}
+.navBar{
+    display: inline-block;
+    padding-right:10px;
+}
+#buttonList {
+    list-style-type: none;
+}
+#buttonList li {
+    margin-bottom:3px;
+    display: inline;
+}
+</style>
+<script>
+    function addCalculatedFields(){
+        var myHours = $("#totalHours").text();
+        console.log("myHours", myHours);
+        var hourly = $("#HourlyRate").text();
+        console.log("hourly", hourly);
+        $("#GrossDue").text((myHours*hourly).toFixed(2));
+        $("#totalDue").text((myHours*hourly*1.029).toFixed(2));
+    }
+    $('document').ready(function(){
+        $(".startedFormatted").attr("style","width:150px");
+        $(".finishedFormatted").attr("style","width:150px");
+        $(".myHours").attr("style","width:150px");
+        $(".comments").attr("style","text-align:left");
+        addCalculatedFields();
+    });
+    function updatePaidStatus(){
+        // Updates comments and finish time of intervalWork
+        var rightNow = new Date().toISOString();
+        console.log("updateWorkInterval", rightNow)
+        $.ajax({
+            url: "update/{{ myHours.last.id }}/",
+            data: {
+                // get the user from the request and the finished timestamp from the server
+                user: {{ user.id }},
+                comments: $("#id_comments").val(),
+                finished: rightNow,
+            },
+            type: "PUT",
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                $("#id_comments").val("");
+                $('#myModal').modal('hide');
+                location.reload();
+            },
+            error: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+                $('#myModal').modal('hide');
+            },
+            complete: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+        });
+    }
+    $('#commentForm').on('submit', function(event){
+        event.preventDefault();
+        console.log("form submitted!", $("#id_comments").val());  
+        updateWorkInterval();
+        var shouldWorkMore = sessionStorage.getItem("startNew");
+        console.log('shouldWorkMore',shouldWorkMore);
+        if(shouldWorkMore == "true"){
+            createWorkInterval();
+        }
+    });
+    // On showing modal, determine the button it came from, you'll need it to determine whether to start a new work interval
+    $('#myModal').on('show.bs.modal', function (event) { 
+        var myButton = $(event.relatedTarget); // Button that triggered the modal
+        console.log("from this button", myButton[0].id);
+        if (myButton[0].id == "clockOutButton"){
+            sessionStorage.setItem("startNew","false");
+            return;
+        }
+        sessionStorage.setItem("startNew","true");
+    }) //delete old text after sending comments to server
+    $(".modal").on("hidden.bs.modal", function(){
+        $(".modal-body1").html("");
+    });
+    $("#id_comments").attr({
+        class:"form-control", 
+        style:"min-height:250px",
+        placeholder: 'Comments go here'
+    });
+    $("#payButton").click(function(e) {
+        console.log("Paying for workIntervals");
+        $.ajax({
+            url: "new/",
+            data: {
+                user: {{ user.id }},
+            },
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                location.reload();
+            },
+            error: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+            complete: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+        });
+    }); 
+    function csrfSafeMethod(method) {
+        // don't reveal CSRF token to GET requests
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader('X-CSRFToken', csrftoken);
+            }
+        }
+    });
+</script>
+
