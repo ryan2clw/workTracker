@@ -52,6 +52,3 @@ class WorkUpdate(UpdateAPIView):
 class WorkCreate(CreateAPIView):
     queryset = IntervalWork.objects.all()
     serializer_class = IntervalWorkSerializer
-    
-
-    
