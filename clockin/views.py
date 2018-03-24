@@ -43,7 +43,7 @@ class IndexView(LoginRequiredMixin, ListView):
 
 class WorkUpdate(UpdateAPIView):
     queryset = IntervalWork.objects.all()
-    project = Project.objects.get(name="Demo")
+    #project = Project.objects.get(name="Demo")
     serializer_class = IntervalWorkSerializer
     
     def get_queryset(self):
