@@ -2,14 +2,20 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LogoutView
 from login.views import CustomLoginview
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', CustomLoginview.as_view(), name='login'),
+    path('', include('menu.urls')),
+    path('login/', CustomLoginview.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('clockin/', include('clockin.urls')),
     path('invoice/', include('invoice.urls')),
+    path('menu/', include('menu.urls')),
     path('admin/', admin.site.urls),
-]
+] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
 
 
 
