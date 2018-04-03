@@ -12,6 +12,8 @@ urlpatterns = [
     path('clockin/', include('clockin.urls')),
     path('invoice/', include('invoice.urls')),
     path('menu/', include('menu.urls')),
+    path('developer/', include('developer.urls')),
+    path('register/', include('register.urls')),
     path('admin/', admin.site.urls),
 ] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
