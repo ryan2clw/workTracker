@@ -24,9 +24,14 @@ class IndexView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs): 
         # Initializes the state of the view
         context = super(IndexView, self).get_context_data(**kwargs)
+        if 'project' in self.kwargs:
+            context['object'] = get_object_or_404(MyObject, slug=self.kwargs['slug'])
+            context['objects'] = get_objects_by_user(self.request.user)
         context['first_name'] = self.request.user.first_name
         context['clockedIn'] = "Clocked In"
-        myHours = IntervalWork.objects.filter(user_id=self.request.user.id, \
+        Projects =  Project.objects.all()
+        context['projects'] = Projects
+        myHours = IntervalWork.objects.filter(user_id=self.request.user.id, project_id=Projects.first().id,
             started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
         context['myHours'] = myHours
         if not myHours or myHours.last().finished:
@@ -35,7 +40,6 @@ class IndexView(LoginRequiredMixin, ListView):
         context['totalHours'] = format(sum([float(interval.timeApart()) for interval in myHours]), '.2f')
         RequestConfig(self.request, paginate=False).configure(table)
         context['table'] = table
-        context['project'] = Project.objects.get(name="Demo")
         context['myForm'] = ClockinForm()
         return context
 

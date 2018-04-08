@@ -1,0 +1,21 @@
+Why use a modern technology stack?
+
+Not that long ago, a trend started to give everyone a slice of the internet.  Point, click, visualize the content, no code required was the idea.  Wordpress began as a place to build a blog, but later grew into a content management system that powers 1/5 of all websites today.  Microsoft embraced the idea of visual coding with its Silverlight plug-in, which doesn’t require knowing code to make the user interface, and in fact, its IDE is named VisualStudio after the same concept.  
+
+Fast forward a decade later and Microsoft has adopted many of the decoupling strategies of a Linux stack in its newest product, .NET Core.   So what happened to plug-ins like Silverlight?  The internet got leaner; more people started using devices instead computers, and in addition to the bulkiness of plug-ins, there were constant security problems.
+
+Modern technology stacks attempt to strike that balance between ease of use, speed, and security.  By separating the client-side and server-side technologies, each one is maximized separately for latency and security; technologies like CDNs and REST services are an example.    But where is the market headed for developers?  Here are 2 stacks that I recently used professionally:
+
+Linux:
+
+Centos7/RHEL, gunicorn, nginx, python, Django, DjangoREST, Postgres, Bootstrap
+
+Windows:
+
+IIS, .NET Core, C#, MVC 6 with WebApi, ORM-based backend, KendoUI
+
+If the old code is Windows based, .NET Core has some great tools for making fast, secure applications.  For brand new applications, Python on a Linux stack is the way to go.  Python is pretty robust for data-mining and website testing, so why not use it for APIs and web development.  It comes with middleware, authentication, an ORM, and pretty much any module you can think of to do anything can be added.
+
+I left out some big names…node, pHp, ruby, perl, go, NoSQL, React, Vue, Angular.  If you do full stack development, what’s your preference?  Comment below.
+
+Want to modernize your stack?  Ditching old tech like Silverlight or WordPress?  Contact us here: <Link>
