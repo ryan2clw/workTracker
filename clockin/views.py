@@ -18,21 +18,31 @@ log = logging.getLogger("workTracker")
 class IndexView(LoginRequiredMixin, ListView):
     model = IntervalWork
     template_name = 'clockin/index.html'
-    context_object_name = 'interval'
+    context_object_name = 'interval' # the variable name of the object in the template
     ordering = ['id']
+    myProjects = None
+    
+    def get_queryset(self):
+        self.myProjects = Project.objects.all()
+        log.debug(self.myProjects)
+        try:
+            #log.debug(self.request.GET["project"]);
+            myProject = Project.objects.get(name=self.request.GET["project"])
+            log.debug(myProject)
+            return IntervalWork.objects.filter(user_id=self.request.user.id, project_id=myProject.id,
+                started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
+        except:
+            return IntervalWork.objects.filter(user_id=self.request.user.id, project_id=self.myProjects.first().id,
+                started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
+            
 
     def get_context_data(self, **kwargs): 
         # Initializes the state of the view
         context = super(IndexView, self).get_context_data(**kwargs)
-        if 'project' in self.kwargs:
-            context['object'] = get_object_or_404(MyObject, slug=self.kwargs['slug'])
-            context['objects'] = get_objects_by_user(self.request.user)
         context['first_name'] = self.request.user.first_name
         context['clockedIn'] = "Clocked In"
-        Projects =  Project.objects.all()
-        context['projects'] = Projects
-        myHours = IntervalWork.objects.filter(user_id=self.request.user.id, project_id=Projects.first().id,
-            started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
+        context['projects'] = self.myProjects
+        myHours = self.object_list
         context['myHours'] = myHours
         if not myHours or myHours.last().finished:
             context['clockedIn'] = "Not Clocked In"

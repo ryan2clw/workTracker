@@ -54,7 +54,7 @@
                           <select id="projectSelected">
                             <option id="myPlaceHolder" value="" disabled selected>Select your project</option>
                             {% for project in projects %}
-                            <option>{{ project }}</option>
+                            <option value="{{ project }}">{{ project }}</option>
                             {% endfor %}
                           </select>
                         </li>
@@ -295,6 +295,8 @@ p{
         placeholder: 'Comments go here'
     });
     function setViewState(){
+        var currentProject = localStorage.getItem("project");
+        $('#projectSelected').val(currentProject);
         var clockedIn = $("#clockedIn")[0].innerText;
         if (clockedIn == "Clocked In"){
             $("#clockOutButton").show();
@@ -307,14 +309,11 @@ p{
         $("#commentButton").hide();
         $("#clockInButton").show();
         $('#projectSelected').prop('disabled', false);
+        console.log("Page ready");
     }
     function createWorkInterval(){
-        console.log("creating new workInterval");
         var selectedProject = $('#projectSelected').find(":selected").text();
-        console.log("selectedProject", selectedProject);
         {% for aProject in projects %}
-            console.log("aProject", "{{aProject.name}}");
-            //console.log("stuff",{{selectedProject}});
             if ("{{aProject.name}}" == selectedProject){
                 $.ajax({
                     url: "new/",
@@ -326,8 +325,8 @@ p{
                     type: "POST",
                     dataType: "json",
                     success: function (data) {
-                        console.log(data)
-                        location.reload();
+                        localStorage.setItem("project", selectedProject);
+                        location.href = "{% url 'clockin' %}?project={{ aProject.name }}";                   
                     },
                     error: function (xhr, status) {
                         console.log(xhr)
@@ -375,7 +374,11 @@ p{
         }
     });
     $('#projectSelected').on('change', function() {
-      alert( this.value );
+        alert( this.value );
+        //window.location.href = "{% url 'clockin' %}?project=" + this.value;
     })
+    function success(){
+        console.log("posted with project param");
+    }
 </script>
 

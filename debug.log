@@ -1,232 +1,258 @@
-[11/Mar/2018 19:35:31] DEBUG [workTracker:41] 2018-03-10 22:27:07.964922-05:00
-[11/Mar/2018 19:35:31] DEBUG [workTracker:42] 2018-03-11 00:00:00.434565-04:00
-[11/Mar/2018 19:35:31] DEBUG [workTracker:41] 2018-03-10 22:27:28.014831-05:00
-[11/Mar/2018 19:35:31] DEBUG [workTracker:42] 2018-03-11 00:00:00.435195-04:00
-[11/Mar/2018 19:35:31] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
-[11/Mar/2018 19:35:31] DEBUG [workTracker:42] 2018-03-11 00:00:00.435462-04:00
-[11/Mar/2018 19:46:04] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - active>]>
-[11/Mar/2018 19:46:04] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
-[11/Mar/2018 19:46:04] DEBUG [workTracker:42] 2018-03-11 00:00:00.804251-04:00
-[11/Mar/2018 19:46:59] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - 15:46:59.880000>, <IntervalWork: Ryan: 2018-03-11 15:46:59.925533 - active>]>
-[11/Mar/2018 19:46:59] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
-[11/Mar/2018 19:46:59] DEBUG [workTracker:42] 2018-03-11 00:00:00.984736-04:00
-[11/Mar/2018 19:46:59] DEBUG [workTracker:41] 2018-03-11 15:46:59.925533-04:00
-[11/Mar/2018 19:46:59] DEBUG [workTracker:42] 2018-03-11 00:00:00.985153-04:00
-[11/Mar/2018 19:48:29] DEBUG [workTracker:37] <QuerySet []>
-[11/Mar/2018 19:49:50] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - active>]>
-[11/Mar/2018 19:49:50] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
-[11/Mar/2018 19:49:50] DEBUG [workTracker:42] 2018-03-11 00:00:00.650140-04:00
-[11/Mar/2018 19:49:58] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - 15:46:59.880000>, <IntervalWork: Ryan: 2018-03-11 15:46:59.925533 - active>]>
-[11/Mar/2018 19:49:58] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
-[11/Mar/2018 19:49:58] DEBUG [workTracker:42] 2018-03-11 00:00:00.075087-04:00
-[11/Mar/2018 19:49:58] DEBUG [workTracker:41] 2018-03-11 15:46:59.925533-04:00
-[11/Mar/2018 19:49:58] DEBUG [workTracker:42] 2018-03-11 00:00:00.075419-04:00
-[11/Mar/2018 19:50:12] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - 15:46:59.880000>, <IntervalWork: Ryan: 2018-03-11 15:46:59.925533 - 15:50:12.140000>]>
-[11/Mar/2018 19:50:12] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
-[11/Mar/2018 19:50:12] DEBUG [workTracker:42] 2018-03-11 00:00:00.251750-04:00
-[11/Mar/2018 19:50:12] DEBUG [workTracker:41] 2018-03-11 15:46:59.925533-04:00
-[11/Mar/2018 19:50:12] DEBUG [workTracker:42] 2018-03-11 00:00:00.252264-04:00
-[11/Mar/2018 19:50:17] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-11 12:26:01.629574 - 15:46:59.880000>, <IntervalWork: Ryan: 2018-03-11 15:46:59.925533 - 15:50:12.140000>, <IntervalWork: Ryan: 2018-03-11 15:50:17.581378 - active>]>
-[11/Mar/2018 19:50:17] DEBUG [workTracker:41] 2018-03-11 12:26:01.629574-04:00
-[11/Mar/2018 19:50:17] DEBUG [workTracker:42] 2018-03-11 00:00:00.627976-04:00
-[11/Mar/2018 19:50:17] DEBUG [workTracker:41] 2018-03-11 15:46:59.925533-04:00
-[11/Mar/2018 19:50:17] DEBUG [workTracker:42] 2018-03-11 00:00:00.628226-04:00
-[11/Mar/2018 19:50:17] DEBUG [workTracker:41] 2018-03-11 15:50:17.581378-04:00
-[11/Mar/2018 19:50:17] DEBUG [workTracker:42] 2018-03-11 00:00:00.628449-04:00
-[11/Mar/2018 19:50:24] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - active>]>
-[11/Mar/2018 19:50:24] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
-[11/Mar/2018 19:50:24] DEBUG [workTracker:42] 2018-03-11 00:00:00.362594-04:00
-[11/Mar/2018 20:32:55] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - active>]>
-[11/Mar/2018 20:32:55] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
-[11/Mar/2018 20:32:55] DEBUG [workTracker:42] 2018-03-11 00:00:00.042018-04:00
-[11/Mar/2018 20:33:08] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-11 15:49:50.614226 - 16:33:08.464000>]>
-[11/Mar/2018 20:33:08] DEBUG [workTracker:41] 2018-03-11 15:49:50.614226-04:00
-[11/Mar/2018 20:33:08] DEBUG [workTracker:42] 2018-03-11 00:00:00.555938-04:00
-[12/Mar/2018 12:46:28] DEBUG [workTracker:37] <QuerySet []>
-[12/Mar/2018 12:46:35] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - active>]>
-[12/Mar/2018 12:46:35] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 12:46:35] DEBUG [workTracker:42] 2018-03-12 00:00:00.699755-04:00
-[12/Mar/2018 12:46:40] DEBUG [workTracker:37] <QuerySet []>
-[12/Mar/2018 12:46:41] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - active>]>
-[12/Mar/2018 12:46:41] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
-[12/Mar/2018 12:46:41] DEBUG [workTracker:42] 2018-03-12 00:00:00.931251-04:00
-[12/Mar/2018 12:48:29] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - active>]>
-[12/Mar/2018 12:48:29] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 12:48:29] DEBUG [workTracker:42] 2018-03-12 00:00:00.056124-04:00
-[12/Mar/2018 12:49:05] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
-[12/Mar/2018 12:49:05] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 12:49:05] DEBUG [workTracker:42] 2018-03-12 00:00:00.094055-04:00
-[12/Mar/2018 12:49:05] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
-[12/Mar/2018 12:49:05] DEBUG [workTracker:42] 2018-03-12 00:00:00.094376-04:00
-[12/Mar/2018 13:38:10] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
-[12/Mar/2018 13:38:10] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 13:38:10] DEBUG [workTracker:42] 2018-03-12 00:00:00.332441-04:00
-[12/Mar/2018 13:38:10] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
-[12/Mar/2018 13:38:10] DEBUG [workTracker:42] 2018-03-12 00:00:00.334812-04:00
-[12/Mar/2018 13:38:19] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - active>]>
-[12/Mar/2018 13:38:19] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
-[12/Mar/2018 13:38:19] DEBUG [workTracker:42] 2018-03-12 00:00:00.417224-04:00
-[12/Mar/2018 15:20:03] DEBUG [workTracker:28] entering LoginView
-[12/Mar/2018 15:20:09] DEBUG [workTracker:43] dispatch called in LoginView
-[12/Mar/2018 15:20:14] DEBUG [workTracker:43] dispatch called in LoginView
-[12/Mar/2018 15:20:14] DEBUG [workTracker:45] POST <QueryDict: {'password': ['Rfd362436!'], 'csrfmiddlewaretoken': ['cuf2JegcNFOrAZNa1FELcF74aBQdrqkRhOTfnuAIVk2jEYnJnzNpP2tdEdwqD0L4'], 'username': ['ryan.dines@gmail.com']}>
-[12/Mar/2018 15:20:14] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - active>]>
-[12/Mar/2018 15:20:14] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
-[12/Mar/2018 15:20:14] DEBUG [workTracker:42] 2018-03-12 00:00:00.713700-04:00
-[12/Mar/2018 15:20:46] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - 11:20:46.805000>, <IntervalWork: Ryan: 2018-03-12 11:20:46.850700 - active>]>
-[12/Mar/2018 15:20:46] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
-[12/Mar/2018 15:20:46] DEBUG [workTracker:42] 2018-03-12 00:00:00.911774-04:00
-[12/Mar/2018 15:20:46] DEBUG [workTracker:41] 2018-03-12 11:20:46.850700-04:00
-[12/Mar/2018 15:20:46] DEBUG [workTracker:42] 2018-03-12 00:00:00.912076-04:00
-[12/Mar/2018 15:24:48] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:25:05] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:26:04] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:26:16] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:27:46] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:28:48] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:29:07] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:29:49] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:30:56] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:31:35] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 15:31:44] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - 11:20:46.805000>, <IntervalWork: Ryan: 2018-03-12 11:20:46.850700 - active>]>
-[12/Mar/2018 15:31:44] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
-[12/Mar/2018 15:31:44] DEBUG [workTracker:42] 2018-03-12 00:00:00.057507-04:00
-[12/Mar/2018 15:31:44] DEBUG [workTracker:41] 2018-03-12 11:20:46.850700-04:00
-[12/Mar/2018 15:31:44] DEBUG [workTracker:42] 2018-03-12 00:00:00.057883-04:00
-[12/Mar/2018 16:13:04] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
-[12/Mar/2018 16:13:04] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 16:13:04] DEBUG [workTracker:42] 2018-03-12 00:00:00.341815-04:00
-[12/Mar/2018 16:13:04] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
-[12/Mar/2018 16:13:04] DEBUG [workTracker:42] 2018-03-12 00:00:00.342052-04:00
-[12/Mar/2018 16:47:28] DEBUG [workTracker:28] entering AdvancedLoginView
-[12/Mar/2018 16:47:55] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 16:49:26] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 16:49:55] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 16:50:15] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 16:54:56] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 16:54:59] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 16:55:03] DEBUG [workTracker:36] Route to customer
-[12/Mar/2018 16:55:03] DEBUG [workTracker:37] <QuerySet []>
-[12/Mar/2018 16:55:51] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 16:55:54] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 16:55:54] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
-[12/Mar/2018 16:55:54] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 16:55:54] DEBUG [workTracker:42] 2018-03-12 00:00:00.588379-04:00
-[12/Mar/2018 16:55:54] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
-[12/Mar/2018 16:55:54] DEBUG [workTracker:42] 2018-03-12 00:00:00.588681-04:00
-[12/Mar/2018 16:57:02] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 16:57:12] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 16:57:18] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 16:57:23] DEBUG [workTracker:36] Route to customer
-[12/Mar/2018 16:57:23] DEBUG [workTracker:37] <QuerySet []>
-[12/Mar/2018 17:00:03] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 17:00:40] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 17:00:43] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 17:00:43] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
-[12/Mar/2018 17:00:43] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 17:00:43] DEBUG [workTracker:42] 2018-03-12 00:00:00.617732-04:00
-[12/Mar/2018 17:00:43] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
-[12/Mar/2018 17:00:43] DEBUG [workTracker:42] 2018-03-12 00:00:00.619180-04:00
-[12/Mar/2018 19:07:06] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 19:07:16] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - active>]>
-[12/Mar/2018 19:07:16] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 19:07:16] DEBUG [workTracker:42] 2018-03-12 00:00:00.792782-04:00
-[12/Mar/2018 19:07:16] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
-[12/Mar/2018 19:07:16] DEBUG [workTracker:42] 2018-03-12 00:00:00.793082-04:00
-[12/Mar/2018 19:07:33] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Sara: 2018-03-12 08:46:35.667863 - 08:49:05.001000>, <IntervalWork: Sara: 2018-03-12 08:49:05.043653 - 15:07:33.751000>]>
-[12/Mar/2018 19:07:33] DEBUG [workTracker:41] 2018-03-12 08:46:35.667863-04:00
-[12/Mar/2018 19:07:33] DEBUG [workTracker:42] 2018-03-12 00:00:00.851972-04:00
-[12/Mar/2018 19:07:33] DEBUG [workTracker:41] 2018-03-12 08:49:05.043653-04:00
-[12/Mar/2018 19:07:33] DEBUG [workTracker:42] 2018-03-12 00:00:00.852351-04:00
-[12/Mar/2018 19:07:42] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 19:07:45] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 19:07:45] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - 11:20:46.805000>, <IntervalWork: Ryan: 2018-03-12 11:20:46.850700 - active>]>
-[12/Mar/2018 19:07:45] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
-[12/Mar/2018 19:07:45] DEBUG [workTracker:42] 2018-03-12 00:00:00.753152-04:00
-[12/Mar/2018 19:07:45] DEBUG [workTracker:41] 2018-03-12 11:20:46.850700-04:00
-[12/Mar/2018 19:07:45] DEBUG [workTracker:42] 2018-03-12 00:00:00.753660-04:00
-[12/Mar/2018 19:07:58] DEBUG [workTracker:37] <QuerySet [<IntervalWork: Ryan: 2018-03-12 08:46:41.897878 - 11:20:46.805000>, <IntervalWork: Ryan: 2018-03-12 11:20:46.850700 - 15:07:58.423000>, <IntervalWork: Ryan: 2018-03-12 15:07:58.474077 - active>]>
-[12/Mar/2018 19:07:58] DEBUG [workTracker:41] 2018-03-12 08:46:41.897878-04:00
-[12/Mar/2018 19:07:58] DEBUG [workTracker:42] 2018-03-12 00:00:00.533987-04:00
-[12/Mar/2018 19:07:58] DEBUG [workTracker:41] 2018-03-12 11:20:46.850700-04:00
-[12/Mar/2018 19:07:58] DEBUG [workTracker:42] 2018-03-12 00:00:00.534285-04:00
-[12/Mar/2018 19:07:58] DEBUG [workTracker:41] 2018-03-12 15:07:58.474077-04:00
-[12/Mar/2018 19:07:58] DEBUG [workTracker:42] 2018-03-12 00:00:00.534549-04:00
-[12/Mar/2018 19:14:04] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 19:14:30] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 19:14:34] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 19:15:35] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 19:15:38] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 19:15:41] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 19:15:44] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 19:21:40] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 19:22:10] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 19:22:13] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 19:28:40] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 19:28:48] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 19:28:51] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 19:29:43] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 20:10:00] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 20:10:50] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 20:12:05] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 20:12:48] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 20:14:30] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 20:14:39] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 20:14:39] DEBUG [workTracker:45] next
-[12/Mar/2018 20:14:42] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 20:14:42] DEBUG [workTracker:45] next
-[12/Mar/2018 20:15:13] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 20:15:15] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 20:15:34] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 20:15:36] DEBUG [workTracker:40] No groups yet.
-[12/Mar/2018 20:15:36] DEBUG [workTracker:45] 
-[12/Mar/2018 20:15:40] DEBUG [workTracker:38] Route to developer
-[12/Mar/2018 20:15:40] DEBUG [workTracker:45] clockin
-[12/Mar/2018 20:25:26] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:28:15] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:36:39] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:37:15] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:37:41] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:38:47] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:40:05] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:40:48] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:42:00] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:44:42] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:45:06] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:45:33] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:48:58] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:50:06] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:50:44] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:51:04] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 21:51:46] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 22:00:50] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 22:04:23] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 22:36:43] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 22:37:50] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 22:37:57] DEBUG [workTracker:41] No groups yet.
-[12/Mar/2018 22:37:57] DEBUG [workTracker:46] 
-[12/Mar/2018 22:38:02] DEBUG [workTracker:36] Route to customer
-[12/Mar/2018 22:38:37] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 22:38:51] DEBUG [workTracker:36] Route to customer
-[12/Mar/2018 22:38:57] DEBUG [workTracker:36] Route to customer
-[12/Mar/2018 22:42:07] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 22:42:40] DEBUG [workTracker:29] entering AdvancedLoginView
-[12/Mar/2018 22:48:32] DEBUG [workTracker:41] 
-[12/Mar/2018 22:48:36] DEBUG [workTracker:41] clockin
-[12/Mar/2018 22:48:39] DEBUG [workTracker:41] 
-[12/Mar/2018 23:28:25] DEBUG [workTracker:46] 
-[12/Mar/2018 23:29:57] DEBUG [workTracker:50] 
-[12/Mar/2018 23:30:01] DEBUG [workTracker:50] clockin
-[12/Mar/2018 23:30:04] DEBUG [workTracker:50] 
-[12/Mar/2018 23:30:09] DEBUG [workTracker:50] 
-[12/Mar/2018 23:33:22] DEBUG [workTracker:33] 
-[12/Mar/2018 23:33:27] DEBUG [workTracker:33] 
-[12/Mar/2018 23:33:30] DEBUG [workTracker:33] clockin
-[12/Mar/2018 23:33:32] DEBUG [workTracker:33] 
-[12/Mar/2018 23:33:34] DEBUG [workTracker:33] clockin
-[12/Mar/2018 23:33:36] DEBUG [workTracker:33] 
-[12/Mar/2018 23:36:33] DEBUG [workTracker:33] 
-[12/Mar/2018 23:36:36] DEBUG [workTracker:33] clockin
-[12/Mar/2018 23:36:39] DEBUG [workTracker:33] 
-[12/Mar/2018 23:36:45] DEBUG [workTracker:33] 
-[12/Mar/2018 23:36:48] DEBUG [workTracker:33] clockin
+[09/Apr/2018 12:40:16] DEBUG [workTracker:27] get queryset
+[09/Apr/2018 12:40:37] DEBUG [workTracker:27] get queryset
+[09/Apr/2018 12:40:50] DEBUG [workTracker:27] get queryset
+[09/Apr/2018 12:41:23] DEBUG [workTracker:27] get queryset
+[09/Apr/2018 12:41:23] DEBUG [workTracker:29] Demo
+[09/Apr/2018 12:42:34] DEBUG [workTracker:27] get queryset
+[09/Apr/2018 12:42:41] DEBUG [workTracker:27] get queryset
+[09/Apr/2018 12:44:38] DEBUG [workTracker:27] get queryset
+[09/Apr/2018 12:49:24] DEBUG [workTracker:29] Demo
+[09/Apr/2018 12:52:48] DEBUG [workTracker:31] Demo
+[09/Apr/2018 12:53:37] DEBUG [workTracker:31] Demo
+[09/Apr/2018 14:01:42] DEBUG [workTracker:27] myProjects
+[09/Apr/2018 14:02:20] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:02:32] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:04:14] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:04:20] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:04:24] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:05:10] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:05:40] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:05:46] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:10:47] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:10:55] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:11:35] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:13:18] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:13:27] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:13:27] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 14:47:43] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:47:59] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:47:59] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 14:48:20] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:48:53] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:49:31] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 14:49:31] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 15:04:24] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:43:54] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:43:54] DEBUG [workTracker:31] Demo
+[09/Apr/2018 15:44:06] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:44:06] DEBUG [workTracker:31] Demo
+[09/Apr/2018 15:44:07] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:44:38] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:44:58] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:44:58] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 15:52:08] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:52:25] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:52:25] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 15:54:18] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:54:53] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:54:53] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 15:55:03] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:55:32] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:55:33] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:55:44] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:55:44] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 15:58:10] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:58:26] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:58:26] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 15:58:44] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:58:55] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 15:58:55] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:04:20] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:04:52] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:06:19] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:06:26] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:06:26] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:17:34] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:17:48] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:17:48] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:18:02] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:18:51] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:18:51] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:22:35] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:23:20] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:23:38] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:23:46] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:23:46] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:24:28] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:24:40] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:24:40] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:26:37] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:26:37] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:27:14] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:27:28] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:27:28] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:29:32] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:29:55] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:30:10] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:30:10] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:33:19] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:33:27] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:34:22] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:34:22] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:35:34] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:35:45] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:35:45] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:37:59] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:38:08] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:38:08] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:38:41] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:38:41] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:38:57] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:38:57] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:39:07] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:39:07] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:39:42] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:39:52] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:39:52] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:44:04] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:48:41] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:48:41] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:49:56] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:49:56] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:50:08] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:50:15] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:50:15] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:50:48] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:50:58] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:50:58] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:51:49] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:51:55] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:51:55] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:53:24] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:53:38] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:53:38] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:54:15] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:54:27] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:54:27] DEBUG [workTracker:31] Demo
+[09/Apr/2018 16:54:41] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:55:31] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:55:31] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:57:09] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:57:09] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 16:57:27] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 16:57:27] DEBUG [workTracker:31] Demo
+[09/Apr/2018 17:38:50] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:39:16] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:39:39] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:39:39] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 17:41:11] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:42:59] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:42:59] DEBUG [workTracker:31] Demo
+[09/Apr/2018 17:44:06] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:44:06] DEBUG [workTracker:31] Demo
+[09/Apr/2018 17:44:20] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:44:20] DEBUG [workTracker:31] Demo
+[09/Apr/2018 17:50:30] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:52:18] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:52:26] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:52:26] DEBUG [workTracker:31] Demo
+[09/Apr/2018 17:52:43] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:52:43] DEBUG [workTracker:31] Demo
+[09/Apr/2018 17:52:54] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:52:54] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 17:54:12] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:54:12] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 17:54:27] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:54:27] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 17:54:35] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:54:35] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 17:58:52] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:59:04] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 17:59:04] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:04:46] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:04:55] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:04:55] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:06:41] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:06:53] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:06:58] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:06:58] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:08:04] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:08:10] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:08:10] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:09:21] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:09:29] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:09:29] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:11:03] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:11:14] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:11:14] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:12:07] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:12:14] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:12:24] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:12:25] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:12:38] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:12:47] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:12:50] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:12:50] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:13:06] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:13:06] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:13:12] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:13:12] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:14:12] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:14:13] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:14:18] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:14:18] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:14:43] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:14:53] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:15:03] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:15:03] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:20:31] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:20:42] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:20:42] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:20:59] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:20:59] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:21:09] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:21:09] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:21:48] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:21:58] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:21:58] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:22:48] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:22:55] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:23:02] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:23:02] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:24:21] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:24:56] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:24:56] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:25:59] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:26:16] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:26:25] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:26:25] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:28:16] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:28:23] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:28:23] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:28:31] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:28:31] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:28:37] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:28:37] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:30:54] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:30:54] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:37:06] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:37:14] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:37:14] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:39:45] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:39:50] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:39:50] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:42:53] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:43:06] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:43:18] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:43:18] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:44:04] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:44:12] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:44:23] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:44:23] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:45:28] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:45:28] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:45:36] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:45:36] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:49:09] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:49:09] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:49:42] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:49:52] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:50:05] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:50:05] DEBUG [workTracker:31] Demo
+[09/Apr/2018 18:50:42] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:50:51] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:50:51] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:51:00] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:51:00] DEBUG [workTracker:31] PureFocus
+[09/Apr/2018 18:51:06] DEBUG [workTracker:27] <QuerySet [<Project: Demo>, <Project: PureFocus>]>
+[09/Apr/2018 18:51:06] DEBUG [workTracker:31] Demo
