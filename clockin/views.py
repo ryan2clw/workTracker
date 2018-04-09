@@ -18,16 +18,31 @@ log = logging.getLogger("workTracker")
 class IndexView(LoginRequiredMixin, ListView):
     model = IntervalWork
     template_name = 'clockin/index.html'
-    context_object_name = 'interval'
+    context_object_name = 'interval' # the variable name of the object in the template
     ordering = ['id']
+    myProjects = None
+    
+    def get_queryset(self):
+        self.myProjects = Project.objects.all()
+        log.debug(self.myProjects)
+        try:
+            #log.debug(self.request.GET["project"]);
+            myProject = Project.objects.get(name=self.request.GET["project"])
+            log.debug(myProject)
+            return IntervalWork.objects.filter(user_id=self.request.user.id, project_id=myProject.id,
+                started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
+        except:
+            return IntervalWork.objects.filter(user_id=self.request.user.id, project_id=self.myProjects.first().id,
+                started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
+            
 
     def get_context_data(self, **kwargs): 
         # Initializes the state of the view
         context = super(IndexView, self).get_context_data(**kwargs)
         context['first_name'] = self.request.user.first_name
         context['clockedIn'] = "Clocked In"
-        myHours = IntervalWork.objects.filter(user_id=self.request.user.id, \
-            started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
+        context['projects'] = self.myProjects
+        myHours = self.object_list
         context['myHours'] = myHours
         if not myHours or myHours.last().finished:
             context['clockedIn'] = "Not Clocked In"
@@ -35,7 +50,6 @@ class IndexView(LoginRequiredMixin, ListView):
         context['totalHours'] = format(sum([float(interval.timeApart()) for interval in myHours]), '.2f')
         RequestConfig(self.request, paginate=False).configure(table)
         context['table'] = table
-        context['project'] = Project.objects.get(name="Demo")
         context['myForm'] = ClockinForm()
         return context
 

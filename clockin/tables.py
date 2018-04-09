@@ -12,10 +12,5 @@ class IntervalTable(tables.Table):
         sequence = ('startedFormatted', 'finishedFormatted', 'myHours', 'comments')
         attrs = {"class" : "table-striped table-bordered"}
         empty_text = "There are no hours logged today."
-     
-'''
 
-class SummingColumn(tables.Column):
-    def render_footer(self, bound_column, table):
-        return sum(bound_column.accessor.resolve(row) for row in table.data)'''   
         
