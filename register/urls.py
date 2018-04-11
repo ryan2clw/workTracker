@@ -1,5 +1,6 @@
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
+from register.forms import RegistrationForm
 from django.urls import path
 from register.views import RegistrationView
 
@@ -7,7 +8,7 @@ from register.views import RegistrationView
 urlpatterns = [
     #path('', RegistrationView.as_view(), name='register') 
     #]
-    path('', CreateView.as_view(
+    path('', RegistrationView.as_view(
             template_name='register.html',
             form_class=UserCreationForm,
             success_url='/'
