@@ -22,6 +22,7 @@ class InvoiceView(LoginRequiredMixin, ListView):
         # Initializes the state of the view
         context = super(InvoiceView, self).get_context_data(**kwargs)
         context['first_name'] = self.request.user.first_name
+        context['myProject'] = self.request.GET['project']
         myHours = IntervalWork.objects.filter(project__name='Demo', paid=False).order_by('started')
         context['myHours'] = myHours
         table = BillingTable(myHours) # gotta love list comprehensions 

@@ -15,22 +15,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" crossorigin="anonymous"></script>
   </head>
-  <body class="main">
+  <body class="main" style="text-align:center">
     {% csrf_token %}
         <ul id="topHalf" style="margin: auto;padding-bottom:0px;padding-top:12px;padding-left:0px">
-            <li class="column" style="padding-right:10px;">
-                <h5 class="navBar">Welcome, {{ first_name }}</h5>
-                <a href="{% url 'logout' %}" class="btn-sm btn-primary navBar">
-                  <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
-                </a>
+            <li style="padding-right:10px;">
+                <h5>Welcome, {{ first_name }}</h5>
             </li>
-            <li class="column">
+            <li>
                 <h5 style="margin-bottom: 5px;" class="navBar">Action:</h5>
                 <div style="display:inline-block; padding: 0px; vertical-align:top" id="myButtonDiv">
                     <ul id="buttonList" style="padding:0px;">
                         <li>
                             <button id="payButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Pay Bill</button>
                         </li>
+                        <a href="{% url 'logout' %}" class="btn-sm btn-primary navBar">
+                  <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
+                </a>
                     <ul>
                 </div>
             </li>
@@ -59,6 +59,7 @@
           </div>
         </div>
         <div id="bottomHalf" style="margin: auto; border-top: 1px solid black;">
+        <h3 style="text-align:center">{{ myProject }}</h3>
         {% load bootstrap4 %}
         {% load querystring from django_tables2 %}
         {% load title from django_tables2 %}
@@ -161,6 +162,9 @@
   </body>
 </html>
 <style>
+ul {
+  list-style-type: none;
+}
 *{
     font-family:Helvetica,Arial,sans-serif;
 }
@@ -206,6 +210,7 @@ p{
 .navBar{
     display: inline-block;
     padding-right:10px;
+    margin-bottom:10px;
 }
 #buttonList {
     list-style-type: none;

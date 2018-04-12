@@ -15,9 +15,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"-->
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script-->
   </head>
   <body class="main" onload="startTime()">
     {% csrf_token %}
@@ -28,27 +28,9 @@
                   <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
                 </a>
             </li>
-            <li class="column">
-                <h5 style="margin-bottom: 5px;margin-right:5px;" class="navBar">Status:</h5>
-                <p class="navBar" style="font-size:110%;" id="clockedIn">{{ clockedIn }}</p>
-            </li>
-            <li class="column">
-                <h5 class="navBar" style="text-align:right;margin:0px">Current Time: </h5>
-                <div class="navBar" id="clock" style="padding:0px;font-size:110%;"></div>
-            </li>
             <li class="column" style="padding-left:0px;">
-                <h5 style="margin-bottom: 5px;" class="navBar">Action:</h5>
                 <div style="display:inline-block; padding: 0px; vertical-align:text-middle" id="myButtonDiv">
                     <ul id="buttonList" style="padding:0px;">
-                        <li>
-                            <button id="clockInButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Clock-In</button>
-                        </li>
-                        <li>
-                           <button id="clockOutButton"  type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Clock-Out</button>
-                        </li>                 
-                        <li>
-                            <button id="commentButton" type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Comment</button>
-                        </li>
                         <li>
                           <h5 style="padding-left:5px;" class="navBar">Project:</h5>
                           <select id="projectSelected">
@@ -57,6 +39,16 @@
                             <option value="{{ project }}">{{ project }}</option>
                             {% endfor %}
                           </select>
+                        </li>
+                        <li>
+                            <h5 style="margin-bottom: 5px;padding-left:10px;" class="navBar">Action:</h5>
+                            <button id="clockInButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Clock-In</button>
+                        </li>
+                        <li>
+                           <button id="clockOutButton"  type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Clock-Out</button>
+                        </li>                 
+                        <li>
+                            <button id="commentButton" type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Comment</button>
                         </li>
                     <ul>
                 </div>
@@ -85,7 +77,7 @@
             </div>
           </div>
         </div>
-        <div id="bottomHalf" style="margin: auto; border-top: 1px solid black;">
+        <div id="bottomHalf" style="margin: auto; border-top: 1px solid black;padding-bottom:0px;">
         {% load bootstrap4 %}
         {% load querystring from django_tables2 %}
         {% load title from django_tables2 %}
@@ -94,7 +86,7 @@
             <div class="table-container">
         {% endif %}
             {% block table %}
-            <div class="table-responsive">
+            <div class="table-responsive" style="padding-bottom:0px;">
                 <table id = "myTable" style="background-color:white;" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
                     {% block table.thead %}
                     <thead>                 
@@ -142,10 +134,22 @@
         {% endblock "content" %}       
       </div>
     </div>
+    <div class="card card-block bg-faded" style="margin-left:20px;margin-right:20px;width:530px">
+    <ul style="margin:0px;padding:0px">
+      <li class="column">
+        <h6 class="navBar" style="color:#007BFF;font-weight:bold;font:sans-serif;text-align:right;margin:0px">Current Time: </h6>
+        <div class="navBar" id="clock" style="padding:0px;font-size:110%;"></div>
+      </li>
+      <li class="column">
+        <h6 style="margin-bottom: 5px;margin-right:5px;color:#007BFF;font-weight:bold;" class="navBar">Status:</h6>
+        <p class="navBar" style="font-size:110%;" id="clockedIn">{{ clockedIn }}</p>
+      </li>
+    </ul>
+    </div>
   </div>
-  <div class="card card-block bg-faded" style="height:60px;width:200px;margin-left:260px;">
+  <div class="card card-block bg-faded" style="height:60px;width:200px;margin:20px;">
     <span>
-      <h6 class="inline" style="color:#007BFF;font-weight:bold;font:sans-serif;">Total Hours:</h6>
+      <h6 class="inline" style="color:#007BFF;font-weight:bold;font:sans-serif;">Project Hours:</h6>
       <p class="inline" id="totalHours">{{ totalHours }}</p>
     </span>
   </div>   
@@ -295,7 +299,7 @@ p{
         placeholder: 'Comments go here'
     });
     function setViewState(){
-        var currentProject = localStorage.getItem("project");
+        var currentProject = sessionStorage.getItem("project");
         $('#projectSelected').val(currentProject);
         var clockedIn = $("#clockedIn")[0].innerText;
         if (clockedIn == "Clocked In"){
@@ -303,13 +307,12 @@ p{
             $("#commentButton").show();
             $("#clockInButton").hide();
             $('#projectSelected').prop('disabled', true);
-            return;
+        }else{
+            $("#clockOutButton").hide();
+            $("#commentButton").hide();
+            $("#clockInButton").show();
+            $('#projectSelected').prop('disabled', false);
         }
-        $("#clockOutButton").hide();
-        $("#commentButton").hide();
-        $("#clockInButton").show();
-        $('#projectSelected').prop('disabled', false);
-        console.log("Page ready");
     }
     function createWorkInterval(){
         var selectedProject = $('#projectSelected').find(":selected").text();
@@ -325,8 +328,9 @@ p{
                     type: "POST",
                     dataType: "json",
                     success: function (data) {
-                        localStorage.setItem("project", selectedProject);
-                        location.href = "{% url 'clockin' %}?project={{ aProject.name }}";                   
+                        console.log("Created workInterval for {{ aProject.name }}");
+                        location.reload();
+                        // Beats refreshing the view one element at a time                   
                     },
                     error: function (xhr, status) {
                         console.log(xhr)
@@ -374,8 +378,9 @@ p{
         }
     });
     $('#projectSelected').on('change', function() {
-        alert( this.value );
-        //window.location.href = "{% url 'clockin' %}?project=" + this.value;
+        sessionStorage.setItem('project', this.value);
+        window.location.href = "{% url 'clockin' %}?project=" + this.value;
+        //location.href = "{% url 'clockin' %}?project={{ aProject.name }}"; 
     })
     function success(){
         console.log("posted with project param");
