@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.views.generic.edit import FormView
 from register.forms import RegistrationFormUniqueEmail
 from django.conf import settings
+from django.contrib.auth.models import User
+from django.shortcuts import redirect
+import requests, json
 
 # Create your views here.
 class RegistrationView(FormView):
@@ -23,20 +26,27 @@ class RegistrationView(FormView):
         return super(RegistrationView, self).dispatch(*args, **kwargs)
 
     def form_valid(self, form):
-        new_user = self.register(form)
-        success_url = self.get_success_url(new_user) if \
-            (hasattr(self, 'get_success_url') and
-             callable(self.get_success_url)) else \
-            self.success_url
+        ''' Begin reCAPTCHA validation '''
+        recaptcha_response = self.request.POST.get('g-recaptcha-response')
+        url = 'https://www.google.com/recaptcha/api/siteverify'
+        values = {
+            'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+            'response': recaptcha_response
+        }
+        response = requests.post(url, values)
+        ''' End reCAPTCHA validation '''
 
-        # success_url may be a string, or a tuple providing the full
-        # argument set for redirect(). Attempting to unpack it tells
-        # us which one it is.
-        try:
-            to, args, kwargs = success_url
-            return redirect(to, *args, **kwargs)
-        except ValueError:
-            return redirect(success_url)
+        if response.ok:
+            new_user = self.register(form)
+            success_url = self.success_url
+            try:
+                to, args, kwargs = success_url
+                return redirect(to, *args, **kwargs)
+            except ValueError:
+                return redirect(success_url)
+        else:
+            messages.error(request, 'Invalid reCAPTCHA. Please try again.')    
+            
             
     def registration_allowed(self):
         """
@@ -46,11 +56,14 @@ class RegistrationView(FormView):
         return getattr(settings, 'REGISTRATION_OPEN', True)
 
     def register(self, form):
+        user = User.objects.create(username=self.request.POST['username'], password=form.fields['password1'])
+        user.save()
+        return
         """
         Implement user-registration logic here. Access to both the
         request and the registration form is available here.
         """
-        raise NotImplementedError
+        #raise NotImplementedError
 
 '''
 class ActivationView(TemplateView):
