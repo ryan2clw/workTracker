@@ -294,10 +294,10 @@ p{
         placeholder: 'Comments go here'
     });
     function setViewState(){
-        var isLoggedIn = false;
+        var badUserRequest = false;
         if (("{{ request.GET.project }}" != "") && ("{{currentProject}}" != "None")){
             if("{{ currentProject }}" != "{{ request.GET.project }}"){
-                isLoggedIn = true;
+                badUserRequest = true;
             }
         }
         if("{{ request.GET.project }}" != ""){
@@ -317,8 +317,9 @@ p{
             $("#clockInButton").show();
             $('#projectSelected').prop('disabled', false);
         }
-        if(isLoggedIn){
+        if(badUserRequest){
             alert("You must log out of {{currentProject}} in order to switch projects.");
+            badUserRequest = false;
         }
     }
     function createWorkInterval(){
