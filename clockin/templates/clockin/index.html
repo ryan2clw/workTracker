@@ -324,8 +324,10 @@ p{
     }
     function createWorkInterval(){
         var selectedProject = $('#projectSelected').find(":selected").text();
+        var shouldAlert = true;
         {% for aProject in projects %}
             if ("{{aProject.name}}" == selectedProject){
+                shouldAlert = false;
                 $.ajax({
                     url: "new/",
                     data: {
@@ -350,8 +352,11 @@ p{
                     },
                 });
             }
-        {% endfor %}  
-        alert("You must select a project to clock in.");   
+        {% endfor %}
+        if(shouldAlert){
+            alert("You must select a project to clock in.");
+            shouldAlert=false;
+        }   
     }
     $("#clockInButton").click(function(e) {
         createWorkInterval();
