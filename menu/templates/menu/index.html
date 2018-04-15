@@ -155,10 +155,15 @@
     <script src="{% static "menu/js/creative.min.js" %}"></script>
 
   </body>
-
 </html>
 <script>
     $('document').ready(function(){
         sessionStorage.setItem("project","");
+        if ("{{ request.GET.project }}" == "none"){
+            alert("You have no projects on record.");
+        }
+        if ("{{ request.GET.developer }}" == "none"){
+            alert("You are not a registered developer.");
+        }
     });
 </script>

@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
-    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"-->
-    <!-- Latest compiled and minified JavaScript -->
-    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script-->
   </head>
   <body class="main" onload="startTime()">
     {% csrf_token %}
@@ -243,7 +239,6 @@ p{
                 $.ajax({
                     url: "update/{{ myHours.last.id }}/",
                     data: {
-                        // get the user from the request and the finished timestamp from the server
                         user: {{ user.id }},
                         comments: $("#id_comments").val(),
                         project: {{aProject.id}},
@@ -299,10 +294,19 @@ p{
         placeholder: 'Comments go here'
     });
     function setViewState(){
-        var currentProject = sessionStorage.getItem("project");
-        $('#projectSelected').val(currentProject);
-        var clockedIn = $("#clockedIn")[0].innerText;
-        if (clockedIn == "Clocked In"){
+        var isLoggedIn = false;
+        if (("{{ request.GET.project }}" != "") && ("{{currentProject}}" != "None")){
+            if("{{ currentProject }}" != "{{ request.GET.project }}"){
+                isLoggedIn = true;
+            }
+        }
+        if("{{ request.GET.project }}" != ""){
+            $('#projectSelected').val("{{ request.GET.project }}");
+        }
+        if("{{ currentProject }}" != "None"){
+            $('#projectSelected').val("{{ currentProject}}"); 
+        }
+        if ($("#clockedIn")[0].innerText == "Clocked In"){
             $("#clockOutButton").show();
             $("#commentButton").show();
             $("#clockInButton").hide();
@@ -312,6 +316,9 @@ p{
             $("#commentButton").hide();
             $("#clockInButton").show();
             $('#projectSelected').prop('disabled', false);
+        }
+        if(isLoggedIn){
+            alert("You must log out of {{currentProject}} in order to switch projects.");
         }
     }
     function createWorkInterval(){
@@ -330,7 +337,7 @@ p{
                     success: function (data) {
                         console.log("Created workInterval for {{ aProject.name }}");
                         location.reload();
-                        // Beats refreshing the view one element at a time                   
+                        return;                   
                     },
                     error: function (xhr, status) {
                         console.log(xhr)
@@ -342,7 +349,8 @@ p{
                     },
                 });
             }
-        {% endfor %}
+        {% endfor %}  
+        alert("You must select a project to clock in.");   
     }
     $("#clockInButton").click(function(e) {
         createWorkInterval();
@@ -378,7 +386,10 @@ p{
         }
     });
     $('#projectSelected').on('change', function() {
-        sessionStorage.setItem('project', this.value);
+        //sessionStorage.setItem('project', this.value);
+        //var signedInProject = "{{ currentProject }}";
+        //var requestedProject = "{{ request.GET.project }}";
+        //var displayedProject = $('#projectSelected').find(":selected").text();
         window.location.href = "{% url 'clockin' %}?project=" + this.value;
         //location.href = "{% url 'clockin' %}?project={{ aProject.name }}"; 
     })

@@ -1,35 +1,53 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 import requests
 import dateutil.parser
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView
 from clockin.models import IntervalWork
+from invoice.models import Project
 from invoice.tables import BillingTable
 from django_tables2 import RequestConfig
 from django.utils import timezone
 from pytz import timezone as pytzTZ
+from django.http import HttpResponseRedirect
+import logging
+from login.views import CustomLoginview
 
-# helper script to populate git details
-# pass scrapeRepo data to the view
+
+log = logging.getLogger("workTracker")
 
 class InvoiceView(LoginRequiredMixin, ListView):
     model = IntervalWork
     template_name = 'invoice/bill.html'
-    context_object_name = 'interval'
-    ordering = ['id']
+    myProject = None
+    myHours = None
+    
+    def get_queryset(self):
+        try:
+            self.myProject = Project.objects.get(name=self.request.GET["project"])
+            self.myHours = IntervalWork.objects.filter(project__name=self.request.GET["project"], paid=False).order_by('started')
+            return self.myHours
+        except:
+            return IntervalWork.objects.none()
 
     def get_context_data(self, **kwargs): 
         # Initializes the state of the view
         context = super(InvoiceView, self).get_context_data(**kwargs)
         context['first_name'] = self.request.user.first_name
-        context['myProject'] = self.request.GET['project']
-        myHours = IntervalWork.objects.filter(project__name='Demo', paid=False).order_by('started')
-        context['myHours'] = myHours
-        table = BillingTable(myHours) # gotta love list comprehensions 
-        context['totalHours'] = format(sum([float(interval.timeApart()) for interval in myHours]), '.2f')
-        RequestConfig(self.request, paginate=False).configure(table)
-        context['table'] = table
+        if self.myProject:
+            context['myProject'] = self.myProject.name
+        if self.myHours:
+            context['myHours'] = self.myHours
+            table = BillingTable(self.myHours) # gotta love list comprehensions 
+            context['totalHours'] = format(sum([float(interval.timeApart()) for interval in self.myHours]), '.2f')
+            RequestConfig(self.request, paginate=False).configure(table)
+            context['table'] = table
         return context
+      
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.groups.filter(name="customer").exists():
+            return HttpResponseRedirect(reverse('menu') + "?project=none")
+        return super(InvoiceView, self).get(request, *args, **kwargs)
 
     def scrapeRepo():
 
