@@ -76,32 +76,34 @@
           <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
           <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
           <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-          <form name="sentMessage" id="contactForm" novalidate>
+          <form name="sentMessage" id="contactForm" novalidate method="post" action="{% url 'contact' %}">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls">
                 <label>Name</label>
-                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                {{ form.name }}
+                {% csrf_token %}
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls">
                 <label>Email Address</label>
-                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                {{ form.email }}
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group col-xs-12 floating-label-form-group controls">
                 <label>Phone Number</label>
-                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                {{ form.phone }}
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls">
                 <label>Message or description of project</label>
-                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                {{ form.message }}
+                <!--textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea-->
                 <p class="help-block text-danger"></p>
               </div>
             </div>
@@ -160,11 +162,51 @@
 
     <!-- Contact Form JavaScript -->
     <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
-    <script src="{% static 'js/contact_me.js' %}"></script>
+    <!--script src="{% static 'js/contact_me.js' %}"></script-->
 
     <!-- Custom scripts for this template -->
     <script src="{% static 'js/clean-blog.min.js' %}"></script>
 
   </body>
-
 </html>
+<script>
+    function csrfSafeMethod(method) {
+        // don't reveal CSRF token to GET requests
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader('X-CSRFToken', csrftoken);
+            }
+        }
+    });
+    //<input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+    $("#id_name").attr({
+        type: "text",
+        class:"form-control", 
+        placeholder: "Name",
+        required: "true",
+    });
+    //<input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+    $("#id_email").attr({
+        type: "email",
+        class:"form-control", 
+        placeholder: "Email Address",
+        required: "true",
+    });
+    $("#id_phone").attr({
+        type: "email",
+        class:"form-control", 
+        placeholder: "Phone Number",
+        required: "true",
+    });
+    $("#id_message").attr({
+        type: "email",
+        class:"form-control", 
+        placeholder: "Message",
+        required: "true",
+    });
+    //<input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+</script>
