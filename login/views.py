@@ -6,11 +6,12 @@ import logging
 log = logging.getLogger("workTracker")
         
 class CustomLoginview(LoginView):
-    
     def get_redirect_url(self):
-        if self.request.user.groups.filter(name="customer").exists():
+        try:
             myProject = Project.objects.get(user_id=self.request.user.id)
-            return reverse('bill') + "?project=" + myProject.name
-            #return 'invoice'
-        return super().get_redirect_url()
-
+            if self.request.user.groups.filter(name="customer").exists():
+                return reverse('bill') + "?project=" + myProject.name
+        except:
+            if self.request.user.groups.filter(name="developer").exists():
+                return reverse('clockin')
+            return reverse('menu') + "?project=none"

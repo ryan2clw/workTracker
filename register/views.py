@@ -14,7 +14,7 @@ class RegistrationView(FormView):
     disallowed_url = 'registration_disallowed'
     form_class = RegistrationFormUniqueEmail
     success_url = 'menu'
-    template_name = 'register.html'
+    template_name = 'register'
 
     def dispatch(self, *args, **kwargs):
         """

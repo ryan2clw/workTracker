@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 class Project(models.Model):
     name = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    #users = models.ManyToManyField(User)
     
     def __str__(self):
         # Shows name, start and end time for admin
