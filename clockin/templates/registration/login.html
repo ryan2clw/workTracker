@@ -27,7 +27,7 @@
    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#3371FF;" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="{% url 'menu' %}">Sales</a>
+        <a class="navbar-brand" href="{% url 'menu' %}">Home</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -35,13 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'developer' %}">Home</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contact' %}">Contact</a>
@@ -66,12 +60,15 @@
         <!--label>
           <input value="remember-me" type="checkbox"> Remember me
         </label-->
-      <button class="btn btn-lg btn-primary btn-block" style="background-color:#3371FF" type="submit">Sign in</button>
+      <button class="btn btn-lg btn-dope btn-block" style="background-color:#3371FF" type="submit">Sign in</button>
       <p class="mt-5 mb-3 text-muted">© 2018</p>
     </form>
   </body>
 </html>
 <script>
+    $('document').ready(function(){
+        console.log("login page ready");
+    }
     $("#id_password").attr({
         "class":"form-control",
         "placeholder":"Password",
@@ -136,5 +133,19 @@ body {
 }
 #navbarResponsive{
   margin:0px;
+}
+.btn-dope{
+  background-color:#3371FF;
+  color:#BFD7FF;
+}
+.btn-dope:hover{
+  background-color:#2964C4;
+  color:white;
+}
+a{
+color:#3371FF;
+}
+a:hover{
+color:green;
 }
 </style>
