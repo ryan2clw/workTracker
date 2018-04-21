@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -111,7 +111,7 @@
             <div class="table-container">
         {% endif %}
             {% block table %}
-            <div class="table-responsive" style="padding-bottom:0px;">
+            <div class="table-responsive" style="padding-bottom:0px;overflow-x: scroll">
                 <table id = "myTable" style="background-color:white;" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
                     {% block table.thead %}
                     <thead>                 
