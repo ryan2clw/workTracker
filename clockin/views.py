@@ -73,8 +73,7 @@ class IndexView(LoginRequiredMixin, ListView):
 # REST ENDPOINTS
 
 class WorkUpdate(UpdateAPIView):
-    queryset = IntervalWork.objects.all()
-    #project = Project.objects.get(name="Demo")
+    queryset = IntervalWork.objects.all() #
     serializer_class = IntervalWorkSerializer
     
     def get_queryset(self):
@@ -85,12 +84,13 @@ class WorkCreate(CreateAPIView):
     serializer_class = IntervalWorkSerializer
 
 class WorkList(ListAPIView):
-    queryset = IntervalWork.objects.all()
-    serializer_class = IntervalWorkSerializer
 
+    serializer_class = IntervalWorkSerializer
+    model = IntervalWork
+    context_object_name = 'IntervalWork' # the variable name of the object in the template
+    ordering = ['id']
     myProjects = None
     currentProject = None
-    
     def get_queryset(self):
         self.myProjects = Project.objects.all()
         for project in self.myProjects:
