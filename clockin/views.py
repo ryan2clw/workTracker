@@ -92,6 +92,7 @@ class WorkList(ListAPIView):
     myProjects = None
     currentProject = None
     def get_queryset(self):
+        # this routine checks for open projects first, then if none are open, retrieves GET['project']'s objects if they're there
         self.myProjects = Project.objects.all()
         for project in self.myProjects:
             IntervalWorks = IntervalWork.objects.filter(user_id=self.request.user.id, project_id=project.id, 

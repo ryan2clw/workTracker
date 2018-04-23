@@ -4,6 +4,7 @@ from django.contrib.auth.views import LogoutView
 from login.views import CustomLoginview
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework.authtoken import views
 
 urlpatterns = [
     path('', include('menu.urls')),
@@ -15,8 +16,8 @@ urlpatterns = [
     path('developer/', include('developer.urls')),
     path('register/', include('register.urls')),
     path('admin/', admin.site.urls),
-] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
+    path('api-token-auth/', views.obtain_auth_token),
+]
 
 
 
