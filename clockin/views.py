@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import reverse
 from pytz import timezone as pytzTZ
 from rest_framework.generics import UpdateAPIView, CreateAPIView, ListAPIView
+from rest_framework import permissions
 from django_tables2 import RequestConfig
 from clockin.models import IntervalWork
 from clockin.serializers import IntervalWorkSerializer
@@ -73,6 +74,7 @@ class IndexView(LoginRequiredMixin, ListView):
 # REST ENDPOINTS
 
 class WorkUpdate(UpdateAPIView):
+
     queryset = IntervalWork.objects.all() #
     serializer_class = IntervalWorkSerializer
     
@@ -91,6 +93,8 @@ class WorkList(ListAPIView):
     ordering = ['id']
     myProjects = None
     currentProject = None
+    permission_classes = [ permissions.IsAuthenticated, ]
+
     def get_queryset(self):
         # this routine checks for open projects first, then if none are open, retrieves GET['project']'s objects if they're there
         self.myProjects = Project.objects.all()
