@@ -13,6 +13,7 @@ from clockin.serializers import IntervalWorkSerializer
 from clockin.forms import ClockinForm
 from clockin.tables import IntervalTable
 from invoice.models import Project
+from django.views.decorators.csrf import csrf_exempt, csrf_protect, ensure_csrf_cookie
 
 LOG = logging.getLogger("workTracker")
 
@@ -115,3 +116,5 @@ class WorkList(ListAPIView):
                     started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
             except:
                 return IntervalWork.objects.none()
+    def get(self, request, *args, **kwargs):
+        return super(WorkList, self).get(request, *args, **kwargs)
