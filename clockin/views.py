@@ -15,7 +15,7 @@ from clockin.tables import IntervalTable
 from invoice.models import Project
 from django.views.decorators.csrf import csrf_exempt, csrf_protect, ensure_csrf_cookie
 
-LOG = logging.getLogger("workTracker")
+log = logging.getLogger("workTracker")
 
 # Clockin View
 
@@ -31,6 +31,7 @@ class IndexView(LoginRequiredMixin, ListView):
         for project in self.myProjects:
             IntervalWorks = IntervalWork.objects.filter(user_id=self.request.user.id, project_id=project.id, 
             started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).values()
+            log.debug("startedGTE: " + str(timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)))
             for work in IntervalWorks:
                 if not work["finished"]:
                     self.currentProject = project.name
@@ -97,7 +98,8 @@ class WorkList(ListAPIView):
     permission_classes = [ permissions.IsAuthenticated, ]
 
     def get_queryset(self):
-        # this routine checks for open projects first, then if none are open, retrieves GET['project']'s objects if they're there
+        # this routine checks for open projects first, then if none are open, 
+        # retrieves GET['project']'s objects if they're from today, else none
         self.myProjects = Project.objects.all()
         for project in self.myProjects:
             IntervalWorks = IntervalWork.objects.filter(user_id=self.request.user.id, project_id=project.id, 

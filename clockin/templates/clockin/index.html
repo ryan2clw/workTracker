@@ -108,11 +108,11 @@
         {% load title from django_tables2 %}
         {% block "content" %}
         {% if table.page %}
-            <div class="table-container">
+            <div class="table-container" style="overflow-x: scroll;">
         {% endif %}
             {% block table %}
-            <div class="table-responsive" style="padding-bottom:0px;overflow-x: scroll">
-                <table id = "myTable" style="background-color:white;" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
+            <div class="table-responsive" style="padding-bottom:0px;background-color:white;">
+                <table id = "myTable" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
                     {% block table.thead %}
                     <thead>                 
                       <tr>
@@ -159,17 +159,17 @@
         {% endblock "content" %}       
       </div>
     </div>
-    <div class="card card-block bg-faded" style="margin-left:20px;margin-right:20px;width:530px">
-    <ul style="margin:0px;padding:0px">
-      <li class="column">
+    <div class="card card-block bg-faded" style="margin-left:20px;margin-right:20px;width:310px">
+    <div style="margin:0px;padding:0px;">
+      <div class="column row-sm-8">
         <h6 class="navBar" style="color:#3371FF;font-weight:bold;font:sans-serif;text-align:right;margin:0px">Current Time: </h6>
         <div class="navBar" id="clock" style="padding:0px;font-size:110%;"></div>
-      </li>
-      <li class="column">
+      </div>
+      <div class="column row-sm-8">
         <h6 style="margin-bottom: 5px;margin-right:5px;color:#3371FF;font-weight:bold;" class="navBar">Status:</h6>
         <p class="navBar" style="font-size:110%;" id="clockedIn">{{ clockedIn }}</p>
-      </li>
-    </ul>
+      </div>
+    </div>
     </div>
   </div>
   <div class="card card-block bg-faded" style="height:60px;width:200px;margin:20px;">
@@ -191,7 +191,6 @@
 div{
     padding: 10px;
 }
-
 th, td{
     text-align: center;
     pointer-events: none;
