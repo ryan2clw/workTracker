@@ -14,7 +14,7 @@ from clockin.forms import ClockinForm
 from clockin.tables import IntervalTable
 from invoice.models import Project
 
-LOG = logging.getLogger("workTracker")
+log = logging.getLogger("workTracker")
 
 # Clockin View
 
@@ -30,6 +30,7 @@ class IndexView(LoginRequiredMixin, ListView):
         for project in self.myProjects:
             IntervalWorks = IntervalWork.objects.filter(user_id=self.request.user.id, project_id=project.id, 
             started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).values()
+            log.debug("startedGTE: " + str(timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)))
             for work in IntervalWorks:
                 if not work["finished"]:
                     self.currentProject = project.name
