@@ -45,7 +45,8 @@ class IndexView(LoginRequiredMixin, ListView):
                 return IntervalWork.objects.filter(user_id=self.request.user.id, project_id=myProject.id,
                     started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
             except:
-                return IntervalWork.objects.none()
+                return IntervalWork.objects.filter(user_id=self.request.user.id,
+                    started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
 
     def get_context_data(self, **kwargs): 
         # Initializes the state of the view
@@ -117,6 +118,5 @@ class WorkList(ListAPIView):
                 return IntervalWork.objects.filter(user_id=self.request.user.id, project_id=myProject.id,
                     started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
             except:
-                return IntervalWork.objects.none()
-    def get(self, request, *args, **kwargs):
-        return super(WorkList, self).get(request, *args, **kwargs)
+                return IntervalWork.objects.filter(user_id=self.request.user.id,
+                    started__gte=timezone.now().astimezone(pytzTZ('US/Eastern')).replace(hour=0, minute=0, second=0)).order_by('started')
