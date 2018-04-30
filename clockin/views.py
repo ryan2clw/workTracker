@@ -1,6 +1,7 @@
 import logging
 from django.views.generic import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
 from django.utils import timezone
 from django.http import HttpResponseRedirect
 from django.shortcuts import reverse
@@ -9,7 +10,7 @@ from rest_framework.generics import UpdateAPIView, CreateAPIView, ListAPIView
 from rest_framework import permissions
 from django_tables2 import RequestConfig
 from clockin.models import IntervalWork
-from clockin.serializers import IntervalWorkSerializer
+from clockin.serializers import IntervalWorkSerializer, ProjectSerializer
 from clockin.forms import ClockinForm
 from clockin.tables import IntervalTable
 from invoice.models import Project
@@ -88,6 +89,14 @@ class WorkCreate(CreateAPIView):
     queryset = IntervalWork.objects.all()
     serializer_class = IntervalWorkSerializer
 
+class ProjectList(ListAPIView):
+
+    serializer_class = ProjectSerializer
+    model = Project
+
+    def get_queryset(self):
+        return Project.objects.all()
+
 class WorkList(ListAPIView):
 
     serializer_class = IntervalWorkSerializer
@@ -100,7 +109,7 @@ class WorkList(ListAPIView):
 
     def get_queryset(self):
         # this routine checks for open projects first, then if none are open, 
-        # retrieves GET['project']'s objects if they're from today, else none
+        # retrieves GET['project']'s objects if they're from today, else retrieves all projects
         self.myProjects = Project.objects.all()
         for project in self.myProjects:
             IntervalWorks = IntervalWork.objects.filter(user_id=self.request.user.id, project_id=project.id, 
