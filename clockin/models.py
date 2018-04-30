@@ -14,8 +14,7 @@ class IntervalWork(models.Model):
     started = models.DateTimeField(auto_now_add=True)
     finished = models.DateTimeField(null=True, blank=True)
     comments = models.TextField(null=True)
-    paid = models.BooleanField(default=False)
-    
+    paid = models.BooleanField(default=False)   
    
     def timeApart(self):
         # Returns 2 decimal delta of time worked
