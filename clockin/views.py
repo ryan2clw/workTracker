@@ -99,6 +99,7 @@ class ProjectList(ListAPIView):
 
 class WorkList(ListAPIView):
 
+    raise_exception = True
     serializer_class = IntervalWorkSerializer
     model = IntervalWork
     context_object_name = 'IntervalWork' # the variable name of the object in the template
