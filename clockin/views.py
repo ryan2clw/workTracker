@@ -85,13 +85,17 @@ class WorkUpdate(UpdateAPIView):
         return IntervalWork.objects.filter(user_id=self.request.user.id).order_by('started')
     
 class WorkCreate(CreateAPIView):
-    queryset = IntervalWork.objects.all()
+    
     serializer_class = IntervalWorkSerializer
+
+    def get_queryset(self):
+        IntervalWork.objects.filter(user_id=self.request.user.id).order_by('started')
 
 class ProjectList(ListAPIView):
 
     serializer_class = ProjectSerializer
     model = Project
+    # MARK TO DO: CHANGE FROM ONE USER TO MANY USERS
 
     def get_queryset(self):
         return Project.objects.all()

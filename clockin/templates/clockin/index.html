@@ -316,11 +316,9 @@ p{
          {% endfor %}
     }
     $('#commentForm').on('submit', function(event){
-        event.preventDefault();
-        console.log("form submitted!", $("#id_comments").val());  
+        event.preventDefault();  
         updateWorkInterval();
         var shouldWorkMore = sessionStorage.getItem("startNew");
-        console.log('shouldWorkMore',shouldWorkMore);
         if(shouldWorkMore == "true"){
             createWorkInterval("dontAlert");
         }
@@ -328,7 +326,6 @@ p{
     // On showing modal, determine the button it came from, you'll need it to determine whether to start a new work interval
     $('#myModal').on('show.bs.modal', function (event) { 
         var myButton = $(event.relatedTarget); // Button that triggered the modal
-        console.log("from this button", myButton[0].id);
         if (myButton[0].id == "clockOutButton"){
             sessionStorage.setItem("startNew","false");
             return;
@@ -337,7 +334,6 @@ p{
     }) //delete old text after sending comments to server
     $(".modal").on("hidden.bs.modal", function(){
         $(".modal-body1").html("");
-        //$('#projectSelected').val("");
     });
     $("#id_comments").attr({
         class:"form-control", 
@@ -387,7 +383,6 @@ p{
                     type: "POST",
                     dataType: "json",
                     success: function (data) {
-                        console.log("Created workInterval for {{ aProject.name }}");
                         location.reload();
                         return;                   
                     },
@@ -447,15 +442,7 @@ p{
         }
     });
     $('#projectSelected').on('change', function() {
-        //sessionStorage.setItem('project', this.value);
-        //var signedInProject = "{{ currentProject }}";
-        //var requestedProject = "{{ request.GET.project }}";
-        //var displayedProject = $('#projectSelected').find(":selected").text();
-        window.location.href = "{% url 'clockin' %}?project=" + this.value;
-        //location.href = "{% url 'clockin' %}?project={{ aProject.name }}"; 
-    })
-    function success(){
-        console.log("posted with project param");
-    }
+        window.location.href = "{% url 'clockin' %}?project=" + this.value; 
+    });
 </script>
 

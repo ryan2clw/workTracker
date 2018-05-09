@@ -1,10 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LogoutView
-from login.views import CustomLoginview
+from login.views import CustomLoginview, CustomObtainAuthToken
 from django.conf import settings
 from django.conf.urls.static import static
-from rest_framework.authtoken import views
 
 urlpatterns = [
     path('', include('menu.urls')),
@@ -16,7 +15,7 @@ urlpatterns = [
     path('developer/', include('developer.urls')),
     path('register/', include('register.urls')),
     path('admin/', admin.site.urls),
-    path('api-token-auth/', views.obtain_auth_token),
+    path('api-token-auth/', CustomObtainAuthToken.as_view()),
 ]
 
 
