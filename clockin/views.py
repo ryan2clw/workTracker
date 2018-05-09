@@ -14,6 +14,7 @@ from clockin.serializers import IntervalWorkSerializer, ProjectSerializer
 from clockin.forms import ClockinForm
 from clockin.tables import IntervalTable
 from invoice.models import Project
+from django.views.decorators.csrf import csrf_exempt, csrf_protect, ensure_csrf_cookie
 
 log = logging.getLogger("workTracker")
 
@@ -102,6 +103,7 @@ class ProjectList(ListAPIView):
 
 class WorkList(ListAPIView):
 
+    raise_exception = True
     serializer_class = IntervalWorkSerializer
     model = IntervalWork
     context_object_name = 'IntervalWork' # the variable name of the object in the template
