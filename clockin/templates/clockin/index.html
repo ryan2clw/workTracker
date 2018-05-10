@@ -92,7 +92,7 @@
               <form action="url {{ work_update }}" method="PUT" id="commentForm">
                   {% csrf_token %}
                   <div class="modal-body">
-                        {{ myForm.comments }}
+                  {{ myForm.comments }}
                   </div>
                   <div class="modal-footer">
                     <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -281,10 +281,7 @@ p{
         // Updates comments and finish time of intervalWork
         var rightNow = new Date().toISOString();
         var selectedProject = $('#projectSelected').find(":selected").text();
-        console.log("selectedProject", selectedProject);
         {% for aProject in projects %}
-            console.log("aProject", "{{aProject.name}}");
-            //console.log("stuff",{{selectedProject}});
             if ("{{aProject.name}}" == selectedProject){
                 $.ajax({
                     url: "update/{{ myHours.last.id }}/",
@@ -421,8 +418,7 @@ p{
         h = h ? h : 12; // the hour '0' should be '12'
         m = checkTime(m);
         s = checkTime(s);
-        document.getElementById('clock').innerHTML =
-        h + ":" + m + ":" + s + " " + ampm;;
+        document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + " " + ampm;
         var t = setTimeout(startTime, 500);
     }
     function checkTime(i) {
