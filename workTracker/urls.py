@@ -13,6 +13,7 @@ urlpatterns = [
     path('invoice/', include('invoice.urls')),
     path('menu/', include('menu.urls')),
     path('developer/', include('developer.urls')),
+    path('project/', include('project.urls')),
     path('register/', include('register.urls')),
     path('admin/', admin.site.urls),
     path('api-token-auth/', CustomObtainAuthToken.as_view()),

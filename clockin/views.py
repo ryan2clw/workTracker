@@ -99,7 +99,7 @@ class ProjectList(ListAPIView):
     # MARK TO DO: CHANGE FROM ONE USER TO MANY USERS
 
     def get_queryset(self):
-        return Project.objects.all()
+        return Project.objects.filter(members__id=self.request.user.id)
 
 class WorkList(ListAPIView):
 

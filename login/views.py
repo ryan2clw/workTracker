@@ -9,15 +9,17 @@ import logging
 log = logging.getLogger("workTracker")
         
 class CustomLoginview(LoginView):
+    # if they are a customer, go there, developer with a project, go there, else, project page
+    # I should have the default redirect be login in settings file maybe just to be sure
     def get_redirect_url(self):
-        try:
-            myProject = Project.objects.get(user_id=self.request.user.id)
-            if self.request.user.groups.filter(name="customer").exists():
-                return reverse('bill') + "?project=" + myProject.name
-        except:
-            if self.request.user.groups.filter(name="developer").exists():
-                return reverse('clockin')
-            return reverse('menu') + "?project=none"
+        if(self.request.user.is_anonymous):
+            return reverse('login') # MARK TO DO: ADD EPIC FAILURE WARNING TO LOGIN
+        myProjects = Project.objects.filter(members=self.request.user)
+        if self.request.user.groups.filter(name="customer").exists():
+            return reverse('bill') + "?project=" + myProjects.last().name # No ability to toggle customer projects yet
+        if self.request.user.groups.filter(name="developer").exists() and len(myProjects) > 0:
+            return reverse('clockin')
+        return reverse('project') #+ "?project=none" # PROJECT PAGE HERE
 
 class CustomObtainAuthToken(ObtainAuthToken):
 
