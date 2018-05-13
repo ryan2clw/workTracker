@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>SeniorDevops.com</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" crossorigin="anonymous"></script>
+    {% load staticfiles %}
+    <link href="{% static "menu/vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <link href="{% static "menu/vendor/magnific-popup/magnific-popup.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "menu/css/creative.min.css" %}" rel="stylesheet">
+  </head>
+  <body class="main" onload="startTime()">
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#3371FF;" id="mainNav">
+      <div class="container" style="padding:0px;">
+        <a class="navbar-brand" href="{% url 'menu' %}">Home</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% csrf_token %}
+        <ul id="topHalf" style="margin: auto;padding-bottom:16px;padding-top:12px;padding-left:0px">
+            <li class="column" style="padding-right:10px;padding-left:0px;">
+                <h5 class="navBar">Welcome, {{ first_name }}</h5>
+                <button id="logOutButton" type="button" class="btn-sm btn-dope" style="font-weight: bold;border:none;" onclick="clockOut()">Log Out</button>
+            </li>
+            <li class="column" style="padding-left:0px;">
+                <div style="display:inline-block; padding: 0px; vertical-align:text-middle" id="myButtonDiv">
+                    <ul id="buttonList" style="padding:0px;">
+                        <li>
+                          <h5 style="padding-left:5px;" class="navBar">Project:</h5>
+                          <select id="projectSelected">
+                            <option id="myPlaceHolder" value="" disabled selected>Select your project</option>
+                            {% for project in projects %}
+                            <option value="{{ project }}">{{ project }}</option>
+                            {% endfor %}
+                          </select>
+                        </li>
+                        <li>
+                            <h5 style="margin-bottom: 5px;padding-left:10px;" class="navBar">Action:</h5>
+                            <button id="projectButton" type="button" class="btn-sm btn-dope navBar" style="font-weight: bold;border:none;">Make Project</button>
+                        </li>
+                        <li>
+                           <button id="clockOutButton"  type="button" class="btn-sm btn-dope" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Clock-Out</button>
+                        </li>                 
+                        <li>
+                            <button id="commentButton" type="button" class="btn-sm btn-dope" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Comment</button>
+                        </li>
+                    <ul>
+                </div>
+            </li>
+        </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Enter your comments below</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form action="url {{ work_update }}" method="PUT" id="commentForm">
+                  {% csrf_token %}
+                  <div class="modal-body">
+                  {{ myForm.comments }}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-dope" data="closingComments">Save changes</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div id="bottomHalf" style="margin: auto; border-top: 1px solid black;">
+        {% load bootstrap4 %}
+        {% load querystring from django_tables2 %}
+        {% load title from django_tables2 %}
+        {% block "content" %}
+        {% if table.page %}
+            <div class="table-container" style="overflow-x: scroll;">
+        {% endif %}
+            {% block table %}
+            <div class="table-responsive" style="padding-bottom:0px;background-color:white;">
+                <table id = "myTable" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
+                    {% block table.thead %}
+                    <thead>                 
+                      <tr>
+                        {% for column in table.columns %}
+                            {% if column.orderable %}
+                            <th {{ column.attrs.th.as_html }}><a href="{% querystring table.prefixed_order_by_field=column.order_by_alias.next %}">{{ column.header|title }}</a></th>
+                            {% else %}
+                            <th {{ column.attrs.th.as_html }}>{{ column.header|title }}</th>
+                            {% endif %}
+                        {% endfor %}
+                      </tr>
+                    </thead>
+                    {% endblock table.thead %}
+                    {% block table.tbody %}
+                    <tbody>
+                        {% for row in table.page.object_list|default:table.rows %} {# support pagination #}
+                          {% block table.tbody.row %}
+                          <tr class="{% cycle "odd" "even" %}">
+                              {% for column, cell in row.items %}
+                                  <td {{ column.attrs.td.as_html }}>{{ cell }}</td>
+                              {% endfor %}
+                          </tr>
+                          {% endblock table.tbody.row %}
+                        {% empty %}
+                          {% if table.empty_text %}
+                          {% block table.tbody.empty_text %}
+                          <tr><td colspan="{{ table.columns|length }}">{{ table.empty_text }}</td></tr>
+                          {% endblock table.tbody.empty_text %}
+                          {% endif %}
+                        {% endfor %}
+                    </tbody>
+                    {% endblock table.tbody %}
+                    {% block table.tfoot %}
+                    <tfoot></tfoot>
+                    {% endblock table.tfoot %}
+            </table>
+        </div>
+        {% endblock table %}
+        {% if table.page %}
+            {% block pagination %}
+            {% bootstrap_pagination table.page url=request.get_full_path %}
+            {% endblock pagination %}
+        {% endif %}
+        {% endblock "content" %}       
+      </div>
+    </div>
+    <div class="card card-block bg-faded" style="margin-left:20px;margin-right:20px;width:310px">
+    <div style="margin:0px;padding:0px;">
+      <div class="column row-sm-8">
+        <h6 class="navBar" style="color:#3371FF;font-weight:bold;font:sans-serif;text-align:right;margin:0px">Current Time: </h6>
+        <div class="navBar" id="clock" style="padding:0px;font-size:110%;"></div>
+      </div>
+      <div class="column row-sm-8">
+        <h6 style="margin-bottom: 5px;margin-right:5px;color:#3371FF;font-weight:bold;" class="navBar">Status:</h6>
+        <p class="navBar" style="font-size:110%;" id="clockedIn">{{ clockedIn }}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="card card-block bg-faded" style="height:60px;width:200px;margin:20px;">
+    <span>
+      <h6 class="inline" style="color:#3371FF;font-weight:bold;font:sans-serif;">Project Hours:</h6>
+      <p class="inline" id="totalHours">{{ totalHours }}</p>
+    </span>
+  </div>   
+  <!--div id="myFooter" style="padding-top:200px;">SeniorDevOps.com © 2018</div-->
+  </body>
+</html>
+<style>
+*{
+    font-family:Helvetica,Arial,sans-serif;
+}
+#myFooter{
+    height:45px;
+}
+div{
+    padding: 10px;
+}
+th, td{
+    text-align: center;
+    pointer-events: none;
+    cursor: default;
+}
+a:visited {
+    color: white;
+}
+a {
+    color:#3371FF;
+    font-weight: bold;
+}
+#buttonList {
+    list-style-type: none;
+}
+#buttonList li {
+    margin-bottom:3px;
+    display: inline;
+}
+.noPads{
+    padding:0px;
+    margin:0px;
+}
+.borderB{
+    border-bottom:gainsboro solid 1.5px;
+}
+.borderR{
+    border-right:gainsboro solid 1px;
+}
+.borderL{
+    border-left:gainsboro solid 1px;
+}
+.borderT{
+    border-top:gainsboro solid 1px;
+}
+p{
+    display:inline-block;
+}
+.inline{
+    display:inline-block;
+    padding: 5px;
+    //border: 1px solid black;;
+}
+.column {
+    display:inline-block;
+    margin: auto;
+    height:35px;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+}
+.main{
+    background-color:#C6E2FF;
+    margin: 0 auto;
+    width: 90%;
+    padding-top:50px;
+}
+.navBar{
+    display: inline-block;
+    padding-right:10px;
+}
+.btn-dope{
+  background-color:#3371FF;
+  color:#BFD7FF;
+}
+.btn-dope:hover{
+  background-color:#2964C4;
+  color:white;
+}
+#mainNav{
+  padding:0px;
+}
+#navbarResponsive{
+  padding:0px;
+}
+</style>
+<script>
+    $('document').ready(function(){
+        $(".startedFormatted").attr("style","width:150px");
+        $(".finishedFormatted").attr("style","width:150px");
+        $(".myHours").attr("style","width:150px");
+        $(".comments").attr("style","text-align:left");
+        $("myPlaceHolder").css("color","white");
+        setViewState();
+    });
+    function updateWorkInterval(){
+        // Updates comments and finish time of intervalWork
+        var rightNow = new Date().toISOString();
+        var selectedProject = $('#projectSelected').find(":selected").text();
+        {% for aProject in projects %}
+            if ("{{aProject.name}}" == selectedProject){
+                $.ajax({
+                    url: "update/{{ myHours.last.id }}/",
+                    data: {
+                        user: {{ user.id }},
+                        comments: $("#id_comments").val(),
+                        project: {{aProject.id}},
+                        finished: rightNow,
+                    },
+                    type: "PUT",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data)
+                        $("#id_comments").val("");
+                        $('#myModal').modal('hide');
+                        location.reload();
+                    },
+                    error: function (xhr, status) {
+                        console.log(xhr)
+                        console.log(status)
+                        $('#myModal').modal('hide');
+                    },
+                    complete: function (xhr, status) {
+                        console.log(xhr)
+                        console.log(status)
+                    },
+                });
+             }
+         {% endfor %}
+    }
+    $('#commentForm').on('submit', function(event){
+        event.preventDefault();  
+        updateWorkInterval();
+        var shouldWorkMore = sessionStorage.getItem("startNew");
+        if(shouldWorkMore == "true"){
+            createWorkInterval("dontAlert");
+        }
+    });
+    // On showing modal, determine the button it came from, you'll need it to determine whether to start a new work interval
+    $('#myModal').on('show.bs.modal', function (event) { 
+        var myButton = $(event.relatedTarget); // Button that triggered the modal
+        if (myButton[0].id == "clockOutButton"){
+            sessionStorage.setItem("startNew","false");
+            return;
+        }
+        sessionStorage.setItem("startNew","true");
+    }) //delete old text after sending comments to server
+    $(".modal").on("hidden.bs.modal", function(){
+        $(".modal-body1").html("");
+    });
+    $("#id_comments").attr({
+        class:"form-control", 
+        style:"min-height:250px",
+        placeholder: 'Comments go here'
+    });
+    function setViewState(){
+        var badUserRequest = false;
+        if (("{{ request.GET.project }}" != "") && ("{{currentProject}}" != "None")){
+            if("{{ currentProject }}" != "{{ request.GET.project }}"){
+                badUserRequest = true;
+            }
+        }
+        $('#projectSelected').val("{{ request.GET.project }}");
+        if("{{ currentProject }}" != "None"){
+            $('#projectSelected').val("{{ currentProject}}"); 
+        }
+        if ($("#clockedIn")[0].innerText == "Clocked In"){
+            $("#clockOutButton").show();
+            $("#commentButton").show();
+            $("#clockInButton").hide();
+            $('#projectSelected').prop('disabled', true);
+        }else{
+            $("#clockOutButton").hide();
+            $("#commentButton").hide();
+            $("#clockInButton").show();
+            $('#projectSelected').prop('disabled', false);
+        }
+        if(badUserRequest){
+            alert("You must log out of {{currentProject}} in order to switch projects.");
+            badUserRequest = false;
+        }
+    }
+    function createWorkInterval(dontAlert){
+        var selectedProject = $('#projectSelected').find(":selected").text();
+        var shouldAlert = true;
+        {% for aProject in projects %}
+            if ("{{aProject.name}}" == selectedProject){
+                shouldAlert = false;
+                $.ajax({
+                    url: "new/",
+                    data: {
+                        user: {{ user.id }},
+                        paid: false,
+                        project: {{ aProject.id }},
+                    },
+                    type: "POST",
+                    dataType: "json",
+                    success: function (data) {
+                        location.reload();
+                        return;                   
+                    },
+                    error: function (xhr, status) {
+                        console.log(xhr)
+                        console.log(status)
+                    },
+                    complete: function (xhr, status) {
+                        console.log(xhr)
+                        console.log(status)
+                    },
+                });
+            }
+        {% endfor %}
+        if(dontAlert == "dontAlert"){
+            return;
+        }
+        if(shouldAlert){
+            alert("You must select a project to clock in.");
+            shouldAlert=false;
+        }   
+    }
+    function clockOut(){
+        window.location.href = "{% url 'logout' %}"
+    }
+    $("#clockInButton").click(function(e) {
+        createWorkInterval();
+    });
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var ampm = h >= 12 ? 'pm' : 'am';
+        h = h % 12;
+        h = h ? h : 12; // the hour '0' should be '12'
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + " " + ampm;
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }  
+    function csrfSafeMethod(method) {
+        // don't reveal CSRF token to GET requests
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader('X-CSRFToken', csrftoken);
+            }
+        }
+    });
+    $('#projectSelected').on('change', function() {
+        window.location.href = "{% url 'clockin' %}?project=" + this.value; 
+    });
+</script>
+
