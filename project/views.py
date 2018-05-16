@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from invoice.models import Project # TO DO: ADD MODEL AND TEMPLATE
 from clockin.serializers import ProjectSerializer, UserSerializer
 from rest_framework.generics import CreateAPIView, UpdateAPIView
+from project.forms import UserAddForm
 
 class ProjectView(LoginRequiredMixin, ListView):
     model = Project
@@ -14,7 +15,7 @@ class ProjectView(LoginRequiredMixin, ListView):
         # Initializes the state of the view
         context = super(ProjectView, self).get_context_data(**kwargs)
         context['first_name'] = self.request.user.first_name
-        print(context['first_name'])
+        context['myForm'] = UserAddForm()
         return context
 
 class ProjectCreate(CreateAPIView):

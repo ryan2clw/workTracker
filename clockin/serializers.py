@@ -10,6 +10,7 @@ class IntervalWorkSerializer(serializers.ModelSerializer):
         fields = ('user', 'started', 'finished', 'comments', 'project', 'id')
 
 class UserSerializer(serializers.ModelSerializer):
+	
     class Meta:
         model = User
         fields = ('project_set',)

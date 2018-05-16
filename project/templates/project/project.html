@@ -23,7 +23,7 @@
     <!-- Custom styles for this template -->
     <link href="{% static "menu/css/creative.min.css" %}" rel="stylesheet">
   </head>
-  <body class="main" onload="startTime()">
+  <body class="main">
   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#3371FF;" id="mainNav">
       <div class="container" style="padding:0px;">
@@ -58,7 +58,7 @@
                     <ul class="buttonList" style="padding:0px;">
                         <li>
                             <h5 style="margin-bottom: 5px;padding-left:10px;" class="navBar">Action:</h5>
-                            <button id="projectButton" type="button" class="btn-sm btn-dope navBar" style="font-weight: bold;border:none;">Make Project</button>
+                            <button id="projectButton" type="button" class="btn-sm btn-dope navBar" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Make Project</button>
                         </li>
                         <li id="inviteButtonContainer">
                            <button id="sendInviteButton"  type="button" class="btn-sm btn-dope" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Send Invite</button>
@@ -80,21 +80,23 @@
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Enter your comments below</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <form action="url {{ work_update }}" method="PUT" id="commentForm">
-                  {% csrf_token %}
-                  <div class="modal-body">
-                  {{ myForm.comments }}
-                  </div>
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-dope" data="closingComments">Save changes</button>
-                  </div>
+              <form action="url {{ user_update }}" method="PUT" id="userForm">
+                {% csrf_token %}
+                <div class="modal-header">
+                  <h5 class="modal-title" id="projectLabel" style="padding-right: 25px; padding-top:3px;">Enter:</h5>
+                  {{ myForm.projectName }}
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>    
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inviteLabel" style="padding-right: 25px">Invite:</h5>
+                    {{ myForm.email }}
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-secondary" style="color:#F0F0F0" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-dope" data="closingComments">Save changes</button>
+                </div>
               </form>
             </div>
           </div>
@@ -234,7 +236,7 @@ p{
 }
 .btn-dope{
   background-color:#3371FF;
-  color:#BFD7FF;
+  color:#F0F0F0;
 }
 .btn-dope:hover{
   background-color:#2964C4;
@@ -260,7 +262,6 @@ p{
         $(".myHours").attr("style","width:150px");
         $(".comments").attr("style","text-align:left");
         $("myPlaceHolder").css("color","white");
-        setViewState();
     });
     function updateWorkInterval(){
         // Updates comments and finish time of intervalWork
@@ -297,7 +298,7 @@ p{
              }
          {% endfor %}
     }
-    $('#commentForm').on('submit', function(event){
+    $('#userForm').on('submit', function(event){
         event.preventDefault();  
         updateWorkInterval();
         var shouldWorkMore = sessionStorage.getItem("startNew");
@@ -317,10 +318,14 @@ p{
     $(".modal").on("hidden.bs.modal", function(){
         $(".modal-body1").html("");
     });
-    $("#id_comments").attr({
+    $("#id_email").attr({
         class:"form-control", 
-        style:"min-height:250px",
-        placeholder: 'Comments go here'
+        placeholder: 'Email Address',
+        required: false
+    });
+    $("#id_projectName").attr({
+        class:"form-control", 
+        placeholder: 'Project name'
     });
     function setViewState(){
         var badUserRequest = false;
@@ -349,67 +354,37 @@ p{
             badUserRequest = false;
         }
     }
-    function createWorkInterval(dontAlert){
-        var selectedProject = $('#projectSelected').find(":selected").text();
-        var shouldAlert = true;
-        {% for aProject in projects %}
-            if ("{{aProject.name}}" == selectedProject){
-                shouldAlert = false;
-                $.ajax({
-                    url: "new/",
-                    data: {
-                        user: {{ user.id }},
-                        paid: false,
-                        project: {{ aProject.id }},
-                    },
-                    type: "POST",
-                    dataType: "json",
-                    success: function (data) {
-                        location.reload();
-                        return;                   
-                    },
-                    error: function (xhr, status) {
-                        console.log(xhr)
-                        console.log(status)
-                    },
-                    complete: function (xhr, status) {
-                        console.log(xhr)
-                        console.log(status)
-                    },
-                });
-            }
-        {% endfor %}
-        if(dontAlert == "dontAlert"){
-            return;
-        }
-        if(shouldAlert){
-            alert("You must select a project to clock in.");
-            shouldAlert=false;
-        }   
-    }
+    function createProject(projectName, additionalUser){
+        $.ajax({
+            url: "new/",
+            data: {"name":projectName},
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                if (!additionalUser)
+                    alert(JSON.stringify(data))
+                else  
+                    alert("Send user " + additionalUser + " project: \n" +
+                        JSON.stringify(data)
+                    );
+                // TO DO: UPDATE                 
+            },
+            error: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+            complete: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+        });
+    } 
     function clockOut(){
         window.location.href = "{% url 'logout' %}"
     }
-    $("#clockInButton").click(function(e) {
-        createWorkInterval();
-    });
-    function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        var ampm = h >= 12 ? 'pm' : 'am';
-        h = h % 12;
-        h = h ? h : 12; // the hour '0' should be '12'
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + " " + ampm;
-        var t = setTimeout(startTime, 500);
-    }
-    function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
-    }  
+    /*$("#projectButton").click(function(e) {
+        createProject('thisDICK','sara.verel@yahoo.com');
+    });*/
     function csrfSafeMethod(method) {
         // don't reveal CSRF token to GET requests
         return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
