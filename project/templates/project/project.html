@@ -55,8 +55,15 @@
             </li>
             <li class="column" style="padding-left:0px;">
                 <div style="display:inline-block; padding: 0px; vertical-align:text-middle" id="myButtonDiv">
-                    <ul id="buttonList" style="padding:0px;">
+                    <ul class="buttonList" style="padding:0px;">
                         <li>
+                            <h5 style="margin-bottom: 5px;padding-left:10px;" class="navBar">Action:</h5>
+                            <button id="projectButton" type="button" class="btn-sm btn-dope navBar" style="font-weight: bold;border:none;">Make Project</button>
+                        </li>
+                        <li id="inviteButtonContainer">
+                           <button id="sendInviteButton"  type="button" class="btn-sm btn-dope" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Send Invite</button>
+                        </li>
+                        <li id="projectsContainer">
                           <h5 style="padding-left:5px;" class="navBar">Project:</h5>
                           <select id="projectSelected">
                             <option id="myPlaceHolder" value="" disabled selected>Select your project</option>
@@ -64,17 +71,7 @@
                             <option value="{{ project }}">{{ project }}</option>
                             {% endfor %}
                           </select>
-                        </li>
-                        <li>
-                            <h5 style="margin-bottom: 5px;padding-left:10px;" class="navBar">Action:</h5>
-                            <button id="projectButton" type="button" class="btn-sm btn-dope navBar" style="font-weight: bold;border:none;">Make Project</button>
-                        </li>
-                        <li>
-                           <button id="clockOutButton"  type="button" class="btn-sm btn-dope" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Clock-Out</button>
-                        </li>                 
-                        <li>
-                            <button id="commentButton" type="button" class="btn-sm btn-dope" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Comment</button>
-                        </li>
+                        </li>             
                     <ul>
                 </div>
             </li>
@@ -159,25 +156,7 @@
         {% endblock "content" %}       
       </div>
     </div>
-    <div class="card card-block bg-faded" style="margin-left:20px;margin-right:20px;width:310px">
-    <div style="margin:0px;padding:0px;">
-      <div class="column row-sm-8">
-        <h6 class="navBar" style="color:#3371FF;font-weight:bold;font:sans-serif;text-align:right;margin:0px">Current Time: </h6>
-        <div class="navBar" id="clock" style="padding:0px;font-size:110%;"></div>
-      </div>
-      <div class="column row-sm-8">
-        <h6 style="margin-bottom: 5px;margin-right:5px;color:#3371FF;font-weight:bold;" class="navBar">Status:</h6>
-        <p class="navBar" style="font-size:110%;" id="clockedIn">{{ clockedIn }}</p>
-      </div>
-    </div>
-    </div>
-  </div>
-  <div class="card card-block bg-faded" style="height:60px;width:200px;margin:20px;">
-    <span>
-      <h6 class="inline" style="color:#3371FF;font-weight:bold;font:sans-serif;">Project Hours:</h6>
-      <p class="inline" id="totalHours">{{ totalHours }}</p>
-    </span>
-  </div>   
+    
   <!--div id="myFooter" style="padding-top:200px;">SeniorDevOps.com © 2018</div-->
   </body>
 </html>
@@ -203,10 +182,10 @@ a {
     color:#3371FF;
     font-weight: bold;
 }
-#buttonList {
+.buttonList {
     list-style-type: none;
 }
-#buttonList li {
+.buttonList li {
     margin-bottom:3px;
     display: inline;
 }
@@ -266,6 +245,12 @@ p{
 }
 #navbarResponsive{
   padding:0px;
+}
+#inviteButtonContainer{
+  display: none;
+}
+#projectsContainer{
+  display: none;
 }
 </style>
 <script>
