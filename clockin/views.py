@@ -79,7 +79,7 @@ class IndexView(LoginRequiredMixin, ListView):
 
 class WorkUpdate(UpdateAPIView):
 
-    queryset = IntervalWork.objects.all() #
+    queryset = IntervalWork.objects.all() 
     serializer_class = IntervalWorkSerializer
     
     def get_queryset(self):
@@ -97,7 +97,6 @@ class ProjectList(ListAPIView):
     serializer_class = ProjectSerializer
     model = Project
     permission_classes = [ permissions.IsAuthenticated, ]
-    # MARK TO DO: CHANGE FROM ONE USER TO MANY USERS
 
     def get_queryset(self):
         return Project.objects.filter(members__id=self.request.user.id)
@@ -115,7 +114,7 @@ class WorkList(ListAPIView):
 
     def get_queryset(self):
         # this routine checks for open projects first, then if none are open, 
-        # retrieves GET['project']'s objects if they're from today, else retrieves all projects
+        # retrieves GET['project']'s objects if they're from today, else retrieves all projects hours for today
         self.myProjects = Project.objects.all()
         for project in self.myProjects:
             IntervalWorks = IntervalWork.objects.filter(user_id=self.request.user.id, project_id=project.id, 

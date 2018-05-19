@@ -38,7 +38,7 @@
               <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">Login</a>
+              <a class="nav-link" href="{% url 'clockin' %}">Clock-In</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contact' %}">Contact</a>
@@ -97,11 +97,14 @@
                   <button type="submit" class="btn btn-secondary" style="color:#F0F0F0" data-dismiss="modal">Close</button>
                   <button type="submit" class="btn btn-dope" data="closingComments">Save changes</button>
                 </div>
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                <div class="g-recaptcha" data-sitekey="6Lc6rVIUAAAAAKIyufRXlshHeyzLaZlm6xZO15w9"></div>
               </form>
             </div>
           </div>
         </div>
-        <div id="bottomHalf" style="margin: auto; border-top: 1px solid black;">
+        <div style="margin: auto; border-top: 1px solid black; width:100%"></div>
+        <div id="bottomHalf">
         {% load bootstrap4 %}
         {% load querystring from django_tables2 %}
         {% load title from django_tables2 %}
@@ -157,8 +160,7 @@
         {% endif %}
         {% endblock "content" %}       
       </div>
-    </div>
-    
+    </div>    
   <!--div id="myFooter" style="padding-top:200px;">SeniorDevOps.com © 2018</div-->
   </body>
 </html>
@@ -172,8 +174,14 @@
 div{
     padding: 10px;
 }
-th, td{
-    text-align: center;
+th{
+    text-align: left;
+    pointer-events: none;
+    cursor: default;
+    color:#3371FF
+}
+td{
+    text-align: left;
     pointer-events: none;
     cursor: default;
 }
@@ -263,60 +271,13 @@ p{
         $(".comments").attr("style","text-align:left");
         $("myPlaceHolder").css("color","white");
     });
-    function updateWorkInterval(){
-        // Updates comments and finish time of intervalWork
-        var rightNow = new Date().toISOString();
-        var selectedProject = $('#projectSelected').find(":selected").text();
-        {% for aProject in projects %}
-            if ("{{aProject.name}}" == selectedProject){
-                $.ajax({
-                    url: "update/{{ myHours.last.id }}/",
-                    data: {
-                        user: {{ user.id }},
-                        comments: $("#id_comments").val(),
-                        project: {{aProject.id}},
-                        finished: rightNow,
-                    },
-                    type: "PUT",
-                    dataType: "json",
-                    success: function (data) {
-                        console.log(data)
-                        $("#id_comments").val("");
-                        $('#myModal').modal('hide');
-                        location.reload();
-                    },
-                    error: function (xhr, status) {
-                        console.log(xhr)
-                        console.log(status)
-                        $('#myModal').modal('hide');
-                    },
-                    complete: function (xhr, status) {
-                        console.log(xhr)
-                        console.log(status)
-                    },
-                });
-             }
-         {% endfor %}
-    }
     $('#userForm').on('submit', function(event){
         event.preventDefault();  
-        updateWorkInterval();
-        var shouldWorkMore = sessionStorage.getItem("startNew");
-        if(shouldWorkMore == "true"){
-            createWorkInterval("dontAlert");
-        }
+        createProject()
+        $('#myModal').modal('hide')
     });
-    // On showing modal, determine the button it came from, you'll need it to determine whether to start a new work interval
-    $('#myModal').on('show.bs.modal', function (event) { 
-        var myButton = $(event.relatedTarget); // Button that triggered the modal
-        if (myButton[0].id == "clockOutButton"){
-            sessionStorage.setItem("startNew","false");
-            return;
-        }
-        sessionStorage.setItem("startNew","true");
-    }) //delete old text after sending comments to server
     $(".modal").on("hidden.bs.modal", function(){
-        $(".modal-body1").html("");
+        $("input").val("");
     });
     $("#id_email").attr({
         class:"form-control", 
@@ -327,47 +288,19 @@ p{
         class:"form-control", 
         placeholder: 'Project name'
     });
-    function setViewState(){
-        var badUserRequest = false;
-        if (("{{ request.GET.project }}" != "") && ("{{currentProject}}" != "None")){
-            if("{{ currentProject }}" != "{{ request.GET.project }}"){
-                badUserRequest = true;
-            }
-        }
-        $('#projectSelected').val("{{ request.GET.project }}");
-        if("{{ currentProject }}" != "None"){
-            $('#projectSelected').val("{{ currentProject}}"); 
-        }
-        if ($("#clockedIn")[0].innerText == "Clocked In"){
-            $("#clockOutButton").show();
-            $("#commentButton").show();
-            $("#clockInButton").hide();
-            $('#projectSelected').prop('disabled', true);
-        }else{
-            $("#clockOutButton").hide();
-            $("#commentButton").hide();
-            $("#clockInButton").show();
-            $('#projectSelected').prop('disabled', false);
-        }
-        if(badUserRequest){
-            alert("You must log out of {{currentProject}} in order to switch projects.");
-            badUserRequest = false;
-        }
-    }
-    function createProject(projectName, additionalUser){
+    function createProject(){
+        var projectName = $("#id_projectName").val();
+        var additionalUser = $("#id_email").val();
         $.ajax({
             url: "new/",
             data: {"name":projectName},
-            type: "POST",
-            dataType: "json",
-            success: function (data) {
-                if (!additionalUser)
-                    alert(JSON.stringify(data))
-                else  
-                    alert("Send user " + additionalUser + " project: \n" +
-                        JSON.stringify(data)
-                    );
-                // TO DO: UPDATE                 
+            type: "POST",                    // you have to use the reverse relationship with many-to-many
+            dataType: "json",                                // maybe I should subclass auth user instead, 
+            success: function (data) {                               // then I could add users to projects
+                getCurrentProjects(data.id, "{{ user_email }}"); // the requestor gets added automatically
+                if (additionalUser){                                               // calls userAddProject
+                    getCurrentProjects(data.id, additionalUser);              
+                }
             },
             error: function (xhr, status) {
                 console.log(xhr)
@@ -376,21 +309,65 @@ p{
             complete: function (xhr, status) {
                 console.log(xhr)
                 console.log(status)
+            }
+        })
+    } 
+    function getCurrentProjects(projectID, username){
+        var myUrl = "{% url 'users_projects' %}?username=" + username;
+        $.ajax({
+            url: myUrl,
+            type: "GET",
+            success: function (data) {
+                var myProjects = [];
+                data.forEach(function(project){
+                    console.log(project, "project");
+                    myProjects.push(project.id);
+                });
+                myProjects.push(projectID);
+                console.log(myProjects, "myProjects");
+                userAddProject(myProjects, username);
+            },
+            error: function (xhr, status) {
+                console.log(xhr, status);
+            },
+            complete: function (xhr, status) {
+                console.log(xhr, status);
+            }
+        })
+    }        
+    function userAddProject(projectList, username){
+        // GET USER ID
+        var myUser = encodeURIComponent(username);
+        var data = { "project_set": projectList };
+        var headers = { "Content-Type": "application/json"};
+        $.ajax({
+            url: "update/" + myUser + "/",
+            data: JSON.stringify(data),
+            headers: headers,
+            type: "PUT",
+            success: function (data) {
+                $("#bottomHalf").load(window.location.href + " #bottomHalf" );
+                console.log(data, "userAddProject response");
+            },
+            error: function (xhr, status) {
+                console.log(xhr);
+                console.log(status);
+            },
+            complete: function (xhr, status) {
+                console.log(xhr);
+                console.log(status);
             },
         });
-    } 
+    }
     function clockOut(){
         window.location.href = "{% url 'logout' %}"
     }
-    /*$("#projectButton").click(function(e) {
-        createProject('thisDICK','sara.verel@yahoo.com');
-    });*/
     function csrfSafeMethod(method) {
         // don't reveal CSRF token to GET requests
         return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
     }
     var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
-    $.ajaxSetup({
+    $.ajaxSetup({ // MARK TO DO: MOVE CSRF TOKEN OUT OF GLOBAL SCOPE       
         beforeSend: function(xhr, settings) {
             if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
                 xhr.setRequestHeader('X-CSRFToken', csrftoken);

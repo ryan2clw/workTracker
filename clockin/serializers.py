@@ -10,14 +10,17 @@ class IntervalWorkSerializer(serializers.ModelSerializer):
         fields = ('user', 'started', 'finished', 'comments', 'project', 'id')
 
 class UserSerializer(serializers.ModelSerializer):
-	
+
     class Meta:
         model = User
-        fields = ('project_set',)
+        fields = ('project_set', 'username','id')
+        read_only_fields = ('username','id')
+        #extra_kwargs = {'url': {'lookup_field': 'username'}, 'users': {'lookup_field': 'username'}}
 
 class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ['name', 'id',]
+        fields = ['name', 'id']
+
   
