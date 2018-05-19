@@ -96,7 +96,7 @@ class ProjectList(ListAPIView):
 
     serializer_class = ProjectSerializer
     model = Project
-    # MARK TO DO: CHANGE FROM ONE USER TO MANY USERS
+    permission_classes = [ permissions.IsAuthenticated, ]
 
     def get_queryset(self):
         return Project.objects.filter(members__id=self.request.user.id)
