@@ -6,5 +6,4 @@ class Project(models.Model):
     members = models.ManyToManyField(User)
     
     def __str__(self):
-        # Shows name, start and end time for admin
         return self.name

@@ -55,6 +55,7 @@ class ContactView(FormView):
             ]
         )
         log.debug(response)
+        # return super(ContactView, self).form_valid(form)
         return super().form_valid(form)
     
 class EmailView(TemplateView):
