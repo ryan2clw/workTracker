@@ -130,7 +130,7 @@
                 </div-->
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-secondary" style="color:#F0F0F0" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-dope" data="closingComments">Save changes</button>
+                  <button type="submit" class="btn btn-dope" data="emailFields">Save changes</button>
                 </div>
                 <script src='https://www.google.com/recaptcha/api.js'></script>
                 <div class="g-recaptcha" data-sitekey="6Lc6rVIUAAAAAKIyufRXlshHeyzLaZlm6xZO15w9"></div>
@@ -202,7 +202,7 @@
 </html>
 <script>
     $('document').ready(function(){
-        if(sessionStorage.getItem("mode") == "edit"){
+        if("{{currentProject}}"){
            $('#bottomHalf').attr("style","width:400px"); // default is 100 percent
            $("#projectButton").attr("data-target", "");
            $('#projectButton').html('Invite').button("refresh");
@@ -215,7 +215,7 @@
         $(".myHours").attr("style","width:150px");
         $(".comments").attr("style","text-align:left");
         $("myPlaceHolder").css("color","white");
-        $('#projectSelected').val("{{ request.GET.project }}");
+        $('#projectSelected').val("{{ request.GET.project }}" || "all");
         if({{ hasProjects}}){
             $("#inviteButtonContainer").css({"display": "inline-block"});
             $("#projectsContainer").css({"display": "inline-block"});
@@ -228,7 +228,8 @@
     });
     $('#inviteForm').on('submit', function(event){
         event.preventDefault();  
-        alert("MAKE API CALL TO ADD USERS");
+        var additionalUser = $("#id_emailOne").val();
+        getCurrentProjects("{{ currentID }}", additionalUser);
         $('#inviteModal').modal('hide')
     });
     $(".modal").on("hidden.bs.modal", function(){
@@ -238,6 +239,11 @@
         class:"form-control", 
         placeholder: 'Email Address',
         required: false
+    });
+    $("#id_emailOne").attr({
+        class:"form-control", 
+        placeholder: 'Email Address',
+        required: true
     });
     $("#id_projectName").attr({
         class:"form-control", 
@@ -313,9 +319,9 @@
                 $("#projectButton").css({"display": "hidden"});
                 var myProject = sessionStorage.getItem("myProject")
                 console.log("myProject", myProject);
-                if(myProject != "None"){
-                    $('#projectSelected').val(myProject); 
-                }
+                //if(myProject != "None"){
+                $('#projectSelected').val(myProject || "all"); 
+                //}
                 $("#bottomHalf").load(window.location.href + " #bottomHalf" );
             },
         });

@@ -33,9 +33,7 @@ class ProjectView(LoginRequiredMixin, ListView):
             context['inviteForm'] = InviteForm()
             table = UserTable(myUsers)
             context['table'] = table
-            print("USER TABLE")
         except:
-            print("PROJECT TABLE")
             table = ProjectTable(self.object_list)
             RequestConfig(self.request, paginate=False).configure(table)
             context['table'] = table
