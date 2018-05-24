@@ -4,10 +4,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from rest_framework import permissions
 from clockin.serializers import ProjectSerializer, UserSerializer
-from rest_framework.generics import CreateAPIView, UpdateAPIView, ListAPIView
+from rest_framework.generics import CreateAPIView, UpdateAPIView, ListAPIView, DestroyAPIView
 from django_tables2 import RequestConfig
 from invoice.models import Project
-from project.forms import UserAddForm, InviteForm
+from project.forms import UserAddForm, InviteForm, UserDeleteForm
 from project.tables import ProjectTable, UserTable
 
 class ProjectView(LoginRequiredMixin, ListView):
@@ -20,9 +20,11 @@ class ProjectView(LoginRequiredMixin, ListView):
         context['myForm'] = UserAddForm()
         context['user_email'] = self.request.user.username        
         context['hasProjects'] = "false"
+        context['deleteForm'] = UserDeleteForm()
         if len(self.object_list) > 0:
             context['hasProjects'] = "true"
         try:
+        	# PARAMETER 'PROJECT' HELPS FORM USER LIST (USER MODE)
             myProject = Project.objects.filter(name=self.request.GET['project'])[0]
             context['hasProjects'] = "true"
             print(myProject.id)
@@ -34,6 +36,7 @@ class ProjectView(LoginRequiredMixin, ListView):
             table = UserTable(myUsers)
             context['table'] = table
         except:
+        	# NO PARAMETER SPECIFIED IS LIKE PROJECT MODE
             table = ProjectTable(self.object_list)
             RequestConfig(self.request, paginate=False).configure(table)
             context['table'] = table
@@ -71,6 +74,14 @@ class ProjectList(ListAPIView):
 class ProjectCreate(CreateAPIView):
     
     serializer_class = ProjectSerializer
+
+    def get_queryset(self):
+        return Project.objects.all()
+
+class ProjectDelete(DestroyAPIView):
+
+    serializer_class = ProjectSerializer
+    lookup_field = 'name'
 
     def get_queryset(self):
         return Project.objects.all()

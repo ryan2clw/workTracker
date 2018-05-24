@@ -90,7 +90,7 @@
                   </button>
                 </div>    
                 <div class="modal-header">
-                    <h5 class="modal-title" id="inviteLabel" style="padding-right: 25px">Invite:</h5>
+                    <h5 class="modal-title" id="inviteLabelInitial" style="padding-right: 25px">Invite:</h5>
                     {{ myForm.email }}
                 </div>
                 <div class="modal-footer">
@@ -116,18 +116,9 @@
                   </button>
                 </div>    
                 <div class="modal-header">
-                    <h5 class="modal-title" id="inviteLabel" style="padding-right: 25px">Invite:</h5>
+                    <h5 class="modal-title" id="inviteLabelOne" style="padding-right: 25px">Invite:</h5>
                     {{ inviteForm.emailOne }}
                 </div>
-                <!--                              ADD DYNAMIC PLUS FIELD HERE
-                div class="modal-header">
-                    <h5 class="modal-title" id="inviteLabel" style="padding-right: 25px">Invite:</h5>
-                    {{ inviteForm.emailTwo }}
-                </div>
-                <div class="modal-header">
-                    <h5 class="modal-title" id="inviteLabel" style="padding-right: 25px">Invite:</h5>
-                    {{ inviteForm.emailOne }}
-                </div-->
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-secondary" style="color:#F0F0F0" data-dismiss="modal">Close</button>
                   <button type="submit" class="btn btn-dope" data="emailFields">Save changes</button>
@@ -138,7 +129,28 @@
             </div>
           </div>
         </div>
-
+        <!-- Delete Modal  -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <form method="DELETE" id="deleteForm">
+                {% csrf_token %}
+                <div style="display:block;left-margin: 10px">
+                  {{ deleteForm.projectName }}
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <h5 class="modal-title" id="deleteLabel" style="margin:10px">Enter a project name to delete,</h5>
+                <h5 class="modal-title" id="deleteLabel" style="margin:10px">or hit the blue cancel button to go back.</h5>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-dope" style="color:#F0F0F0" data-dismiss="modal">CANCEL</button>
+                  <button type="submit" class="btn btn-danger" id="deleteModalButton" data="closingComments">DELETE</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
         <div style="margin: auto; border-top: 1px solid black; width:100%"></div>
         <div id="bottomHalf">
         {% load bootstrap4 %}
@@ -202,7 +214,11 @@
 </html>
 <script>
     function deleteUser(){
-        alert("YOU DID IT");
+        alert("MAKE API CALL TO DELETE USER.");
+    }
+    function deleteProject(){
+        console.log("Deleting project.");
+        $('#deleteModal').modal('show');
     }
     $('document').ready(function(){ 
         if("{{currentProject}}"){
@@ -212,7 +228,6 @@
         }
         $('th.username').html("Members").attr("style","text-align:center");
         $('th.name').html("Project");
-        //$('#bottomHalf').attr("style","width:350px");
         $(".startedFormatted").attr("style","width:150px");
         $(".finishedFormatted").attr("style","width:150px");
         $(".myHours").attr("style","width:150px");
@@ -229,11 +244,12 @@
         createProject();
         $('#myModal').modal('hide');
     });
-    $('#inviteForm').on('submit', function(event){
-        event.preventDefault();  
-        var additionalUser = $("#id_emailOne").val();
-        getCurrentProjects("{{ currentID }}", additionalUser);
-        $('#inviteModal').modal('hide')
+    $('#deleteForm').on('submit', function(event){
+        event.preventDefault();
+        alert("MAKE API CALL FOOL");  
+        //var additionalUser = $("#id_emailOne").val();
+        //getCurrentProjects("{{ currentID }}", additionalUser);
+        $('#inviteModal').modal('hide');
     });
     $(".modal").on("hidden.bs.modal", function(){
         $("input").val("");

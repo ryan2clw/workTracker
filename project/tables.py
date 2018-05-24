@@ -4,10 +4,15 @@ from django.contrib.auth.models import User
 from django.utils.safestring import mark_safe
 
 class ProjectTable(tables.Table):
+
+    buttons = tables.LinkColumn(empty_values=(), verbose_name='Action')
     
     class Meta:
         model = Project
-        fields = ('name', 'members')
+        fields = ('name', 'members', 'buttons')
+
+    def render_buttons(self, record):
+        return mark_safe('<button onclick="deleteProject()" class="btn-sm btn-danger">Delete</button>')
 
 class UserTable(tables.Table):
 

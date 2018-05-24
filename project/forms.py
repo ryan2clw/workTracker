@@ -15,6 +15,10 @@ class UserAddForm(forms.Form):
         ]
     )
 
+class UserDeleteForm(forms.Form):
+
+    projectName = forms.CharField(max_length=100)
+
 class InviteForm(forms.Form):
 
     emailOne = forms.EmailField(
