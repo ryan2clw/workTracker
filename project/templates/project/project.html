@@ -201,7 +201,10 @@
   </body>
 </html>
 <script>
-    $('document').ready(function(){
+    function deleteUser(){
+        alert("YOU DID IT");
+    }
+    $('document').ready(function(){ 
         if("{{currentProject}}"){
            $('#bottomHalf').attr("style","width:400px"); // default is 100 percent
            $("#projectButton").attr("data-target", "");
@@ -370,7 +373,6 @@ th{
 }
 td{
     text-align: left;
-    pointer-events: none;
     cursor: default;
 }
 a:visited {
