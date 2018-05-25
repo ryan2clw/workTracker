@@ -23,4 +23,4 @@ class UserTable(tables.Table):
         fields = ('username','buttons')
 
     def render_buttons(self, record):
-        return mark_safe('<button onclick="deleteUser()" class="btn-sm btn-danger">Delete</button>')
+        return mark_safe('<button onclick="deleteUser(event)" class="btn-sm btn-danger">Delete</button>')
