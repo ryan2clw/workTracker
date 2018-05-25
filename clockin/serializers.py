@@ -15,7 +15,6 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('project_set', 'username','id')
         read_only_fields = ('username','id')
-        #extra_kwargs = {'url': {'lookup_field': 'username'}, 'users': {'lookup_field': 'username'}}
 
 class ProjectSerializer(serializers.ModelSerializer):
 
@@ -23,4 +22,9 @@ class ProjectSerializer(serializers.ModelSerializer):
         model = Project
         fields = ['name', 'id']
 
+class ProjectMemberSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Project
+        fields = ['name', 'members']
   

@@ -4,25 +4,44 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from rest_framework import permissions
 from clockin.serializers import ProjectSerializer, UserSerializer
-from rest_framework.generics import CreateAPIView, UpdateAPIView, ListAPIView
+from rest_framework.generics import CreateAPIView, UpdateAPIView, ListAPIView, DestroyAPIView
 from django_tables2 import RequestConfig
 from invoice.models import Project
-from project.forms import UserAddForm
-from project.tables import ProjectTable
+from project.forms import UserAddForm, InviteForm, UserDeleteForm
+from project.tables import ProjectTable, UserTable
 
 class ProjectView(LoginRequiredMixin, ListView):
     model = Project
     template_name = 'project/project.html'
 
     def get_context_data(self, **kwargs): 
-        # Initializes the state of the view
         context = super(ProjectView, self).get_context_data(**kwargs)
         context['first_name'] = self.request.user.first_name
         context['myForm'] = UserAddForm()
-        context['user_email'] = self.request.user.username
-        table = ProjectTable(self.object_list)
-        RequestConfig(self.request, paginate=False).configure(table)
-        context['table'] = table
+        context['user_email'] = self.request.user.username        
+        context['hasProjects'] = "false"
+        deleteForm = UserDeleteForm()
+        context['deleteForm'] = deleteForm
+        #context['deleteProject'] = deleteForm.projectName
+        if len(self.object_list) > 0:
+            context['hasProjects'] = "true"
+        try:
+        	# PARAMETER 'PROJECT' HELPS FORM USER LIST (USER MODE)
+            myProject = Project.objects.filter(name=self.request.GET['project'])[0]
+            context['hasProjects'] = "true"
+            print(myProject.id)
+            myUsers = myProject.members.all()
+            context['currentID'] = myProject.id
+            context['currentProject'] = myProject.name
+            print(myProject.name)
+            context['inviteForm'] = InviteForm()
+            table = UserTable(myUsers)
+            context['table'] = table
+        except:
+        	# NO PARAMETER SPECIFIED IS LIKE PROJECT MODE
+            table = ProjectTable(self.object_list)
+            RequestConfig(self.request, paginate=False).configure(table)
+            context['table'] = table
         return context
 
     def get_queryset(self):
@@ -61,6 +80,14 @@ class ProjectCreate(CreateAPIView):
     def get_queryset(self):
         return Project.objects.all()
 
+class ProjectDelete(DestroyAPIView):
+
+    serializer_class = ProjectSerializer
+    lookup_field = 'name'
+
+    def get_queryset(self):
+        return Project.objects.all()
+
 class UserUpdate(UpdateAPIView):
 
     serializer_class = UserSerializer
@@ -68,13 +95,6 @@ class UserUpdate(UpdateAPIView):
 
     def get_queryset(self):
         return User.objects.all()
-'''
-     UPDATE lets you set the project list directly
-
-     use the serializer class 
-
-    def update(self):
-        myProjects = Project.objects.filter(members__id=self.request.user.id)'''
 
 
 

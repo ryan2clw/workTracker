@@ -14,3 +14,31 @@ class UserAddForm(forms.Form):
             validators.validate_confusables_email,
         ]
     )
+
+class UserDeleteForm(forms.Form):
+
+    name = forms.CharField(max_length=100)
+
+class InviteForm(forms.Form):
+
+    emailOne = forms.EmailField(
+        help_text=_(u'email address'),
+        required=True,
+        validators=[
+            validators.validate_confusables_email,
+        ]
+    )
+    emailTwo = forms.EmailField(
+        help_text=_(u'email address'),
+        required=False,
+        validators=[
+            validators.validate_confusables_email,
+        ]
+    )
+    emailThree = forms.EmailField(
+        help_text=_(u'email address'),
+        required=False,
+        validators=[
+            validators.validate_confusables_email,
+        ]
+    )

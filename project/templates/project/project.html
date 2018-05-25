@@ -60,14 +60,14 @@
                             <h5 style="margin-bottom: 5px;padding-left:10px;" class="navBar">Action:</h5>
                             <button id="projectButton" type="button" class="btn-sm btn-dope navBar" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Make Project</button>
                         </li>
-                        <li id="inviteButtonContainer">
-                           <button id="sendInviteButton"  type="button" class="btn-sm btn-dope" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Send Invite</button>
-                        </li>
+                        <!--li id="inviteButtonContainer">
+                           <button id="sendInviteButton"  type="button" class="btn-sm btn-dope" style="font-weight: bold;border:none;">Send Invite</button>
+                        </li-->
                         <li id="projectsContainer">
-                          <h5 style="padding-left:5px;" class="navBar">Project:</h5>
+                          <h5 style="padding-left:5px;" class="navBar">Edit:</h5>
                           <select id="projectSelected">
-                            <option id="myPlaceHolder" value="" disabled selected>Select your project</option>
-                            {% for project in projects %}
+                            <option id="myPlaceHolder" value="all">-----All-----</option>
+                            {% for project in object_list %}
                             <option value="{{ project }}">{{ project }}</option>
                             {% endfor %}
                           </select>
@@ -76,7 +76,7 @@
                 </div>
             </li>
         </ul>
-        <!-- Modal -->
+        <!-- Project Modal (myModal) -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -90,7 +90,7 @@
                   </button>
                 </div>    
                 <div class="modal-header">
-                    <h5 class="modal-title" id="inviteLabel" style="padding-right: 25px">Invite:</h5>
+                    <h5 class="modal-title" id="inviteLabelInitial" style="padding-right: 25px">Invite:</h5>
                     {{ myForm.email }}
                 </div>
                 <div class="modal-footer">
@@ -99,6 +99,54 @@
                 </div>
                 <script src='https://www.google.com/recaptcha/api.js'></script>
                 <div class="g-recaptcha" data-sitekey="6Lc6rVIUAAAAAKIyufRXlshHeyzLaZlm6xZO15w9"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Invite Modal -->
+        <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <form action="url {{ user_update }}" method="PUT" id="inviteForm">
+                {% csrf_token %}
+                <div class="modal-header">
+                  <h4 class="modal-title" id="projectName" style="padding-right: 25px; padding-top:3px; text-align: center;">{{ currentProject }}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>    
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inviteLabelOne" style="padding-right: 25px">Invite:</h5>
+                    {{ inviteForm.emailOne }}
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-secondary" style="color:#F0F0F0" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-dope" data="emailFields">Save changes</button>
+                </div>
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                <div class="g-recaptcha" data-sitekey="6Lc6rVIUAAAAAKIyufRXlshHeyzLaZlm6xZO15w9"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Delete Modal  -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <form method="DELETE" id="deleteForm">
+                {% csrf_token %}
+                <div style="display:block;left-margin: 10px">
+                  {{ deleteForm.name }}
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <h5 class="modal-title" id="deleteLabel" style="margin:10px">Enter a project name to delete,</h5>
+                <h5 class="modal-title" id="deleteLabel" style="margin:10px">or hit the blue cancel button to go back.</h5>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-dope" style="color:#F0F0F0" data-dismiss="modal">CANCEL</button>
+                  <button type="submit" class="btn btn-danger" id="deleteModalButton" data="closingComments">DELETE</button>
+                </div>
               </form>
             </div>
           </div>
@@ -164,6 +212,170 @@
   <!--div id="myFooter" style="padding-top:200px;">SeniorDevOps.com © 2018</div-->
   </body>
 </html>
+<script>
+    function deleteUser(){
+        alert("MAKE API CALL TO DELETE USER.");
+    }
+    function deleteProject(){
+        $('#deleteModal').modal('show');
+    }
+    $('document').ready(function(){ 
+        if("{{currentProject}}"){
+           $('#bottomHalf').attr("style","width:400px"); // default is 100 percent
+           $("#projectButton").attr("data-target", "");
+           $('#projectButton').html('Invite').button("refresh");
+        }
+        $('th.username').html("Members").attr("style","text-align:center");
+        $('th.name').html("Project");
+        $(".startedFormatted").attr("style","width:150px");
+        $(".finishedFormatted").attr("style","width:150px");
+        $(".myHours").attr("style","width:150px");
+        $(".comments").attr("style","text-align:left");
+        $("myPlaceHolder").css("color","white");
+        $('#projectSelected').val("{{ request.GET.project }}" || "all");
+        if({{ hasProjects}}){
+            $("#inviteButtonContainer").css({"display": "inline-block"});
+            $("#projectsContainer").css({"display": "inline-block"});
+        }
+    });
+    $('#userForm').on('submit', function(event){
+        event.preventDefault();  
+        createProject();
+        $('#myModal').modal('hide');
+    });
+    $('#deleteForm').on('submit', function(event){
+        event.preventDefault();
+        var deletingProject = $("form#deleteForm")["0"][1].value;
+        var headers = { "Content-Type": "application/json"};
+        try{
+            $.ajax({
+                url: "delete/" + deletingProject + "/",
+                headers: headers,
+                type: "DELETE",
+                success: function (data) {
+                    $("#bottomHalf").load(window.location.href + " #bottomHalf" );
+                    //$("#projectSelected").load(window.location.href + " #projectSelected" );
+                    $('#projectSelected').val("all");
+                },
+                error: function (xhr, status) {
+                    if(xhr.status === 404){
+                        alert("Project not found. Failed to validate.");
+                    }
+                },
+            });
+        }catch{
+            return;
+        }
+        $('#deleteModal').modal('hide');
+    });
+    $(".modal").on("hidden.bs.modal", function(){
+        $("input").val("");
+    });
+    $("#id_email").attr({
+        class:"form-control", 
+        placeholder: 'Email Address',
+        required: false
+    });
+    $("#id_emailOne").attr({
+        class:"form-control", 
+        placeholder: 'Email Address',
+        required: true
+    });
+    $("#id_projectName").attr({
+        class:"form-control", 
+        placeholder: 'Project name'
+    });
+    $("#projectButton").click(function(){
+        var mode = sessionStorage.getItem("mode");
+        if(mode == "edit"){
+            $('#inviteModal').modal('show');
+        }
+    });
+    function createProject(){
+        var projectName = $("#id_projectName").val();
+        var additionalUser = $("#id_email").val();
+        $.ajax({
+            url: "new/",
+            data: {"name":projectName},
+            type: "POST",                    
+            dataType: "json",                                 
+            success: function (data) {
+                sessionStorage.setItem("myProject", projectName);                              
+                getCurrentProjects(data.id, "{{ user_email }}");
+                if (additionalUser){                                              
+                    getCurrentProjects(data.id, additionalUser);              
+                }
+            },
+            error: function (xhr, status) {
+                console.log(xhr)
+                console.log(status)
+            },
+        })
+    } 
+    function getCurrentProjects(projectID, username){
+        var myUrl = "{% url 'users_projects' %}?username=" + username;
+        $.ajax({
+            url: myUrl,
+            type: "GET",
+            success: function (data) {
+                var myProjects = [];
+                data.forEach(function(project){
+                    myProjects.push(project.id);
+                });
+                myProjects.push(projectID); // ADDS THE NEW PROJECT ID TO THE ARRAY OF OLD ONES
+                userAddProject(myProjects, username);
+            },
+            error: function (xhr, status) {
+                console.log(xhr, status);
+            },
+        })
+    }        
+    function userAddProject(projectList, username){
+        // GET USER ID
+        var myUser = encodeURIComponent(username);
+        var data = { "project_set": projectList };
+        var headers = { "Content-Type": "application/json"};
+        $.ajax({
+            url: "update/" + myUser + "/",
+            data: JSON.stringify(data),
+            headers: headers,
+            type: "PUT",
+            success: function (data) {
+                $("#inviteButtonContainer").css({"display": "inline-block"});
+                $("#projectsContainer").css({"display": "inline-block"});
+                $("#projectButton").css({"display": "hidden"});
+                var myProject = sessionStorage.getItem("myProject")
+                $('#projectSelected').val(myProject || "all"); 
+                $("#bottomHalf").load(window.location.href + " #bottomHalf" );
+            },
+        });
+    }
+    function clockOut(){
+        window.location.href = "{% url 'logout' %}"
+    }
+    function csrfSafeMethod(method) {
+        // don't reveal CSRF token to GET requests
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    $.ajaxSetup({ // MARK TO DO: MOVE CSRF TOKEN OUT OF GLOBAL SCOPE       
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader('X-CSRFToken', csrftoken);
+            }
+        }
+    });
+    $('#projectSelected').on('change', function(event) {
+        window.location.href = "{% url 'project' %}?project=" + this.value;
+        if (this.value == "all"){
+            sessionStorage.setItem("mode", "project"); // mode changes state of button
+            return;
+        }else{          
+            sessionStorage.setItem("mode", "edit");
+            return;
+        }
+    });
+</script>
 <style>
 *{
     font-family:Helvetica,Arial,sans-serif;
@@ -182,7 +394,6 @@ th{
 }
 td{
     text-align: left;
-    pointer-events: none;
     cursor: default;
 }
 a:visited {
@@ -263,119 +474,3 @@ p{
   display: none;
 }
 </style>
-<script>
-    $('document').ready(function(){
-        $(".startedFormatted").attr("style","width:150px");
-        $(".finishedFormatted").attr("style","width:150px");
-        $(".myHours").attr("style","width:150px");
-        $(".comments").attr("style","text-align:left");
-        $("myPlaceHolder").css("color","white");
-    });
-    $('#userForm').on('submit', function(event){
-        event.preventDefault();  
-        createProject()
-        $('#myModal').modal('hide')
-    });
-    $(".modal").on("hidden.bs.modal", function(){
-        $("input").val("");
-    });
-    $("#id_email").attr({
-        class:"form-control", 
-        placeholder: 'Email Address',
-        required: false
-    });
-    $("#id_projectName").attr({
-        class:"form-control", 
-        placeholder: 'Project name'
-    });
-    function createProject(){
-        var projectName = $("#id_projectName").val();
-        var additionalUser = $("#id_email").val();
-        $.ajax({
-            url: "new/",
-            data: {"name":projectName},
-            type: "POST",                    // you have to use the reverse relationship with many-to-many
-            dataType: "json",                                // maybe I should subclass auth user instead, 
-            success: function (data) {                               // then I could add users to projects
-                getCurrentProjects(data.id, "{{ user_email }}"); // the requestor gets added automatically
-                if (additionalUser){                                               // calls userAddProject
-                    getCurrentProjects(data.id, additionalUser);              
-                }
-            },
-            error: function (xhr, status) {
-                console.log(xhr)
-                console.log(status)
-            },
-            complete: function (xhr, status) {
-                console.log(xhr)
-                console.log(status)
-            }
-        })
-    } 
-    function getCurrentProjects(projectID, username){
-        var myUrl = "{% url 'users_projects' %}?username=" + username;
-        $.ajax({
-            url: myUrl,
-            type: "GET",
-            success: function (data) {
-                var myProjects = [];
-                data.forEach(function(project){
-                    console.log(project, "project");
-                    myProjects.push(project.id);
-                });
-                myProjects.push(projectID);
-                console.log(myProjects, "myProjects");
-                userAddProject(myProjects, username);
-            },
-            error: function (xhr, status) {
-                console.log(xhr, status);
-            },
-            complete: function (xhr, status) {
-                console.log(xhr, status);
-            }
-        })
-    }        
-    function userAddProject(projectList, username){
-        // GET USER ID
-        var myUser = encodeURIComponent(username);
-        var data = { "project_set": projectList };
-        var headers = { "Content-Type": "application/json"};
-        $.ajax({
-            url: "update/" + myUser + "/",
-            data: JSON.stringify(data),
-            headers: headers,
-            type: "PUT",
-            success: function (data) {
-                $("#bottomHalf").load(window.location.href + " #bottomHalf" );
-                console.log(data, "userAddProject response");
-            },
-            error: function (xhr, status) {
-                console.log(xhr);
-                console.log(status);
-            },
-            complete: function (xhr, status) {
-                console.log(xhr);
-                console.log(status);
-            },
-        });
-    }
-    function clockOut(){
-        window.location.href = "{% url 'logout' %}"
-    }
-    function csrfSafeMethod(method) {
-        // don't reveal CSRF token to GET requests
-        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-    }
-    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
-    $.ajaxSetup({ // MARK TO DO: MOVE CSRF TOKEN OUT OF GLOBAL SCOPE       
-        beforeSend: function(xhr, settings) {
-            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-                xhr.setRequestHeader('X-CSRFToken', csrftoken);
-            }
-        }
-    });
-    $('#projectSelected').on('change', function() {
-        window.location.href = "{% url 'clockin' %}?project=" + this.value; 
-    });
-</script>
-
