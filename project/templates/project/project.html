@@ -107,10 +107,10 @@
         <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <form action="url {{ user_update }}" method="PUT" id="inviteForm">
+              <form method="PUT" id="inviteForm">
                 {% csrf_token %}
                 <div class="modal-header">
-                  <h4 class="modal-title" id="projectName" style="padding-right: 25px; padding-top:3px; text-align: center;">{{ currentProject }}</h5>
+                  <h4 class="modal-title" id="projectName" style="padding-right: 25px; padding-top:3px; text-align: center;">{{ currentProject }}</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -232,6 +232,12 @@
             $("#projectsContainer").css({"display": "inline-block"});
         }
     });
+    $('#inviteForm').on('submit', function(event){
+        event.preventDefault();
+        var inviteUser = $("form#inviteForm")["0"][2].value;
+        getCurrentProjects("{{currentID}}", inviteUser);
+        $('#myModal').modal('hide');
+    });
     $('#userForm').on('submit', function(event){
         event.preventDefault();  
         createProject();
@@ -283,7 +289,7 @@
             $('#inviteModal').modal('show');
         }
     });
-    function createProject(){
+    function createProject(){ 
         var projectName = $("#id_projectName").val();
         var additionalUser = $("#id_email").val();
         $.ajax({
@@ -291,16 +297,14 @@
             data: {"name":projectName},
             type: "POST",                    
             dataType: "json",                                 
-            success: function (data) {
-                sessionStorage.setItem("myProject", projectName);                              
+            success: function (data) {                              
                 getCurrentProjects(data.id, "{{ user_email }}");
                 if (additionalUser){                                              
                     getCurrentProjects(data.id, additionalUser);              
                 }
             },
             error: function (xhr, status) {
-                console.log(xhr)
-                console.log(status)
+                console.log(xhr, status);
             },
         })
     } 
@@ -383,7 +387,7 @@
     });
     function deleteUser(event){
         var personToRemove = event.path[2].children["0"].innerText;
-        userDeleteProject({{currentID}}, personToRemove);
+        userDeleteProject("{{currentID}}", personToRemove);
     }
     function deleteProject(){
         $('#deleteModal').modal('show');
@@ -445,7 +449,6 @@ p{
 .inline{
     display:inline-block;
     padding: 5px;
-    //border: 1px solid black;;
 }
 .column {
     display:inline-block;

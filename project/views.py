@@ -29,11 +29,9 @@ class ProjectView(LoginRequiredMixin, ListView):
         	# PARAMETER 'PROJECT' HELPS FORM USER LIST (USER MODE)
             myProject = Project.objects.filter(name=self.request.GET['project'])[0]
             context['hasProjects'] = "true"
-            print(myProject.id)
             myUsers = myProject.members.all()
             context['currentID'] = myProject.id
             context['currentProject'] = myProject.name
-            print(myProject.name)
             context['inviteForm'] = InviteForm()
             table = UserTable(myUsers)
             context['table'] = table
