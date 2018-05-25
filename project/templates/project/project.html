@@ -136,7 +136,7 @@
               <form method="DELETE" id="deleteForm">
                 {% csrf_token %}
                 <div style="display:block;left-margin: 10px">
-                  {{ deleteForm.projectName }}
+                  {{ deleteForm.name }}
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -217,7 +217,6 @@
         alert("MAKE API CALL TO DELETE USER.");
     }
     function deleteProject(){
-        console.log("Deleting project.");
         $('#deleteModal').modal('show');
     }
     $('document').ready(function(){ 
@@ -246,10 +245,28 @@
     });
     $('#deleteForm').on('submit', function(event){
         event.preventDefault();
-        alert("MAKE API CALL FOOL");  
-        //var additionalUser = $("#id_emailOne").val();
-        //getCurrentProjects("{{ currentID }}", additionalUser);
-        $('#inviteModal').modal('hide');
+        var deletingProject = $("form#deleteForm")["0"][1].value;
+        var headers = { "Content-Type": "application/json"};
+        try{
+            $.ajax({
+                url: "delete/" + deletingProject + "/",
+                headers: headers,
+                type: "DELETE",
+                success: function (data) {
+                    $("#bottomHalf").load(window.location.href + " #bottomHalf" );
+                    //$("#projectSelected").load(window.location.href + " #projectSelected" );
+                    $('#projectSelected').val("all");
+                },
+                error: function (xhr, status) {
+                    if(xhr.status === 404){
+                        alert("Project not found. Failed to validate.");
+                    }
+                },
+            });
+        }catch{
+            return;
+        }
+        $('#deleteModal').modal('hide');
     });
     $(".modal").on("hidden.bs.modal", function(){
         $("input").val("");
@@ -293,10 +310,6 @@
                 console.log(xhr)
                 console.log(status)
             },
-            complete: function (xhr, status) {
-                console.log(xhr)
-                console.log(status)
-            }
         })
     } 
     function getCurrentProjects(projectID, username){
@@ -307,19 +320,14 @@
             success: function (data) {
                 var myProjects = [];
                 data.forEach(function(project){
-                    console.log(project, "project");
                     myProjects.push(project.id);
                 });
-                myProjects.push(projectID);
-                console.log(myProjects, "myProjects");
+                myProjects.push(projectID); // ADDS THE NEW PROJECT ID TO THE ARRAY OF OLD ONES
                 userAddProject(myProjects, username);
             },
             error: function (xhr, status) {
                 console.log(xhr, status);
             },
-            complete: function (xhr, status) {
-                console.log(xhr, status);
-            }
         })
     }        
     function userAddProject(projectList, username){
@@ -337,10 +345,7 @@
                 $("#projectsContainer").css({"display": "inline-block"});
                 $("#projectButton").css({"display": "hidden"});
                 var myProject = sessionStorage.getItem("myProject")
-                console.log("myProject", myProject);
-                //if(myProject != "None"){
                 $('#projectSelected').val(myProject || "all"); 
-                //}
                 $("#bottomHalf").load(window.location.href + " #bottomHalf" );
             },
         });

@@ -20,7 +20,9 @@ class ProjectView(LoginRequiredMixin, ListView):
         context['myForm'] = UserAddForm()
         context['user_email'] = self.request.user.username        
         context['hasProjects'] = "false"
-        context['deleteForm'] = UserDeleteForm()
+        deleteForm = UserDeleteForm()
+        context['deleteForm'] = deleteForm
+        #context['deleteProject'] = deleteForm.projectName
         if len(self.object_list) > 0:
             context['hasProjects'] = "true"
         try:
