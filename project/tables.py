@@ -6,13 +6,16 @@ from django.utils.safestring import mark_safe
 class ProjectTable(tables.Table):
 
     buttons = tables.LinkColumn(empty_values=(), verbose_name='Action')
+    requestor = 'IDFK'
     
     class Meta:
         model = Project
         fields = ('name', 'members', 'buttons')
 
     def render_buttons(self, record):
-        return mark_safe('<button onclick="deleteProject()" class="btn-sm btn-danger">Delete</button>')
+        if record.owner.username == self.requestor:
+            return mark_safe('<button onclick="deleteProject(event)" class="btn-sm btn-danger whiteBold">Delete</button>')
+        return mark_safe('<button onclick="userQuits(event)" class="btn-sm btn-warning grayText">Quit</button>')
 
 class UserTable(tables.Table):
 

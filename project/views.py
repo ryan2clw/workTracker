@@ -22,7 +22,6 @@ class ProjectView(LoginRequiredMixin, ListView):
         context['hasProjects'] = "false"
         deleteForm = UserDeleteForm()
         context['deleteForm'] = deleteForm
-        #context['deleteProject'] = deleteForm.projectName
         if len(self.object_list) > 0:
             context['hasProjects'] = "true"
         try:
@@ -38,6 +37,7 @@ class ProjectView(LoginRequiredMixin, ListView):
         except:
         	# NO PARAMETER SPECIFIED IS LIKE PROJECT MODE
             table = ProjectTable(self.object_list)
+            table.requestor = self.request.user.username
             RequestConfig(self.request, paginate=False).configure(table)
             context['table'] = table
         return context

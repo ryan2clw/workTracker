@@ -60,15 +60,16 @@
                             <h5 style="margin-bottom: 5px;padding-left:10px;" class="navBar">Action:</h5>
                             <button id="projectButton" type="button" class="btn-sm btn-dope navBar" data-toggle="modal" data-target="#myModal" style="font-weight: bold;border:none;">Make Project</button>
                         </li>
-                        <!--li id="inviteButtonContainer">
-                           <button id="sendInviteButton"  type="button" class="btn-sm btn-dope" style="font-weight: bold;border:none;">Send Invite</button>
-                        </li-->
                         <li id="projectsContainer">
                           <h5 style="padding-left:5px;" class="navBar">Edit:</h5>
                           <select id="projectSelected">
-                            <option id="myPlaceHolder" value="all">-----All-----</option>
+                            <option id="myPlaceHolder" value="all">--------All--------</option>
                             {% for project in object_list %}
-                            <option value="{{ project }}">{{ project }}</option>
+                              {% if project.owner.id == user.id %}
+                                <option value="{{ project }}">{{ project }}</option>
+                              {% else %}
+                                <option value="{{ project }}" disabled="true">{{ project }}</option>
+                              {% endif %}
                             {% endfor %}
                           </select>
                         </li>             
@@ -246,25 +247,30 @@
     $('#deleteForm').on('submit', function(event){
         event.preventDefault();
         var deletingProject = $("form#deleteForm")["0"][1].value;
-        var headers = { "Content-Type": "application/json"};
-        try{
-            $.ajax({
-                url: "delete/" + deletingProject + "/",
-                headers: headers,
-                type: "DELETE",
-                success: function (data) {
-                    window.location.reload();
-                },
-                error: function (xhr, status) {
-                    if(xhr.status === 404){
-                        alert("Project not found. Failed to validate.");
-                    }
-                },
-            });
-        }catch{
-            return;
+        var selectedProject = sessionStorage.getItem("deleteThisProject");
+        if (deletingProject == selectedProject){
+            var headers = { "Content-Type": "application/json"};
+            try{
+                $.ajax({
+                    url: "delete/" + deletingProject + "/",
+                    headers: headers,
+                    type: "DELETE",
+                    success: function (data) {
+                        window.location.reload();
+                    },
+                    error: function (xhr, status) {
+                        if(xhr.status === 404){
+                            alert("Project not found. Failed to validate.");
+                        }
+                    },
+                });
+            }catch{
+                return;
+            }
+            $('#deleteModal').modal('hide');
+        }else{
+            alert("Delete failed, entry did not match project name.");
         }
-        $('#deleteModal').modal('hide');
     });
     $(".modal").on("hidden.bs.modal", function(){
         $("input").val("");
@@ -294,7 +300,10 @@
         var additionalUser = $("#id_email").val();
         $.ajax({
             url: "new/",
-            data: {"name":projectName},
+            data: {
+                "name":projectName, 
+                "owner": {{ user.id }}
+            },
             type: "POST",                    
             dataType: "json",                                 
             success: function (data) {                              
@@ -344,6 +353,26 @@
                 console.log(xhr, status);
             },
         })
+    }
+    function userQuitProject(projectName, username){
+        var myUrl = "{% url 'users_projects' %}?username=" + username;
+        $.ajax({
+            url: myUrl,
+            type: "GET",
+            success: function (data) {
+                var myProjects = {};
+                data.forEach(function(project){
+                    myProjects[project.name] = project.id;
+                });
+                delete(myProjects[projectName]);
+                var projectList = Object.values(myProjects); // REMOVES SELECTED PROJECT ID, THEN SETS ARRAY
+                userAddProject(projectList, username);
+                $('#projectSelected').val("all");
+            },
+            error: function (xhr, status) {
+                console.log(xhr, status);
+            },
+        })
     }         
     function userAddProject(projectList, username){
         // GET USER ID
@@ -385,11 +414,17 @@
             return;
         }
     });
+
     function deleteUser(event){
         var personToRemove = event.path[2].children["0"].innerText;
         userDeleteProject("{{currentID}}", personToRemove);
     }
-    function deleteProject(){
+    function userQuits(event){
+        var projectName = event.path[2].children["0"].innerText;
+        userQuitProject(projectName, "{{ user_email }}");
+    }
+    function deleteProject(event){
+        sessionStorage.setItem("deleteThisProject", event.path[2].children["0"].innerText);
         $('#deleteModal').modal('show');
     }
 </script>
@@ -488,5 +523,12 @@ p{
 }
 #projectsContainer{
   display: none;
+}
+.grayText{
+  color:#707070;
+  font-weight: bold;
+}
+.whiteBold{  
+  font-weight: normal;
 }
 </style>
