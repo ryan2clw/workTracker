@@ -22,24 +22,22 @@ class ProjectView(LoginRequiredMixin, ListView):
         context['hasProjects'] = "false"
         deleteForm = UserDeleteForm()
         context['deleteForm'] = deleteForm
-        #context['deleteProject'] = deleteForm.projectName
         if len(self.object_list) > 0:
             context['hasProjects'] = "true"
         try:
         	# PARAMETER 'PROJECT' HELPS FORM USER LIST (USER MODE)
             myProject = Project.objects.filter(name=self.request.GET['project'])[0]
             context['hasProjects'] = "true"
-            print(myProject.id)
             myUsers = myProject.members.all()
             context['currentID'] = myProject.id
             context['currentProject'] = myProject.name
-            print(myProject.name)
             context['inviteForm'] = InviteForm()
             table = UserTable(myUsers)
             context['table'] = table
         except:
         	# NO PARAMETER SPECIFIED IS LIKE PROJECT MODE
             table = ProjectTable(self.object_list)
+            table.requestor = self.request.user.username
             RequestConfig(self.request, paginate=False).configure(table)
             context['table'] = table
         return context
