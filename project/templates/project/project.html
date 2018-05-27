@@ -20,14 +20,14 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <!-- Plugin CSS -->
     <link href="{% static "menu/vendor/magnific-popup/magnific-popup.css" %}" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <!-- MARK TO DO: FIX CSS WHEN SHRUNK -->
     <link href="{% static "menu/css/creative.min.css" %}" rel="stylesheet">
   </head>
   <body class="main">
   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#3371FF;" id="mainNav">
-      <div class="container" style="padding:0px;">
-        <a class="navbar-brand" href="{% url 'menu' %}">Home</a>
+      <div class="container" style="padding-top:0px; padding-bottom:0px; padding-left: 10px;">
+        <a class="navbar-brand" href="{% url 'menu' %}">Sales</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -35,13 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="{% url 'clockin' %}">Clock-In</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>
           </ul>
         </div>
@@ -447,9 +441,6 @@ th{
 td{
     text-align: left;
     cursor: default;
-}
-a:visited {
-    color: white;
 }
 a {
     color:#3371FF;
