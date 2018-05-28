@@ -27,18 +27,15 @@
    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#3371FF;" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="{% url 'menu' %}">Home</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="{% url 'menu' %}" style="color:#F0F0F0">Sales</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color:#F0F0F0">
           Menu
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              <a class="nav-link" href="{% url 'register' %}">Register</a>
             </li>
           </ul>
         </div>
@@ -47,7 +44,7 @@
     <form class="form-signin" method="post" action="{% url 'login' %}?next={% url 'clockin' %}">
     {% csrf_token %}
       <img class="mb-4" src="{% static "seniorDevops.png" %}" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <h3 class="h3 mb-3 font-weight-normal">Please sign in</h3>
       <label for="inputEmail" class="sr-only">Email address</label>
       {{form.username}}
       <label for="id_password" class="sr-only">Password</label>
@@ -77,6 +74,9 @@
         "required":"True",
         "type":"email",
     });
+    $(".nav-link").css("font-size", "16px");
+    $(".navbar-brand").css("font-size", "16px");
+    $(".text-center").css("margin-top", "80px");
 </script>
 <style>
 html,

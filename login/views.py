@@ -30,4 +30,5 @@ class CustomObtainAuthToken(ObtainAuthToken):
         user = serializer.validated_data['user']
         token, created = Token.objects.get_or_create(user=user)
         return Response({'token': token.key,
-                         'user_id': self.request.user.id})
+                         'user_id': self.request.user.id,
+                         'first_name': user.first_name})
