@@ -6,7 +6,7 @@ from django.utils.safestring import mark_safe
 class ProjectTable(tables.Table):
 
     buttons = tables.LinkColumn(empty_values=(), verbose_name='Action')
-    requestor = 'IDFK'
+    requestor = 'IDFK' # Default value is for Anonymous requests
     
     class Meta:
         model = Project
