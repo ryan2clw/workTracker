@@ -3,7 +3,7 @@ from django.views.generic import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from rest_framework import permissions
-from clockin.serializers import ProjectSerializer, UserSerializer
+from clockin.serializers import ProjectSerializer, UserSerializer, ProjectMemberSerializer
 from rest_framework.generics import CreateAPIView, UpdateAPIView, ListAPIView, DestroyAPIView
 from django_tables2 import RequestConfig
 from invoice.models import Project
@@ -60,6 +60,16 @@ class ProjectView(LoginRequiredMixin, ListView):
         else:
             messages.error(request, 'Invalid reCAPTCHA. Please try again.') 
 
+class ProjectMemberList(ListAPIView):
+
+    serializer_class = ProjectMemberSerializer
+    model = Project
+    permission_classes = [ permissions.IsAuthenticated, ]
+
+    def get_queryset(self):
+        user = User.objects.get(username=self.request.GET["username"])
+        return Project.objects.filter(members__id=user.id)
+
 class ProjectList(ListAPIView):
 
     serializer_class = ProjectSerializer
@@ -93,6 +103,7 @@ class UserUpdate(UpdateAPIView):
 
     def get_queryset(self):
         return User.objects.all()
+
 
 
 
