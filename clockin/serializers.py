@@ -27,7 +27,7 @@ class ProjectMemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ['name', 'members']
+        fields = ['name', 'members', 'owner']
         depth = 2
 
     def build_nested_field(self, field_name, relation_info, nested_depth):
