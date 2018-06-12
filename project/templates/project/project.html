@@ -230,7 +230,7 @@
     $('#inviteForm').on('submit', function(event){
         event.preventDefault();
         var inviteUser = $("form#inviteForm")["0"][2].value;
-        getCurrentProjects("{{currentID}}", inviteUser);
+        updateCurrentProjects("{{currentID}}", inviteUser);
         $('#myModal').modal('hide');
     });
     $('#userForm').on('submit', function(event){
@@ -301,9 +301,9 @@
             type: "POST",                    
             dataType: "json",                                 
             success: function (data) {                              
-                getCurrentProjects(data.id, "{{ user_email }}");
+                updateCurrentProjects(data.id, "{{ user_email }}");
                 if (additionalUser){                                              
-                    getCurrentProjects(data.id, additionalUser);              
+                    updateCurrentProjects(data.id, additionalUser);              
                 }
             },
             error: function (xhr, status) {
@@ -311,7 +311,7 @@
             },
         })
     } 
-    function getCurrentProjects(projectID, username){
+    function updateCurrentProjects(projectID, username){
         var myUrl = "{% url 'users_projects' %}?username=" + username;
         $.ajax({
             url: myUrl,
@@ -408,18 +408,20 @@
             return;
         }
     });
-
     function deleteUser(event){
-        var personToRemove = event.path[2].children["0"].innerText;
+        var personToRemove = event.target.offsetParent.nextSibling.parentNode.cells["0"].innerHTML;
         userDeleteProject("{{currentID}}", personToRemove);
     }
     function userQuits(event){
-        var projectName = event.path[2].children["0"].innerText;
-        userQuitProject(projectName, "{{ user_email }}");
+      var quitProject = event.target.offsetParent.nextSibling.parentNode.cells["0"].innerHTML;
+      console.log("QUITTING", quitProject);
+      userQuitProject(quitProject, "{{ user_email }}");
     }
     function deleteProject(event){
-        sessionStorage.setItem("deleteThisProject", event.path[2].children["0"].innerText);
-        $('#deleteModal').modal('show');
+      var deleteProject = event.target.offsetParent.nextSibling.parentNode.cells["0"].innerHTML;
+      console.log("DELETING", deleteProject);
+      sessionStorage.setItem("deleteThisProject", deleteProject);
+      $('#deleteModal').modal('show');
     }
 </script>
 <style>
