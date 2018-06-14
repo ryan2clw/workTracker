@@ -44,10 +44,11 @@ class InvoiceView(LoginRequiredMixin, ListView):
             context['table'] = table
         return context
       
+    ''' COULD FILTER BY ADMIN GROUP IF I CREATE ONE, OR BY OBJECT OWNERSHIP, OLD CODE FOR EXAMPLE
     def get(self, request, *args, **kwargs):
         if not self.request.user.groups.filter(name="customer").exists():
             return HttpResponseRedirect(reverse('menu') + "?project=none")
-        return super(InvoiceView, self).get(request, *args, **kwargs)
+        return super(InvoiceView, self).get(request, *args, **kwargs)'''
 
     def scrapeRepo():
 
