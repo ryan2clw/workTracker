@@ -1,10 +1,9 @@
-from .models import Project
 from rest_framework import serializers
+from clockin.models import Bill
 
-class ProjectHoursSerializer(serializers.ModelSerializer):
-
-	intervals = serializers.RelatedField(many=True)
+class BillSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Project
-        fields = ('name', 'user', 'intervals')
+        model = Bill
+        fields = ('customer','project','created','pay_rate','tax')
+
