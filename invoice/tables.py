@@ -8,7 +8,7 @@ class BillingTable(tables.Table):
     
     class Meta:
         model = IntervalWork
-        exclude = ('id', 'user', 'project', 'paid') #'started', 'finished', 
+        exclude = ('id', 'user', 'project', 'paid','bill') #'started', 'finished', 
         sequence = ('started', 'finished', 'myHours', 'comments')
         attrs = {"class" : "table-striped table-bordered"}
         empty_text = "Paid in full."

@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" crossorigin="anonymous"></script>
   </head>
-  <body class="main" style="text-align:center">
+  <body class="main" style="text-align:center;">
     {% csrf_token %}
         <ul id="topHalf" style="margin: auto;padding-bottom:0px;padding-top:12px;padding-left:0px">
             <li style="padding-right:10px;">
@@ -26,11 +26,14 @@
                 <div style="display:inline-block; padding: 0px; vertical-align:top" id="myButtonDiv">
                     <ul id="buttonList" style="padding:0px;">
                         <li>
-                            <button id="payButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Pay Bill</button>
+                            <button id="payButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Change Pay</button>
+                        </li>
+                         <li>
+                            <button id="billButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Show Bill</button>
                         </li>
                         <a href="{% url 'logout' %}" class="btn-sm btn-primary navBar">
-                  <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
-                </a>
+                          <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
+                        </a>
                     <ul>
                 </div>
             </li>
@@ -41,7 +44,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Enter your comments below</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeButton">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -58,15 +61,42 @@
             </div>
           </div>
         </div>
+        <!-- Pay Modal -->
+        <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <form action="url {{ bill_new }}" method="POST" id="payForm">
+                <!-- Prevent default and make API call to corresponding create or update method. 
+                  "url {{ bill }}" = location.reload) -->
+                {% csrf_token %}
+                <div class="modal-header">
+                  <h5 class="modal-title" id="projectLabel" style="padding-right: 25px; padding-top:3px;">Pay Rate:</h5>
+                  {{ pay_form.pay_rate }}
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>    
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inviteLabelInitial" style="padding-right: 25px">Tax by %:</h5>
+                    {{ pay_form.tax }}
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-secondary" style="color:#F0F0F0" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-dope" data="closingComments">Save changes</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
         <div id="bottomHalf" style="margin: auto; border-top: 1px solid black;">
         <h3 style="text-align:center">{{ myProject }}</h3>
-        {% load bootstrap4 %}
-        {% load querystring from django_tables2 %}
-        {% load title from django_tables2 %}
-        {% block "content" %}
-        {% if table.page %}
+          {% load bootstrap4 %}
+          {% load querystring from django_tables2 %}
+          {% load title from django_tables2 %}
+          {% block "content" %}
+            {% if table.page %}
             <div class="table-container">
-        {% endif %}
+            {% endif %}
             {% block table %}
             <div class="table-responsive">
                 <table id = "myTable" style="background-color:white;" class="table table-hover table-bordered table-striped"{% if table.attrs %} {{ table.attrs.as_html }}{% endif %}>
@@ -116,9 +146,18 @@
         {% endblock "content" %}       
       </div>
     </div>
-  </div>
-  <div class="card card-block bg-faded" style="height:180px;width:250px;margin-left:260px;">
-      <table class="moneyTable">
+  <div style="justify-content: center;display: flex">
+    <div class="card card-block bg-faded hoursTable" style="width:50%; margin-left: 19px;">
+      <table class="hoursTable" style="border:solid #D8D8D8 1px;">
+        <tr>
+          <td style="font-weight:bold;">Total Hours:</td>
+          <td id="totalHours" style="margin-bottom:0px;color:black">{{ totalHours }}</td>
+          <td>(hr)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="card card-block bg-faded moneyTable" style="width:250px; margin-left: 19px">
+      <table class="moneyTable" style="border:solid #D8D8D8 1px;">
         <tr>
           <td style="font-weight:bold;">Hours:</td>
           <td id="totalHours" style="margin-bottom:0px;color:black">{{ totalHours }}</td>
@@ -127,7 +166,7 @@
         <tr style="border-bottom: solid black 1px">
           <td style="font-weight:bold;">Pay Rate:</td>
           <td>
-            <p id="HourlyRate" style="margin-bottom:0px;color:black">20.00</p>
+            <p id="HourlyRate" style="margin-bottom:0px;color:black">{{ pay_rate }}</p>
           </td>
           <td>($/hr)
           </td>
@@ -143,7 +182,7 @@
         <tr style="border-bottom: solid black 1px">
           <td style="font-weight:bold;">Convenience:</td>
           <td>
-            <p id="surCharge" style="margin-bottom:0px;color:black;">2.90</p>
+            <p id="surCharge" style="margin-bottom:0px;color:black;">{{ tax }}</p>
           </td>
           <td>(%)
           </td>
@@ -157,7 +196,8 @@
           </td>
         </tr>
       </table>
-  </div>   
+     </div>
+   </div>
   <!--div id="myFooter" style="padding-top:200px;">SeniorDevOps.com © 2018</div-->
   </body>
 </html>
@@ -189,6 +229,12 @@ p{
     text-align:right;
     width:100%;
 }
+.hoursTable{
+    color:#007BFF;
+    font:sans-serif;
+    text-align:right;
+    width:100%;
+}
 .inline{
     display:inline-block;
     padding: 5px;
@@ -212,6 +258,14 @@ p{
     padding-right:10px;
     margin-bottom:10px;
 }
+.btn-dope{
+  background-color:#3371FF;
+  color:#F0F0F0;
+}
+.btn-dope:hover{
+  background-color:#2964C4;
+  color:white;
+}
 #buttonList {
     list-style-type: none;
 }
@@ -223,110 +277,98 @@ p{
 <script>
     function addCalculatedFields(){
         var myHours = $("#totalHours").text();
-        console.log("myHours", myHours);
         var hourly = $("#HourlyRate").text();
-        console.log("hourly", hourly);
+        var myTax = $("#surCharge").text();
         $("#GrossDue").text((myHours*hourly).toFixed(2));
-        $("#totalDue").text((myHours*hourly*1.029).toFixed(2));
+        $("#totalDue").text((myHours*hourly*((myTax*0.01)+1)).toFixed(2));
     }
     $('document').ready(function(){
         $(".startedFormatted").attr("style","width:150px");
         $(".finishedFormatted").attr("style","width:150px");
         $(".myHours").attr("style","width:150px");
         $(".comments").attr("style","text-align:left");
+        $(".moneyTable").hide();
+        sessionStorage.setItem("showPay", "true");
         addCalculatedFields();
     });
-    function updatePaidStatus(){
-        // Updates comments and finish time of intervalWork
-        var rightNow = new Date().toISOString();
-        console.log("updateWorkInterval", rightNow)
-        $.ajax({
-            url: "update/{{ myHours.last.id }}/",
-            data: {
-                // get the user from the request and the finished timestamp from the server
-                user: {{ user.id }},
-                comments: $("#id_comments").val(),
-                finished: rightNow,
-            },
-            type: "PUT",
-            dataType: "json",
-            success: function (data) {
-                console.log(data)
-                $("#id_comments").val("");
-                $('#myModal').modal('hide');
-                location.reload();
-            },
-            error: function (xhr, status) {
-                console.log(xhr)
-                console.log(status)
-                $('#myModal').modal('hide');
-            },
-            complete: function (xhr, status) {
-                console.log(xhr)
-                console.log(status)
-            },
-        });
-    }
-    $('#commentForm').on('submit', function(event){
-        event.preventDefault();
-        console.log("form submitted!", $("#id_comments").val());  
-        updateWorkInterval();
-        var shouldWorkMore = sessionStorage.getItem("startNew");
-        console.log('shouldWorkMore',shouldWorkMore);
-        if(shouldWorkMore == "true"){
-            createWorkInterval();
-        }
+    $('#billButton').click(function(event){
+      var showPay = sessionStorage.getItem("showPay");
+      if (showPay=="true"){
+        addCalculatedFields();
+        $(".moneyTable").show();
+        $(".hoursTable").hide();
+        $('#billButton').html('Hide Bill').button("refresh");
+        showPay = "false";
+      }else{
+        $(".moneyTable").hide();
+        $(".hoursTable").show();
+        $('#billButton').html('Show Bill').button("refresh");
+        showPay = "true";
+      }
+      console.log(showPay);
+      sessionStorage.setItem("showPay", showPay);
     });
-    // On showing modal, determine the button it came from, you'll need it to determine whether to start a new work interval
-    $('#myModal').on('show.bs.modal', function (event) { 
-        var myButton = $(event.relatedTarget); // Button that triggered the modal
-        console.log("from this button", myButton[0].id);
-        if (myButton[0].id == "clockOutButton"){
-            sessionStorage.setItem("startNew","false");
-            return;
-        }
-        sessionStorage.setItem("startNew","true");
-    }) //delete old text after sending comments to server
+    function updateBill(){
+      var myRate = $("#id_pay_rate").val();
+      $("#HourlyRate").text(myRate);
+      var myTax = $("#id_tax").val();
+      $("#surCharge").text(myTax);
+      addCalculatedFields();
+      // AJAX call to make PDF
+      $(".hoursTable").hide();
+      $(".moneyTable").show();
+      $('#payModal').modal('hide');
+      // update bill for the next page refresh
+      $.ajax({
+          url: "update/{{ bill_id }}/",
+          data: {
+            // get the user from the request and the finished timestamp from the server
+            "pay_rate": myRate,
+            "tax": myTax
+          },
+          type: "PATCH",
+          dataType: "json",
+          success: function (data) {
+            console.log(data);
+            $("#id_tax").val("");
+            $("#id_pay_rate").val("");
+            $(".moneyTable").show();
+            $(".hoursTable").hide();
+          },
+          error: function (xhr, status) {
+            console.log(xhr);
+            console.log(status);
+          },
+      });
+    }
     $(".modal").on("hidden.bs.modal", function(){
         $(".modal-body1").html("");
     });
-    $("#id_comments").attr({
-        class:"form-control", 
-        style:"min-height:250px",
-        placeholder: 'Comments go here'
+    $("#id_tax").attr({
+      class:"form-control", 
+      style:"display:flex;flex:1",
+      placeholder: 'optional surcharge (%)'
+    });
+    $("#id_pay_rate").attr({
+      class:"form-control", 
+      style:"display:flex;flex:1",
+      placeholder: 'hourly rate ($/hr)'
     });
     $("#payButton").click(function(e) {
-        console.log("Paying for workIntervals");
-        $.ajax({
-            url: "new/",
-            data: {
-                user: {{ user.id }},
-            },
-            type: "POST",
-            dataType: "json",
-            success: function (data) {
-                console.log(data)
-                location.reload();
-            },
-            error: function (xhr, status) {
-                console.log(xhr)
-                console.log(status)
-            },
-            complete: function (xhr, status) {
-                console.log(xhr)
-                console.log(status)
-            },
-        });
-    }); 
+        $('#payModal').modal('show');
+    });
+    $('#payForm').on('submit', function(event){
+      event.preventDefault();
+      updateBill();
+    });
     function csrfSafeMethod(method) {
         // don't reveal CSRF token to GET requests
         return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
     }
-    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
     $.ajaxSetup({
         beforeSend: function(xhr, settings) {
             if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-                xhr.setRequestHeader('X-CSRFToken', csrftoken);
+                xhr.setRequestHeader('X-CSRFToken', jQuery("[name=csrfmiddlewaretoken]").val());
             }
         }
     });
