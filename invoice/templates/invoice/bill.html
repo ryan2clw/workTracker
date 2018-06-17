@@ -14,8 +14,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" crossorigin="anonymous"></script>
+    {% load staticfiles %}
+    <link href="{% static "menu/vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <link href="{% static "menu/vendor/magnific-popup/magnific-popup.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "menu/css/creative.min.css" %}" rel="stylesheet">
   </head>
-  <body class="main" style="text-align:center;">
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#3371FF;" id="mainNav">
+      <div class="container" style="padding-top:0px; padding-bottom:0px; padding-left: 10px;">
+        <a class="navbar-brand" href="{% url 'menu' %}">Home</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'project' %}">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <body class="main" style="text-align:center;padding-top: 36px;">
     {% csrf_token %}
         <ul id="topHalf" style="margin: auto;padding-bottom:0px;padding-top:12px;padding-left:0px">
             <li style="padding-right:10px;">
@@ -26,12 +51,12 @@
                 <div style="display:inline-block; padding: 0px; vertical-align:top" id="myButtonDiv">
                     <ul id="buttonList" style="padding:0px;">
                         <li>
-                            <button id="payButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Change Pay</button>
+                            <button id="payButton" type="button" class="btn-sm btn-dope navBar" style="font-weight: bold;border:none;">Change Pay</button>
                         </li>
                          <li>
-                            <button id="billButton" type="button" class="btn-sm btn-primary navBar" style="font-weight: bold;border:none;">Show Bill</button>
+                            <button id="billButton" type="button" class="btn-sm btn-dope navBar" style="font-weight: bold;border:none;">Show Bill</button>
                         </li>
-                        <a href="{% url 'logout' %}" class="btn-sm btn-primary navBar">
+                        <a href="{% url 'logout' %}" class="btn-sm btn-dope navBar">
                           <span class="glyphicon glyphicon-log-out" style="font-weight: bold;">Log out</span>
                         </a>
                     <ul>
@@ -208,6 +233,13 @@ ul {
 *{
     font-family:Helvetica,Arial,sans-serif;
 }
+a:visited {
+    color: #F0F0F0;
+}
+a {
+    color:#3371FF;
+    font-weight: bold;
+}
 #myFooter{
     height:45px;
 }
@@ -273,6 +305,16 @@ p{
     margin-bottom:3px;
     display: inline;
 }
+.navBar{
+    display: inline-block;
+    padding-right:10px;
+}
+#mainNav{
+  padding:0px;
+}
+#navbarResponsive{
+  padding:0px;
+}
 </style>
 <script>
     function addCalculatedFields(){
@@ -283,14 +325,16 @@ p{
         $("#totalDue").text((myHours*hourly*((myTax*0.01)+1)).toFixed(2));
     }
     $('document').ready(function(){
-        $(".startedFormatted").attr("style","width:150px");
-        $(".finishedFormatted").attr("style","width:150px");
-        $(".myHours").attr("style","width:150px");
-        $(".comments").attr("style","text-align:left");
+        $(".started").attr("style","width:195px");
+        $(".finished").attr("style","width:195px");
+        $(".myHours").attr("style","width:100px");
+        $(".comments").attr("style","text-align:left;padding-left:24px");
         $(".moneyTable").hide();
+        $(".btn-primary").css("background-color","#3371FF");
         sessionStorage.setItem("showPay", "true");
         addCalculatedFields();
     });
+    $(".navbar-brand").css("font-size", "97%");
     $('#billButton').click(function(event){
       var showPay = sessionStorage.getItem("showPay");
       if (showPay=="true"){

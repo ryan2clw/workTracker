@@ -8,7 +8,7 @@ class IntervalTable(tables.Table):
     
     class Meta:
         model = IntervalWork
-        exclude = ('id', 'user', 'started', 'finished', 'project', 'paid')
+        fields = ('startedFormatted', 'finishedFormatted', 'myHours', 'comments')
         sequence = ('startedFormatted', 'finishedFormatted', 'myHours', 'comments')
         attrs = {"class" : "table-striped table-bordered"}
         empty_text = "There are no hours logged today."
