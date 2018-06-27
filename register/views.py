@@ -11,7 +11,7 @@ import boto3
 
 def activate(request, uidb64, token):
     try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
+        uid = urlsafe_base64_decode(uidb64).decode()
         user = User.objects.get(pk=uid)
     except (TypeError, ValueError, OverflowError, User.DoesNotExist):
         user = None
@@ -30,6 +30,7 @@ def signup(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
+            print("signup posted valid form")
             user = form.save(commit=False)
             user.is_active = False
             user.save()
@@ -38,10 +39,34 @@ def signup(request):
             message = render_to_string('account_activation_email.html', {
                 'user': user,
                 'domain': current_site.domain,
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
                 'token': account_activation_token.make_token(user),
             })
-            user.email_user(subject, message)
+            response = self.client.send_email(
+                Source='ryan@seniordevops.com',
+                Destination={
+                    'ToAddresses': [
+                        'ryan.dines@gmail.com',
+                    ],
+                },
+                Message={
+                    'Subject': {
+                        'Data': subject,
+                    },
+                    'Body': {
+                        'Text': {
+                            'Data': 'IDFK what this does',
+                        },
+                        'Html': {
+                            'Data': message,
+                        }
+                    }
+                },
+                ReplyToAddresses=[
+                    'ryan@seniordevops.com',
+                ]
+            )
+            print(response)
             return redirect('login')
     else:
         form = RegistrationForm()
