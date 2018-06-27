@@ -1,15 +1,16 @@
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
 from register.forms import RegistrationForm
-from django.urls import path
+from django.urls import path, re_path
 from django.conf.urls import url
 from register.views import signup, activate
 
 urlpatterns = [
-    #url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+    #re_path(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/',
     #    activate, name='activate'),
+    # activate, name='activate'),
     #path('activate',activate, name='activate'),
-    path('activate/<slug:uid>/<slug:token>/', activate, name='activate'),
+    path('activate/<uidb64>/<token>/', activate, name='activate'),
     path('', signup, name='register')
 ]
 
