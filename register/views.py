@@ -1,7 +1,7 @@
 from django.contrib.sites.shortcuts import get_current_site
 from django.shortcuts import render, redirect
 from django.utils.encoding import force_bytes, force_text
-from django.utils.http import urlsafe_base64_encode
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
 from register.forms import RegistrationForm
 from register.tokens import account_activation_token
@@ -26,11 +26,11 @@ def activate(request, uidb64, token):
         return redirect('login') # MARK TO DO: ADD 403 ERROR MESSAGE TO LOGIN ?message=noauth
 
 def signup(request):
-    client = boto3.client('ses', region_name='us-east-1')
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
             print("signup posted valid form")
+            client = boto3.client('ses', region_name='us-east-1')
             user = form.save(commit=False)
             user.is_active = False
             user.save()
@@ -42,7 +42,7 @@ def signup(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)).decode(),
                 'token': account_activation_token.make_token(user),
             })
-            response = self.client.send_email(
+            response = client.send_email(
                 Source='ryan@seniordevops.com',
                 Destination={
                     'ToAddresses': [
