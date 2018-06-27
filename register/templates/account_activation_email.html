@@ -1,13 +1,13 @@
 {% autoescape off %}
-<div class="jumbotron">
-  <h1 class="display-4">Hi {{ user.username }}!</h1>
+<div>
+  <h2 class="display-4">Hi {{ user.username }}</h2>
   <p class="lead">Welcome to WorkTracker, a simple way to bill for time.</p>
   <hr class="my-4">
-  <p>Please click on the button below to activate your account:</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+  <p>Please click on the link below to activate your account:</p>
+  <h2>
+    <a href="https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
 {% endautoescape %}" role="button">Activate</a>
-  </p>
+  </h2>
 </div>
 
 
