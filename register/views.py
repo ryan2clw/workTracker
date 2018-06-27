@@ -54,9 +54,6 @@ def signup(request):
                         'Data': subject,
                     },
                     'Body': {
-                        'Text': {
-                            'Data': 'IDFK what this does',
-                        },
                         'Html': {
                             'Data': message,
                         }
