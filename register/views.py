@@ -46,7 +46,7 @@ def signup(request):
                 Source='ryan@seniordevops.com',
                 Destination={
                     'ToAddresses': [
-                        'ryan.dines@gmail.com',
+                        form.cleaned_data['username'],
                     ],
                 },
                 Message={
