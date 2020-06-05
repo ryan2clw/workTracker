@@ -4,7 +4,7 @@ certifi==2018.1.18
 chardet==3.0.4
 confusable-homoglyphs==3.0.0
 DateTime==4.2
-Django==2.0.2
+Django==2.2.13
 django-bootstrap4==0.0.6
 django-tables2==1.19.0
 djangorestframework==3.7.7
